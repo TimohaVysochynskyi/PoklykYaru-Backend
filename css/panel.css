@@ -76,7 +76,7 @@
 }
 
 .product-coop-window{
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
 	display: flex;
@@ -121,4 +121,19 @@
 .product-list-wrapper{
 	display: flex;
 	justify-content: center;
+}
+
+@media screen and (max-width: 769px){
+	.container{
+		flex-wrap: nowrap !important;
+	}
+	.product-coop-wrapper{
+		flex-wrap: wrap;
+		height: auto;
+		width: 100vw;
+		justify-content: center;
+	}
+	.product-list-wrapper{
+		flex-wrap: wrap;
+	}
 }

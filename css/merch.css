@@ -36,7 +36,7 @@ body{
 	font-weight: 500;
 	text-align: center;
 }
-.product-el:last-child{
+.product-el:nth-child(3){
 	font-size: 20px;
 	font-weight: 700;
 	text-align: right;
@@ -52,6 +52,7 @@ body{
 	font-weight: 700;
 	letter-spacing: 0.5px;
 	border-radius: 4px;
+	text-decoration: none;
 	transition: .3s;
 }
 .product-buy-btn:hover{
