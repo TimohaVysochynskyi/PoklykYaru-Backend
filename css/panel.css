@@ -1,9 +1,10 @@
 .container{
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 	position: relative;
 }
 .pin-form{
@@ -44,6 +45,11 @@
 }
 
 
+.product-coop-wrapper{
+	display: flex;
+	align-items: center;
+	height: 60vh;
+}
 .product-option{
 	width: 330px;
 	height: 330px;
@@ -110,4 +116,9 @@
 	text-decoration: none;
 	transform: rotateZ(45deg);
 	transition: .4s;
+}
+
+.product-list-wrapper{
+	display: flex;
+	justify-content: center;
 }

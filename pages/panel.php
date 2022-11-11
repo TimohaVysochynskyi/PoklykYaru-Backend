@@ -26,7 +26,8 @@
 		$mysql->query("DELETE FROM `product` WHERE `name` = '$dName' AND `id` = '$dCode'");
 	}
 
-	$mysql->close();
+	$data = $mysql->query("SELECT * FROM `product`");
+	$productsCount = $data->num_rows;
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +39,7 @@
 	<title>Адмін панель | Поклик Яру</title>
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/panel.css">
+	<link rel="stylesheet" href="../css/merch.css">
 </head>
 <body>
 	<main class="container">
@@ -49,8 +51,16 @@
 		<? endif ?>
 		<? if($_SESSION['pin-confirmed'] == True): ?>
 			<!-- All content -->
-			<a href="#" class="product-option" onclick="addProduct()"><h1>+</h1></a>
-			<a href="#" class="product-option" onclick="deleteProduct()"><h1>-</h1></a>
+			<div class="product-coop-window" id="edit-product">
+				<form action="#" method="post" class="product-coop-form">
+					<a href="#" class="product-coop-cross" onclick=closePopUp() id="product-coop-cross">+</a>
+					<h2 class="product-coop-title">Редагування мерчу</h1>
+					<input type="text" class="form-control" name="e-name" placeholder="Нова назва">
+					<textarea name="e-description" class="form-control" placeholder="Новий опис"></textarea>
+					<input type="number" class="form-control" name="e-cost" placeholder="Нові монейс (грн)">
+					<button type="submit" class="form-button" name="confirm-edit-product">Підтвердити</button>
+				</form>
+			</div>
 
 			<div class="product-coop-window" id='add-product'>
 				<form action="#" method="post" class="product-coop-form">
@@ -61,7 +71,8 @@
 					<input type="number" class="form-control" name="a-cost" placeholder="Скіки монейс (грн)">
 					<button type="submit" class="form-button" name="add-product">Додати</button>
 				</form>
-			</div>	
+			</div>
+
     		<div class="product-coop-window" id='delete-product'>
 				<form action="#" method="post" class="product-coop-form">
 					<a href="#" class="product-coop-cross" onclick=closePopUp() id='product-coop-cross'>+</a>
@@ -71,7 +82,33 @@
 					<button type="submit" class="form-button" name="delete-product">Видалити</button>
 				</form>
 			</div>
-															 
+
+			<div class="product-coop-wrapper">
+				<a href="#" class="product-option" onclick="addProduct()"><h1>+</h1></a>
+				<a href="#" class="product-option" onclick="deleteProduct()"><h1>-</h1></a>
+			</div>
+			
+			<div class="product-list-wrapper">
+				<?php 
+					if($productsCount > 0){
+						foreach ($data as $product) {
+							$id = $product['id'];
+            		        $name = $product['name'];
+            		        $description = $product['description'];
+            		        $cost = $product['cost'];
+							echo '<div class="product">';
+								echo '<p class="product-el">'.$name.'</p>';
+								echo '<p class="product-el">'.$description.'</p>';
+								echo '<p class="product-el">'.$cost.'</p>';
+								echo '<a href="#" class="product-buy-btn" onclick="editProduct()">редагувати</a>';
+							echo '</div>';
+						}
+					}else{
+						echo '<h1>Ше нічо тут немає</h1>';
+					}
+					$mysql->close();
+				?>
+			</div>
 		<? endif; ?>
 	</main>
 

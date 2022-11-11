@@ -196,8 +196,14 @@ function deleteProduct(){
 	$('#delete-product').fadeIn(500);
 	document.getElementById('delete-product').style.display = "flex";
 }
+function editProduct() { 
+    $('#edit-product').fadeIn(500);
+	document.getElementById('edit-product').style.display = "flex";
+}
+
 function closePopUp(){
 	$('#add-product').fadeOut("fast");
 	$('#delete-product').fadeOut("fast");
+    $('#edit-product').fadeOut("fast");
 	document.getElementById('product-coop-cross').style.transform = "rotateZ(180deg)";
 }
