@@ -1,3 +1,2 @@
 <?php
-    $mysql = new mysqli('localhost', 'root', 'root', 'poklykyaru')
-?>
+    $mysql = new mysqli('localhost', 'root', 'root', 'poklykyaru');

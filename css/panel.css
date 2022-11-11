@@ -65,7 +65,6 @@
 }
 .product-option:hover{
 	box-shadow: -3px -3px 8px #2a373d;
-	transform: scale(1.02);
 	transition: .4s;
 }
 .product-option > h1{

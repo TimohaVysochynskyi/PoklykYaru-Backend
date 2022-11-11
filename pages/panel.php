@@ -23,8 +23,8 @@ $eCost = $_POST['e-cost'];
 $id = $_COOKIE['editing-started'];
 
 if (isset($_POST['add-product'])) {
-	$mysql->query("INSERT INTO `product` (`name`, `description`, `cost`) 
-        	VALUES ('$aName', '$aDescription', '$aCost')");
+	$mysql->query("INSERT INTO `product` (`name`, `description`, `cost`, `heart`) 
+        	VALUES ('$aName', '$aDescription', '$aCost', 0)");
 }
 if (isset($_POST['delete-product'])) {
 	$mysql->query("DELETE FROM `product` WHERE `name` = '$dName' AND `id` = '$dCode'");
@@ -52,6 +52,11 @@ $productsCount = $data->num_rows;
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/panel.css">
 	<link rel="stylesheet" href="../css/merch.css">
+	<style>
+		.container {
+			height: auto;
+		}
+	</style>
 </head>
 
 <body>
@@ -67,12 +72,11 @@ $productsCount = $data->num_rows;
 			<? if ($_COOKIE['editing-started'] != '') : ?>
 				<div class="product-coop-window" style="display: flex; position: fixed;">
 					<form action="#" method="post" class="product-coop-form">
-						<a href="./panel.php" class="product-coop-cross" onclick=closePopUp() id="product-coop-cross">+</a>
 						<h2 class="product-coop-title">Редагування мерчу</h1>
 							<input type="text" class="form-control" name="e-name" placeholder="Нова назва">
 							<textarea name="e-description" class="form-control" placeholder="Новий опис"></textarea>
 							<input type="number" class="form-control" name="e-cost" placeholder="Нові монейс (грн)">
-							<button type="submit" class="form-button" name="confirm-edit-product">Підтвердити</button>
+							<button type="submit" class="form-button" name="confirm-edit-product">Підтвердити/Відмінити</button>
 					</form>
 				</div>
 			<? endif; ?>
@@ -106,7 +110,7 @@ $productsCount = $data->num_rows;
 				</a>
 			</div>
 			<hr style="width: 100vw; border: 1.5px solid #2a373d; background-color: #2a373d;">
-			<div class="product-list-wrapper">
+			<div class="product-list-wrapper" style="margin: 30px;">
 				<?php
 				if ($productsCount > 0) {
 					foreach ($data as $product) {
@@ -129,7 +133,38 @@ $productsCount = $data->num_rows;
 						}
 					}
 				} else {
-					echo '<h1>Ше нічо тут немає</h1>';
+					echo '<h1>Ше нема продуктів. ДОДАЙ ПРЯМО ЗАРАЗ, АУ!!!!!!</h1>';
+				}
+				?>
+			</div>
+			<hr style="width: 100vw; border: 1.5px solid #2a373d; background-color: #2a373d;">
+			<div class="product-list-wrapper" style="margin: 30px;">
+				<?php
+				$data = $mysql->query("SELECT * FROM `product-feedback`");
+				$feedbackCount = $data->num_rows;
+				if ($feedbackCount > 0) {
+					foreach ($data as $feedback) {
+						$id = $feedback['id'];
+						$pName = $feedback['pname'];
+						$fName = $feedback['fname'];
+						$text = $feedback['text'];
+						$email = $feedback['email'];
+						echo '<form action="#" method="post">';
+						echo '<div class="product">';
+						echo '<p class="product-el">Товар: ' . $pname . '</p>';
+						echo '<p class="product-el">Ім\'я автора: ' . $fName . '</p>';
+						echo '<p class="product-el">Відгук: ' . $text . '</p>';
+						echo '<p class="product-el">Мило: ' . $email . '</p>';
+						echo '<button class="product-buy-btn" name="delete-feedback-btn-' . $id . '">Видалити цю фігню</button>';
+						echo '</div>';
+						echo '</form>';
+						if (isset($_POST['delete-feedback-btn-' . $id])) {
+							$mysql->query("DELETE FROM `product-feedback` WHERE `id` = '$id'");
+							header("Location: ./panel.php");
+						}
+					}
+				} else {
+					echo '<h1>Ше нема порад :((((((( Я сумний, зате хост веселий, шо лишні 10кб його не нагружають</h1>';
 				}
 				$mysql->close();
 				?>
