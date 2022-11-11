@@ -151,7 +151,7 @@ $productsCount = $data->num_rows;
 						$email = $feedback['email'];
 						echo '<form action="#" method="post">';
 						echo '<div class="product">';
-						echo '<p class="product-el">Товар: ' . $pname . '</p>';
+						echo '<p class="product-el">Товар: ' . $pName . '</p>';
 						echo '<p class="product-el">Ім\'я автора: ' . $fName . '</p>';
 						echo '<p class="product-el">Відгук: ' . $text . '</p>';
 						echo '<p class="product-el">Мило: ' . $email . '</p>';
