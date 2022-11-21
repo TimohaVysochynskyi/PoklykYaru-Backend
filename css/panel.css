@@ -85,6 +85,7 @@
 	width: 100vw;
 	background-color: rgba(0, 0, 0, 0.9);
 	display: none;
+	z-index: 3;
 }
 .product-coop-form{
 	min-width: 330px;
@@ -120,6 +121,7 @@
 .product-list-wrapper{
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 @media screen and (max-width: 769px){
@@ -131,8 +133,5 @@
 		height: auto;
 		width: 100vw;
 		justify-content: center;
-	}
-	.product-list-wrapper{
-		flex-wrap: wrap;
 	}
 }

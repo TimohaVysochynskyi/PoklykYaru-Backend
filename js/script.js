@@ -186,8 +186,6 @@ function showEventList() {
     }
 }
 
-
-
 function addProduct(){
 	$('#add-product').fadeIn(500);
 	document.getElementById('add-product').style.display = "flex";
@@ -202,4 +200,53 @@ function closePopUp(){
 	$('#delete-product').fadeOut("fast");
     $('#edit-product').fadeOut("fast");
 	document.getElementById('product-coop-cross').style.transform = "rotateZ(180deg)";
+}
+showNew();
+function showNew() { 
+    $('#new').fadeIn("slow");
+    $('#clothes').fadeOut("fast");
+    $('#stickers').fadeOut("fast");
+    $('#books').fadeOut("fast");
+    $('#flags').fadeOut("fast");
+    document.querySelector("#merch-page-title").innerText = "новинки";
+}
+function showClothes() { 
+    $('#new').fadeOut("fast");
+    $('#clothes').fadeIn("slow");
+    $('#stickers').fadeOut("fast");
+    $('#books').fadeOut("fast");
+    $('#flags').fadeOut("fast");
+    document.querySelector("#merch-page-title").innerText = "одяг";
+}
+function showStickers() { 
+    $('#new').fadeOut("fast");
+    $('#clothes').fadeOut("fast");
+    $('#stickers').fadeIn("slow");
+    $('#books').fadeOut("fast");
+    $('#flags').fadeOut("fast");
+    document.querySelector("#merch-page-title").innerText = "стікери";
+}
+function showBooks() { 
+    $('#new').fadeOut("fast");
+    $('#clothes').fadeOut("fast");
+    $('#stickers').fadeOut("fast");
+    $('#books').fadeIn("slow");
+    $('#flags').fadeOut("fast");
+    document.querySelector("#merch-page-title").innerText = "книги";
+}
+function showFlags() { 
+    $('#new').fadeOut("fast");
+    $('#clothes').fadeOut("fast");
+    $('#stickers').fadeOut("fast");
+    $('#books').fadeOut("fast");
+    $('#flags').fadeIn("slow");
+    document.querySelector("#merch-page-title").innerText = "прапори";
+}
+
+function showDetails() { 
+    $('#product-desc').fadeIn("slow");
+    document.getElementById('product-desc').style.display = "flex";
+}
+function closeDetails(){ 
+    $('#product-desc').fadeOut("fast");
 }

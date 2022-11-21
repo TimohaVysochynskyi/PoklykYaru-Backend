@@ -14,20 +14,29 @@ $aName = $_POST['a-name'];
 $aDescription = $_POST['a-description'];
 $aCost = $_POST['a-cost'];
 
-$dName = $_POST['d-name'];
 $dCode = $_POST['d-code'];
 
 $eName = $_POST['e-name'];
 $eDescription = $_POST['e-description'];
 $eCost = $_POST['e-cost'];
 $id = $_COOKIE['editing-started'];
+$aFilename = $_FILES['a-image']["name"];
+$aTempname = $_FILES['a-image']["tmp_name"];
+$folder = "../temp/" . $aFilename;
 
 if (isset($_POST['add-product'])) {
-	$mysql->query("INSERT INTO `product` (`name`, `description`, `cost`, `heart`) 
-        	VALUES ('$aName', '$aDescription', '$aCost', 0)");
+
+	$mysql->query("INSERT INTO `product` (`name`, `description`, `cost`, `heart`, `image`) 
+        	VALUES ('$aName', '$aDescription', '$aCost', 0, '$aFilename')");
+
+	if (move_uploaded_file($aTempname, $folder)) {
+		echo "<h3>  Image uploaded successfully!</h3>";
+	} else {
+		echo "<h3>  Failed to upload image!</h3>";
+	}
 }
 if (isset($_POST['delete-product'])) {
-	$mysql->query("DELETE FROM `product` WHERE `name` = '$dName' AND `id` = '$dCode'");
+	$mysql->query("DELETE FROM `product` WHERE `id` = '$dCode'");
 }
 if (isset($_POST['confirm-edit-product'])) {
 	$mysql->query("UPDATE `product` 
@@ -61,6 +70,7 @@ $productsCount = $data->num_rows;
 
 <body>
 	<main class="container">
+		<a href="./merch.php">Merch</a>
 		<?php if (empty($_SESSION['pin-confirmed'])) : ?>
 			<form action="#" method="post" class="pin-form">
 				<input type="password" class="form-control" name="pin" placeholder="Без пін коду не пущу!">
@@ -81,12 +91,13 @@ $productsCount = $data->num_rows;
 				</div>
 			<? endif; ?>
 			<div class="product-coop-window" id='add-product'>
-				<form action="#" method="post" class="product-coop-form">
+				<form action="#" method="post" class="product-coop-form" enctype="multipart/form-data">
 					<a href="#" class="product-coop-cross" onclick=closePopUp() id='product-coop-cross'>+</a>
 					<h2 class="product-coop-title">Додавання нового мерчу</h1>
 						<input type="text" class="form-control" name="a-name" placeholder="Назва нової бази">
 						<textarea name="a-description" class="form-control" placeholder="Опис цієї найкрутішої в світі мерчинки"></textarea>
 						<input type="number" class="form-control" name="a-cost" placeholder="Скіки монейс (грн)">
+						<input type="file" class="form-control" name="a-image" placeholder="Картинка">
 						<button type="submit" class="form-button" name="add-product">Додати</button>
 				</form>
 			</div>
@@ -95,7 +106,6 @@ $productsCount = $data->num_rows;
 				<form action="#" method="post" class="product-coop-form">
 					<a href="#" class="product-coop-cross" onclick=closePopUp() id='product-coop-cross'>+</a>
 					<h2 class="product-coop-title">Видалення мерчу</h2>
-					<input type="text" class="form-control" name="d-name" placeholder="Назва товару">
 					<input type="number" class="form-control" name="d-code" placeholder="Ідентифікаційний код">
 					<button type="submit" class="form-button" name="delete-product">Видалити</button>
 				</form>
@@ -118,8 +128,10 @@ $productsCount = $data->num_rows;
 						$name = $product['name'];
 						$description = $product['description'];
 						$cost = $product['cost'];
+						$image = $product['image'];
 						echo '<form action="#" method="post">';
 						echo '<div class="product">';
+						echo '<img class="product-image" src="../temp/' . $image . '">';
 						echo '<p class="product-el">' . $name . '</p>';
 						echo '<p class="product-el">' . $description . '</p>';
 						echo '<p class="product-el">' . $cost . ' гривнів</p>';

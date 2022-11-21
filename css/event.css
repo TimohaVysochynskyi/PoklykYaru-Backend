@@ -39,7 +39,7 @@
 }
 .event__link {
     text-decoration: none;
-    font-weight: 700;
+    fotn-weight: 700;
     letter-spacing: .5px;
     background-color: #293c43d0;
     padding: 10px;
@@ -48,17 +48,15 @@
     justify-content: center;
     border-radius: 22px;
     width: 100%;
-    border-color: #1b1c1d;
     height: 100%;
-    transition: .5s
+    transition: .3s
 }
 .event__link:hover {
-    box-shadow: 0 0 20px #293c43;
-    font-size: 18px;
-    border-radius: 100px;
-    border: 3px solid #293c43;
-    background-color: #293c43ef;
-    transition: .45s
+    box-shadow: 0 0 2px #293c43;
+    font-size: 20px;
+    border-radius: 30px;
+    background-color: #293c43d0;
+    transition: .35s
 }
 
 .event__list-wrapper {

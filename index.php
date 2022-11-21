@@ -1,8 +1,9 @@
 <?php
-    require './php/blocks.php';
+require './php/blocks.php';
 ?>
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
     <link rel="icon" type="image/x-icon" href="./images/header&footer/logo.ico">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 
     <!--Preloader-->
@@ -24,12 +26,9 @@
         <section class="header__registration">
             <div class="header__register-timer-wrapper">
                 <div class="header__register-timer">
-                    <span> <span id="days" class="header__register-timer-text">000</span><span
-                            class="header__register-timer-text">ДН. </span> </span>
-                    <span> <span id="hours" class="header__register-timer-text">00</span><span
-                            class="header__register-timer-text">ГОД. </span> </span>
-                    <span> <span id="minutes" class="header__register-timer-text">00</span><span
-                            class="header__register-timer-text">ХВ. </span> </span>
+                    <span> <span id="days" class="header__register-timer-text">000</span><span class="header__register-timer-text">ДН. </span> </span>
+                    <span> <span id="hours" class="header__register-timer-text">00</span><span class="header__register-timer-text">ГОД. </span> </span>
+                    <span> <span id="minutes" class="header__register-timer-text">00</span><span class="header__register-timer-text">ХВ. </span> </span>
                     <img src="./images/header&footer/header-arrow.png" class="header__register-img">
                     <h1 class="header__register-title">РЕЄСТРАЦІЮ НА НОВУ ЗМІНУ БУДЕ ВІДКРИТО ЧЕРЕЗ</h1>
                 </div>
@@ -89,7 +88,8 @@
         <!--Short feedback block-->
         <div class="feedback-wrapper">
             <div class="default-title__wrapper">
-                <h2 class="default-title">ВІДГУКИ</h2><hr>
+                <h2 class="default-title">ВІДГУКИ</h2>
+                <hr>
             </div>
             <div class="feedback" id="feedback">
                 <div class="feedback__item wow fadeInLeft">
@@ -124,7 +124,7 @@
                     <div class="feedback__item-col"><img src="./images/feedback/feedback-nadia.png" class="feedback__item-img"></div>
                     <div class="feedback__item-col">
                         <h4 class="feedback__item-title">НАДІЯ ЗАМРИГА<br><span>мама подруги Волинь</span></h4>
-                        <p class="feedback__item-text">&nbspЇї перша зміна на таборі була цікавою, складною, емоційною, випробувальною. Не передати мій подив, коли на половині моєї дороги до Черкас вона подзвонила і сказала, що хоче залишитися ще на одну зміну! Друга зміна, під час якої моя Волинь стала ройовою, ще більше зміцнила її і загартувала характер. Систематизувався в її поглядах національний дух, поглибилися знання з історії країни. Вона з надзвичайним трепетом читала одразу придбану після табору книгу «Холодний Яр». 
+                        <p class="feedback__item-text">&nbspЇї перша зміна на таборі була цікавою, складною, емоційною, випробувальною. Не передати мій подив, коли на половині моєї дороги до Черкас вона подзвонила і сказала, що хоче залишитися ще на одну зміну! Друга зміна, під час якої моя Волинь стала ройовою, ще більше зміцнила її і загартувала характер. Систематизувався в її поглядах національний дух, поглибилися знання з історії країни. Вона з надзвичайним трепетом читала одразу придбану після табору книгу «Холодний Яр».
                             Саме донька навчила мене і пояснила, як виконується Державний гімн України. Під час співу притискаємо до серця не долоню, а кулак. Зерна української ідеї, які пояснені командою «Поклик Яру», я впевнена, зростуть!</p>
                     </div>
                 </div>
@@ -138,7 +138,8 @@
                 <div class="feedback__gradient"></div>
             </div>
             <div class="default-title__wrapper">
-                <a href="./pages/feedback.html#feedback-page" id="showfeedbackbtn" class="default-title feedback__btn">БІЛЬШЕ ВІДГУКІВ</a><hr>
+                <a href="./pages/feedback.html#feedback-page" id="showfeedbackbtn" class="default-title feedback__btn">БІЛЬШЕ ВІДГУКІВ</a>
+                <hr>
             </div>
         </div>
 
@@ -157,16 +158,12 @@
             <div class="footer__col">
                 <nav class="footer__nav">
                     <ul class="footer__list">
-                        <li><a href="https://www.youtube.com/channel/UCROFrx6_3YVPx2pKHyY8C2w" class="footer__link"><img
-                                    src="./images/header&footer/yt-link.png" alt=""></a></li>
-                        <li><a href="https://www.tiktok.com/@pokluk.yary?_t=8VGQqhNHl7G&_r=1" class="footer__link"><img
-                                    src="./images/header&footer/tt-link.png" alt=""></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCROFrx6_3YVPx2pKHyY8C2w" class="footer__link"><img src="./images/header&footer/yt-link.png" alt=""></a></li>
+                        <li><a href="https://www.tiktok.com/@pokluk.yary?_t=8VGQqhNHl7G&_r=1" class="footer__link"><img src="./images/header&footer/tt-link.png" alt=""></a></li>
                         <li><a href="https://t.me/PoklykYaru" class="footer__link">
                                 <img src="./images/header&footer/tg-link.png" alt=""></a></li>
-                        <li><a href="https://www.facebook.com/poklyk.yaru" class="footer__link"><img
-                                    src="./images/header&footer/fc-link.png" alt=""></a></li>
-                        <li><a href="https://www.instagram.com/poklyk.yaru/" class="footer__link"><img
-                                    src="./images/header&footer/inst-link.png" alt=""></a></li>
+                        <li><a href="https://www.facebook.com/poklyk.yaru" class="footer__link"><img src="./images/header&footer/fc-link.png" alt=""></a></li>
+                        <li><a href="https://www.instagram.com/poklyk.yaru/" class="footer__link"><img src="./images/header&footer/inst-link.png" alt=""></a></li>
                     </ul>
                 </nav>
             </div>
@@ -177,21 +174,23 @@
             </div>
         </div>
         <div class="footer-block">
-            <h3 class="footer__license">ГО “Поклик яру”    2020-2021. Всі права захищені</h3>
+            <h3 class="footer__license">ГО “Поклик яру” 2020-2021. Всі права захищені</h3>
             <h3 class="footer__license">Дизайн сайту Olha Skarzhynets, графічний дизайн Катя Вспишка, верстка сайту Дон</h3>
         </div>
-		<a href="./pages/merch.php">mdfkdslmnfdsl</a>
+        <a href="./pages/panel.php">Panel</a>
     </footer>
 
     <!--Scripts-->
     <script>
-        window.onload = setTimeout(function(){
+        window.onload = setTimeout(function() {
             $("#preloader").slideUp("slow");
             document.querySelector('body').style.overflow = "scroll";
         }, 2500);
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/script.js"></script> <script src="./js/parallax.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/parallax-rotate.js"></script>
 </body>
+
 </html>
