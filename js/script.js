@@ -250,3 +250,5 @@ function showDetails() {
 function closeDetails(){ 
     $('#product-desc').fadeOut("fast");
 }
+
+

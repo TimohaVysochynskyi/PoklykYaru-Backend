@@ -1,0 +1,67 @@
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+@import url(main.css);
+* {
+    font-family: 'Mulish', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #d6d0ba;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden !important;
+}
+body{
+    background-color: #72838A;
+}
+
+/**** HEADER ****/
+
+.header{
+    padding: 25px 0px;
+    width: 100vw;
+    min-height: 8vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.header__nav{
+    width: 90vw;
+    background-color: #5E7178;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
+}
+.header__list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+.header__item{
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+}
+.header__link{
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.header__link>img{
+    transform: rotate(90deg);
+    width: 50px;
+}
+
+
+
+/**** MESSAGE BOARD ****/
+
+.board-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

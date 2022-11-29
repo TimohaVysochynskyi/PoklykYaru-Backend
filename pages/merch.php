@@ -1,5 +1,6 @@
 <?php
 require '../php/blocks.php';
+require '../php/connect.php';
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +10,7 @@ require '../php/blocks.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Поклик Яру | Відгуки</title>
+    <title>Поклик Яру | Мерч</title>
     <link rel="icon" type="image/x-icon" href="../images/header&footer/logo.ico">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/event.css">
@@ -42,8 +43,7 @@ require '../php/blocks.php';
 
     <main class="container">
         <div class="product__desc-wrapper" id="product-desc">
-            <a href="javascript:void(0)" class="product__desc-back" onclick="closeDetails()"><img src="../images/events/event-list-arrow.png"
-                    alt="Назад"></a>
+            <a href="javascript:void(0)" class="product__desc-back" onclick="closeDetails()"><img src="../images/events/event-list-arrow.png" alt="Назад"></a>
             <div class="product__desc">
                 <div class="product__desc-row">
                     <div class="product__desc-col">
@@ -78,74 +78,134 @@ require '../php/blocks.php';
         </div>
         <div class="product__list-wrapper" id="merchCategories">
             <ul class="product__list" id="new">
-                <li class="product__item">
-                    <div class="product__item-row">
-                        <img src="../test/phone.png" alt="Картинка товару" class="product__item-image">
-                    </div>
-                    <div class="product__item-row">
-                        <h2 class="product__item-name">Телефон</h2>
-                        <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
-                            <p class="product__item-price">999<span>$</span></p>
-                            <a href="javascript:void(0)" class="product__item-btn" onclick="showDetails()">купити</a>
-                        </div>
-                    </div>
-                </li>
+                <?php
+                foreach ($products as $productID => $attributes) {
+                    if ($attributes['type'] == "new") {
+                        echo '
+                            <li class="product__item">
+                                <div class="product__item-row">
+                                    <img src="../test/' . $attributes['image'] . '" alt="Картинка товару" class="product__item-image">
+                                </div>
+                                <div class="product__item-row">
+                                    <h2 class="product__item-name">' . $attributes['title'] . '</h2>
+                                    <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
+                                        <p class="product__item-price">' . $attributes['price'] . '<span>грн</span></p>
+                                        <a href="javascript:void(0)" id="show-details-btn-' . $attributes['id'] . '" class="product__item-btn" onclick="showDetails()">купити</a>
+                                        <form action="../assets/stripeIPN.php?id=' . $productID . '" method="POST">
+                                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="' . $stripeDetails['publishableKey'] . '" data-amount="' . $attributes['price'] * 100 . '" data-name="' . $attributes['title'] . '" data-description="Widget" data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-locale="auto">
+                                            </script>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                        ';
+                    }
+                }
+                ?>
             </ul>
             <ul class="product__list" id="clothes">
-                <li class="product__item">
-                    <div class="product__item-row">
-                        <img src="../test/tshirt.png" alt="Картинка товару" class="product__item-image">
-                    </div>
-                    <div class="product__item-row">
-                        <h2 class="product__item-name">Футболка</h2>
-                        <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
-                            <p class="product__item-price">999<span>$</span></p>
-                            <a href="javascript:void(0)" class="product__item-btn" onclick="showDetails()">купити</a>
-                        </div>
-                    </div>
-                </li>
+                <?php
+                foreach ($products as $productID => $attributes) {
+                    if ($attributes['type'] == "clothe") {
+                        echo '
+                            <li class="product__item">
+                                <div class="product__item-row">
+                                    <img src="../test/' . $attributes['image'] . '" alt="Картинка товару" class="product__item-image">
+                                </div>
+                                <div class="product__item-row">
+                                    <h2 class="product__item-name">' . $attributes['title'] . '</h2>
+                                    <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
+                                        <p class="product__item-price">' . $attributes['price'] . '<span>грн</span></p>
+                                        <a href="javascript:void(0)" class="product__item-btn" onclick="showDetails()">купити</a>
+                                        <form action="../assets/stripeIPN.php?id=' . $productID . '" method="POST">
+                                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="' . $stripeDetails['publishableKey'] . '" data-amount="' . $attributes['price'] * 100 . '" data-name="' . $attributes['title'] . '" data-description="Widget" data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-locale="auto">
+                                            </script>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                        ';
+                    }
+                }
+                ?>
             </ul>
             <ul class="product__list" id="stickers">
-                <li class="product__item">
-                    <div class="product__item-row">
-                        <img src="../test/stickers.png" alt="Картинка товару" class="product__item-image">
-                    </div>
-                    <div class="product__item-row">
-                        <h2 class="product__item-name">Стікери</h2>
-                        <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
-                            <p class="product__item-price">999<span>$</span></p>
-                            <a href="javascript:void(0)" class="product__item-btn" onclick="showDetails()">купити</a>
-                        </div>
-                    </div>
-                </li>
+                <?php
+                foreach ($products as $productID => $attributes) {
+                    if ($attributes['type'] == "sticker") {
+                        echo '
+                            <li class="product__item">
+                                <div class="product__item-row">
+                                    <img src="../test/' . $attributes['image'] . '" alt="Картинка товару" class="product__item-image">
+                                </div>
+                                <div class="product__item-row">
+                                    <h2 class="product__item-name">' . $attributes['title'] . '</h2>
+                                    <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
+                                        <p class="product__item-price">' . $attributes['price'] . '<span>грн</span></p>
+                                        <a href="javascript:void(0)" class="product__item-btn" onclick="showDetails()">купити</a>
+                                        <form action="../assets/stripeIPN.php?id=' . $productID . '" method="POST">
+                                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="' . $stripeDetails['publishableKey'] . '" data-amount="' . $attributes['price'] * 100 . '" data-name="' . $attributes['title'] . '" data-description="Widget" data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-locale="auto">
+                                            </script>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                        ';
+                    }
+                }
+                ?>
             </ul>
             <ul class="product__list" id="books">
-                <li class="product__item">
-                    <div class="product__item-row">
-                        <img src="../test/book.png" alt="Картинка товару" class="product__item-image">
-                    </div>
-                    <div class="product__item-row">
-                        <h2 class="product__item-name">Книга</h2>
-                        <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
-                            <p class="product__item-price">999<span>$</span></p>
-                            <a href="javascript:void(0)" class="product__item-btn" onclick="showDetails()">купити</a>
-                        </div>
-                    </div>
-                </li>
+                <?php
+                foreach ($products as $productID => $attributes) {
+                    if ($attributes['type'] == "book") {
+                        echo '
+                            <li class="product__item">
+                                <div class="product__item-row">
+                                    <img src="../test/' . $attributes['image'] . '" alt="Картинка товару" class="product__item-image">
+                                </div>
+                                <div class="product__item-row">
+                                    <h2 class="product__item-name">' . $attributes['title'] . '</h2>
+                                    <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
+                                        <p class="product__item-price">' . $attributes['price'] . '<span>грн</span></p>
+                                        <a href="javascript:void(0)" class="product__item-btn" onclick="showDetails()">купити</a>
+                                        <form action="../assets/stripeIPN.php?id=' . $productID . '" method="POST">
+                                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="' . $stripeDetails['publishableKey'] . '" data-amount="' . $attributes['price'] * 100 . '" data-name="' . $attributes['title'] . '" data-description="Widget" data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-locale="auto">
+                                            </script>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                        ';
+                    }
+                }
+                ?>
             </ul>
             <ul class="product__list" id="flags">
-                <li class="product__item">
-                    <div class="product__item-row">
-                        <img src="../test/flag.png" alt="Картинка товару" class="product__item-image">
-                    </div>
-                    <div class="product__item-row">
-                        <h2 class="product__item-name">Прапор</h2>
-                        <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
-                            <p class="product__item-price">999<span>$</span></p>
-                            <a href="javascript:void(0)" class="product__item-btn" onclick="showDetails()">купити</a>
-                        </div>
-                    </div>
-                </li>
+                <?php
+                foreach ($products as $productID => $attributes) {
+                    if ($attributes['type'] == "flag") {
+                        echo '
+                            <li class="product__item">
+                                <div class="product__item-row">
+                                    <img src="../test/' . $attributes['image'] . '" alt="Картинка товару" class="product__item-image">
+                                </div>
+                                <div class="product__item-row">
+                                    <h2 class="product__item-name">' . $attributes['title'] . '</h2>
+                                    <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
+                                        <p class="product__item-price">' . $attributes['price'] . '<span>грн</span></p>
+                                        <a href="javascript:void(0)" class="product__item-btn" onclick="showDetails()">купити</a>
+                                        <form action="../assets/stripeIPN.php?id=' . $productID . '" method="POST">
+                                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="' . $stripeDetails['publishableKey'] . '" data-amount="' . $attributes['price'] * 100 . '" data-name="' . $attributes['title'] . '" data-description="Widget" data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-locale="auto">
+                                            </script>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                        ';
+                    }
+                }
+                ?>
             </ul>
         </div>
     </main>
@@ -158,6 +218,10 @@ require '../php/blocks.php';
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../js/script.js"></script>
     <script src="../js/parallax-move.js"></script>
+    <script>
+        document.querySelector('.stripe-button-el > span').style.fontSize = "0px";
+        document.querySelector('.stripe-button-el').innerText = "купити";
+    </script>
 </body>
 
 </html>

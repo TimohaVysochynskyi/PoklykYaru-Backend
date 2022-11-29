@@ -13,6 +13,7 @@ if (isset($_POST['pin-submit'])) {
 $aName = $_POST['a-name'];
 $aDescription = $_POST['a-description'];
 $aCost = $_POST['a-cost'];
+$aType = $_POST['a-type'];
 
 $dCode = $_POST['d-code'];
 
@@ -26,8 +27,8 @@ $folder = "../temp/" . $aFilename;
 
 if (isset($_POST['add-product'])) {
 
-	$mysql->query("INSERT INTO `product` (`name`, `description`, `cost`, `heart`, `image`) 
-        	VALUES ('$aName', '$aDescription', '$aCost', 0, '$aFilename')");
+	$mysql->query("INSERT INTO `product` (`name`, `description`, `cost`, `heart`, `image`, `type`) 
+        	VALUES ('$aName', '$aDescription', '$aCost', 0, '$aFilename', '$aType')");
 
 	if (move_uploaded_file($aTempname, $folder)) {
 		echo "<h3>  Image uploaded successfully!</h3>";
@@ -60,7 +61,7 @@ $productsCount = $data->num_rows;
 	<title>Адмін панель | Поклик Яру</title>
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/panel.css">
-	<link rel="stylesheet" href="../css/merch.css">
+	<link rel="stylesheet" href="../css/merch2.css">
 	<style>
 		.container {
 			height: auto;
@@ -97,6 +98,14 @@ $productsCount = $data->num_rows;
 						<input type="text" class="form-control" name="a-name" placeholder="Назва нової бази">
 						<textarea name="a-description" class="form-control" placeholder="Опис цієї найкрутішої в світі мерчинки"></textarea>
 						<input type="number" class="form-control" name="a-cost" placeholder="Скіки монейс (грн)">
+						<label for="a-type" class="product-coop__type" style="float: left;">Тип товару: </label>
+						<select name="a-type" class="product-coop__type product-type">
+							<option value="new">Новинка</option>
+							<option value="clothe">Одяг</option>
+							<option value="sticker">Стікери</option>
+							<option value="book">Книги</option>
+							<option value="flag">прапор</option>
+						</select>
 						<input type="file" class="form-control" name="a-image" placeholder="Картинка">
 						<button type="submit" class="form-button" name="add-product">Додати</button>
 				</form>
@@ -149,7 +158,7 @@ $productsCount = $data->num_rows;
 				}
 				?>
 			</div>
-			<hr style="width: 100vw; border: 1.5px solid #2a373d; background-color: #2a373d;">
+			<!--<hr style="width: 100vw; border: 1.5px solid #2a373d; background-color: #2a373d;">
 			<div class="product-list-wrapper" style="margin: 30px;">
 				<?php
 				$data = $mysql->query("SELECT * FROM `product-feedback`");
@@ -180,7 +189,7 @@ $productsCount = $data->num_rows;
 				}
 				$mysql->close();
 				?>
-			</div>
+			</div>-->
 		<? endif; ?>
 	</main>
 

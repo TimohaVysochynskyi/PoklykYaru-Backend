@@ -10,7 +10,6 @@
         let _mouseY = e.clientY;
         let _image = `${0 + (_mouseX - _w) * 0.015}px, ${0 + (_mouseY - _h) * 0.015}px`;
         let x = `${_image}`;
-        console.log(x);
         elem.style.transform = `translate(${x})`;
     }
 
