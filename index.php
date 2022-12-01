@@ -138,7 +138,7 @@ require './php/blocks.php';
                 <div class="feedback__gradient"></div>
             </div>
             <div class="default-title__wrapper">
-                <a href="./pages/feedback.html#feedback-page" id="showfeedbackbtn" class="default-title feedback__btn">БІЛЬШЕ ВІДГУКІВ</a>
+                <a href="./pages/feedback.php#feedback-page" id="showfeedbackbtn" class="default-title feedback__btn">БІЛЬШЕ ВІДГУКІВ</a>
                 <hr>
             </div>
         </div>
