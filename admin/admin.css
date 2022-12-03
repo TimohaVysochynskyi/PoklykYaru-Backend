@@ -64,11 +64,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 99vw;
+    width: 100vw;
     min-height: 10vh;
     background-color: #5E7178;
     border-radius: 10px 10px 0px 0px;
-    box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.3)
+    box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: 0;
 }
 .footer > p{
     font-size: 18px;
