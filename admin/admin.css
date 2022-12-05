@@ -23,13 +23,25 @@ body{
     min-height: 8vh;
     height: auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .header__nav{
+    margin: 10px 0px;
     width: 90vw;
     background-color: #5E7178;
     border-radius: 10px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
+}
+.header__nav:last-child{
+    width: 80vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.header__nav:last-child > .header__list > .header__item{
+    margin: 0px 50px;
 }
 .header__list{
     display: flex;
@@ -93,7 +105,7 @@ body{
 .board{
     margin: 20px 0px;
     width: 70vw;
-    min-height: 33vh;
+    min-height: 40vh;
     height: auto;
     background-color: #5E7178;
     border-radius: 15px 2px;
@@ -221,3 +233,25 @@ body{
     border-radius: 6px;
     transition: .3s;
 }
+
+
+
+/**** PAGES ****/
+
+.pages-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.page{
+    width: 25%;
+    margin: 30px; 
+    background-color: #5E7178;
+}
+.page__img{
+    width: 100%;
+}
+.
