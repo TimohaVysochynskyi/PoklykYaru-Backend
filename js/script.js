@@ -3,14 +3,14 @@ new WOW().init(); //Element loading animation
 if(window.screen.width > 968){
     $('.whoarewe').hover( function(){
         function textAnimate(){
-            document.getElementById('whoarewe-text').innerHTML = "Мета «Поклик Яру» - виховання відповідальної молоді. <br><br>Ми переконані, що це найкоротший шлях до процвітання і розвитку нашої Держави. <br><br>Наша команда — це свідома українська молодь, об'єднана цінностями Побратимства, Дисципліни та Патріотизму."
+            document.getElementById('whoarewe-text').style.width = "85%";
             document.getElementById('whoarewe-text').style.fontSize = "26px";
             document.getElementById('whoarewe-text').style.fontWeight = "600";
             document.getElementById('whoarewe-text').style.textAlign = "left";
             document.getElementById('whoarewe-text').style.transform = "translateX(-25vw)";
-            document.getElementById('whoarewe-text').style.width = "85%";
+            document.getElementById('whoarewe-text').innerHTML = "Мета «Поклик Яру» - виховання відповідальної молоді. <br><br>Ми переконані, що це найкоротший шлях до процвітання і розвитку нашої Держави. <br><br>Наша команда — це свідома українська молодь, об'єднана цінностями Побратимства, Дисципліни та Патріотизму."
         }
-        setTimeout(textAnimate, 400);
+        setTimeout(textAnimate, 1100);
         document.getElementById('whoarewe-img').style.transform = "translateX(60vw) scale(1.3)";
         document.getElementById('whoarewe-img').style.transition = "2s";
         document.getElementById('whoarewe-img').style.transitionTimingFunction = "ease";
@@ -21,14 +21,14 @@ if(window.screen.width > 968){
     });
     $('.whatarewedoing').hover( function(){
         function textAnimate(){
-            document.getElementById('whatarewedoing-text').innerHTML = "Наша модель виховання — це систематична і регулярна робота з молоддю протягом років. <br><br>Ми організовуємо:<br>Табори національно-патріотичного виховання. <br>Освітні, виховні, вишкільні, культурні, туристичні заходи.<br>Популяризуємо історичний регіон Холодний Яр.<br>Волонтерські заходи на підтримку Збройних Сил України"
             document.getElementById('whatarewedoing-text').style.fontSize = "26px";
             document.getElementById('whatarewedoing-text').style.fontWeight = "600";
             document.getElementById('whatarewedoing-text').style.textAlign = "left";
             document.getElementById('whatarewedoing-text').style.transform = "translateX(22vw)";
             document.getElementById('whatarewedoing-text').style.width = "80%";
+            document.getElementById('whatarewedoing-text').innerHTML = "Наша модель виховання — це систематична і регулярна робота з молоддю протягом років. <br><br>Ми організовуємо:<br>Табори національно-патріотичного виховання. <br>Освітні, виховні, вишкільні, культурні, туристичні заходи.<br>Популяризуємо історичний регіон Холодний Яр.<br>Волонтерські заходи на підтримку Збройних Сил України"
         }
-        setTimeout(textAnimate, 400);
+        setTimeout(textAnimate, 1100);
         document.getElementById('whatarewedoing-img').style.transform = "translateX(-60vw) scale(1.3)";
         document.getElementById('whatarewedoing-img').style.transition = "2s";
         document.getElementById('whatarewedoing-img').style.transitionTimingFunction = "ease";

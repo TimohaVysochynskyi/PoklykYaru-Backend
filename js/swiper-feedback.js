@@ -1,11 +1,15 @@
 let slidesPerView = 2;
 let rows = 2;
-if(window.screen.width > 968){
-    slidesPerView = 2;
-    rows = 2;
+
+if (window.screen.width > 1700){
+  slidesPerView = 2;
+  rows = 2;
+} else if (window.screen.width <= 1700){
+  slidesPerView = 1;
+  rows = 2;
 } else {
-    slidesPerView = 1;
-    rows = 1;
+  slidesPerView = 1;
+  rows = 1;
 }
 let swiper = new Swiper(".feedback-swiper", {
     slidesPerView: slidesPerView,

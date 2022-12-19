@@ -84,7 +84,7 @@
 
 .feedback-swiper {
     width: 90vw;
-    height: 95vh;
+    height: 80vh;
     margin: 50px 0
 }
 .feedback__item {
@@ -100,6 +100,11 @@
     justify-content: justify;
 }
 
+/*@media screen and (max-width: 1800px) {
+    .feedback__item{
+        height: 50vh;
+    }
+}*/
 @media screen and (max-width: 968px) {
     .zmi__item {
         width: 95%
@@ -110,6 +115,19 @@
     }
 
     .swiper-slide {
-        height: 100% !important
+        height: auto !important;
+    }
+    .swiper-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    .feedback-swiper{
+        height: 100vh;
+    }
+    .feedback__item-col:first-child{
+        height: 15%;
+    }
+    .feedback__item-text{
+        margin: 0px;
     }
 }
