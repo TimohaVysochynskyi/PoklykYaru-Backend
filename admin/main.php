@@ -1,3 +1,8 @@
+<?php
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +42,7 @@
             <form class="board__form" method="post" action="#">
                 <input type="text" name="name" class="board__form-name" placeholder="Псевдо">
                 <textarea name="text" class="board__form-text" placeholder="Повідомлення"></textarea>
-                <button type="submit" class="board__form-btn">Лест гоууу</button>
+                <button type="submit" name="board__form-btn" class="board__form-btn">Лест гоууу</button>
             </form>
         </div>
     </main>

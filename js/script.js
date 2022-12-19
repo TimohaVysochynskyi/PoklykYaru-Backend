@@ -243,12 +243,6 @@ function showFlags() {
     document.querySelector("#merch-page-title").innerText = "прапори";
 }
 
-function showDetails() { 
-    $('#product-desc').fadeIn("slow");
-    document.getElementById('product-desc').style.display = "flex";
-}
-function closeDetails(){ 
-    $('#product-desc').fadeOut("fast");
-}
+
 
 
