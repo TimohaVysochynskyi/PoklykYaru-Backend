@@ -1,6 +1,8 @@
 <?php
 require '../php/blocks.php';
 require '../php/connect.php';
+
+$data = $mysql->query("SELECT * FROM `product`");
 ?>
 
 <!DOCTYPE html>
@@ -43,18 +45,23 @@ require '../php/connect.php';
 
     <main class="container">
 
-        <?php foreach ($products as $productID => $attributes) {
+        <?php foreach ($data as $product) {
+            $id = $product['id'];
+            $name = $product['name'];
+            $description = $product['description'];
+            $price = $product['cost'];
+            $image = $product['image'];
             echo '
-            <div class="product__desc-wrapper" id="product-desc'.$attributes['id'].'">
-                <a href="javascript:void(0)" class="product__desc-back" onclick="closeDetails()"><img src="../images/events/event-list-arrow.png" alt="Назад"></a>
+            <div class="product__desc-wrapper" id="product-desc' . $id . '">
+                <a href="javascript:void(0)" class="product__desc-back" onclick="document.getElementById(\'product-desc' . $id . '\').style.display = \'none\'"><img src="../images/events/event-list-arrow.png" alt="Назад"></a>
                 <div class="product__desc">
                     <div class="product__desc-row">
                         <div class="product__desc-col">
-                            <img src="../test/'.$attributes['image'].'" alt="Картинка товару" id="parallax" class="product__desc-img">
+                            <img src="../test/' . $image . '" alt="Картинка товару" id="parallax" class="product__desc-img">
                         </div>
                         <div class="product__desc-col">
-                            <h2 class="product__desc-name">'.$attributes['title'].'</h2>
-                            <p class="product__desc-desc">&nbsp'.$attributes['description'].'</p>
+                            <h2 class="product__desc-name">' . $name . '</h2>
+                            <p class="product__desc-desc">&nbsp' . $description . '</p>
                         </div> <!-- Flex -->
                     </div>
                     <div class="product__desc-row">
@@ -67,10 +74,11 @@ require '../php/connect.php';
                             <!-- Загуглить як робляться ці вогники/зірочки -->
                         </div>
                         <div class="product__desc-col">
-                            <p class="product__item-price" style="font-size: 36px; color: #2a373d;">'.$attributes['price'].'<span style="color: #2a373d;">грн</span></p>
-                            <form action="../assets/stripeIPN.php?id=' . $productID . '" method="POST">
-                                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="' . $stripeDetails['publishableKey'] . '" data-amount="' . $attributes['price'] * 100 . '" data-name="' . $attributes['title'] . '" data-description="Widget" data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-locale="auto">
-                                </script>
+                            <p class="product__item-price" style="font-size: 36px; color: #2a373d;">' . $price . '<span style="color: #2a373d;">грн</span></p>
+                            <form action="../php/payform.php" method="post">
+                                <input type="hidden" name="name" value="' . $name . '">
+                                <input type="hidden" name="price" value="' . $price . '">
+                                <button type="submit" class="product__desc-btn">Гоу</button>
                             </form>
                         </div> <!-- Flex -->
                     </div>
@@ -86,18 +94,23 @@ require '../php/connect.php';
         <div class="product__list-wrapper" id="merchCategories">
             <ul class="product__list" id="new">
                 <?php
-                foreach ($products as $productID => $attributes) {
-                    if ($attributes['type'] == "new") {
+                foreach ($data as $product) {
+                    $id = $product['id'];
+                    $name = $product['name'];
+                    $price = $product['cost'];
+                    $image = $product['image'];
+                    $type = $product['type'];
+                    if ($type == "new") {
                         echo '
                             <li class="product__item">
                                 <div class="product__item-row">
-                                    <img src="../test/' . $attributes['image'] . '" alt="Картинка товару" class="product__item-image">
+                                    <img src="../test/' . $image . '" alt="Картинка товару" class="product__item-image">
                                 </div>
                                 <div class="product__item-row">
-                                    <h2 class="product__item-name">' . $attributes['title'] . '</h2>
+                                    <h2 class="product__item-name">' . $name . '</h2>
                                     <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
-                                        <p class="product__item-price">' . $attributes['price'] . '<span>грн</span></p>
-                                        <a href="javascript:void(0)" id="' . $attributes['id'] . '" class="product__item-btn" onclick="showDetails()">купити</a>
+                                        <p class="product__item-price">' . $price . '<span>грн</span></p>
+                                        <a href="javascript:void(0)" id="' . $id . '" class="product__item-btn" onclick="$(\'#product-desc' . $id . '\').fadeIn(); document.getElementById(\'product-desc' . $id . '\').style.display = \'flex\'">купити</a>
                                     </div>
                                 </div>
                             </li>
@@ -108,18 +121,23 @@ require '../php/connect.php';
             </ul>
             <ul class="product__list" id="clothes">
                 <?php
-                foreach ($products as $productID => $attributes) {
-                    if ($attributes['type'] == "clothe") {
+                foreach ($data as $product) {
+                    $id = $product['id'];
+                    $name = $product['name'];
+                    $price = $product['cost'];
+                    $image = $product['image'];
+                    $type = $product['type'];
+                    if ($type == "clothe") {
                         echo '
                             <li class="product__item">
                                 <div class="product__item-row">
-                                    <img src="../test/' . $attributes['image'] . '" alt="Картинка товару" class="product__item-image">
+                                    <img src="../test/' . $image . '" alt="Картинка товару" class="product__item-image">
                                 </div>
                                 <div class="product__item-row">
-                                    <h2 class="product__item-name">' . $attributes['title'] . '</h2>
+                                    <h2 class="product__item-name">' . $name . '</h2>
                                     <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
-                                        <p class="product__item-price">' . $attributes['price'] . '<span>грн</span></p>
-                                        <a href="javascript:void(0)" id="' . $attributes['id'] . '" class="product__item-btn" onclick="showDetails()">купити</a>
+                                        <p class="product__item-price">' . $price . '<span>грн</span></p>
+                                        <a href="javascript:void(0)" id="' . $id . '" class="product__item-btn" onclick="$(\'#product-desc' . $id . '\').fadeIn(); document.getElementById(\'product-desc' . $id . '\').style.display = \'flex\'">купити</a>
                                     </div>
                                 </div>
                             </li>
@@ -130,18 +148,23 @@ require '../php/connect.php';
             </ul>
             <ul class="product__list" id="stickers">
                 <?php
-                foreach ($products as $productID => $attributes) {
-                    if ($attributes['type'] == "sticker") {
+                foreach ($data as $product) {
+                    $id = $product['id'];
+                    $name = $product['name'];
+                    $price = $product['cost'];
+                    $image = $product['image'];
+                    $type = $product['type'];
+                    if ($type == "sticker") {
                         echo '
                             <li class="product__item">
                                 <div class="product__item-row">
-                                    <img src="../test/' . $attributes['image'] . '" alt="Картинка товару" class="product__item-image">
+                                    <img src="../test/' . $image . '" alt="Картинка товару" class="product__item-image">
                                 </div>
                                 <div class="product__item-row">
-                                    <h2 class="product__item-name">' . $attributes['title'] . '</h2>
+                                    <h2 class="product__item-name">' . $name . '</h2>
                                     <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
-                                        <p class="product__item-price">' . $attributes['price'] . '<span>грн</span></p>
-                                        <a href="javascript:void(0)" id="' . $attributes['id'] . '" class="product__item-btn" onclick="showDetails()">купити</a>
+                                        <p class="product__item-price">' . $price . '<span>грн</span></p>
+                                        <a href="javascript:void(0)" id="' . $id . '" class="product__item-btn" onclick="$(\'#product-desc' . $id . '\').fadeIn(); document.getElementById(\'product-desc' . $id . '\').style.display = \'flex\'">купити</a>
                                     </div>
                                 </div>
                             </li>
@@ -152,18 +175,23 @@ require '../php/connect.php';
             </ul>
             <ul class="product__list" id="books">
                 <?php
-                foreach ($products as $productID => $attributes) {
-                    if ($attributes['type'] == "book") {
+                foreach ($data as $product) {
+                    $id = $product['id'];
+                    $name = $product['name'];
+                    $price = $product['cost'];
+                    $image = $product['image'];
+                    $type = $product['type'];
+                    if ($type == "book") {
                         echo '
                             <li class="product__item">
                                 <div class="product__item-row">
-                                    <img src="../test/' . $attributes['image'] . '" alt="Картинка товару" class="product__item-image">
+                                    <img src="../test/' . $image . '" alt="Картинка товару" class="product__item-image">
                                 </div>
                                 <div class="product__item-row">
-                                    <h2 class="product__item-name">' . $attributes['title'] . '</h2>
+                                    <h2 class="product__item-name">' . $name . '</h2>
                                     <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
-                                        <p class="product__item-price">' . $attributes['price'] . '<span>грн</span></p>
-                                        <a href="javascript:void(0)" id="' . $attributes['id'] . '" class="product__item-btn" onclick="showDetails()">купити</a>
+                                        <p class="product__item-price">' . $price . '<span>грн</span></p>
+                                        <a href="javascript:void(0)" id="' . $id . '" class="product__item-btn" onclick="$(\'#product-desc' . $id . '\').fadeIn(); document.getElementById(\'product-desc' . $id . '\').style.display = \'flex\'">купити</a>
                                     </div>
                                 </div>
                             </li>
@@ -174,18 +202,23 @@ require '../php/connect.php';
             </ul>
             <ul class="product__list" id="flags">
                 <?php
-                foreach ($products as $productID => $attributes) {
-                    if ($attributes['type'] == "flag") {
+                foreach ($data as $product) {
+                    $id = $product['id'];
+                    $name = $product['name'];
+                    $price = $product['cost'];
+                    $image = $product['image'];
+                    $type = $product['type'];
+                    if ($type == "flag") {
                         echo '
                             <li class="product__item">
                                 <div class="product__item-row">
-                                    <img src="../test/' . $attributes['image'] . '" alt="Картинка товару" class="product__item-image">
+                                    <img src="../test/' . $image . '" alt="Картинка товару" class="product__item-image">
                                 </div>
                                 <div class="product__item-row">
-                                    <h2 class="product__item-name">' . $attributes['title'] . '</h2>
+                                    <h2 class="product__item-name">' . $name . '</h2>
                                     <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
-                                        <p class="product__item-price">' . $attributes['price'] . '<span>грн</span></p>
-                                        <a href="javascript:void(0)" id="' . $attributes['id'] . '" class="product__item-btn" onclick="showDetails()">купити</a>
+                                        <p class="product__item-price">' . $price . '<span>грн</span></p>
+                                        <a href="javascript:void(0)" id="' . $id . '" class="product__item-btn" onclick="$(\'#product-desc' . $id . '\').fadeIn(); document.getElementById(\'product-desc' . $id . '\').style.display = \'flex\'">купити</a>
                                     </div>
                                 </div>
                             </li>
@@ -206,24 +239,6 @@ require '../php/connect.php';
     <script src="../js/script.js"></script>
     <script src="../js/parallax-move.js"></script>
     <script>
-        document.querySelector('.stripe-button-el > span').style.fontSize = "0px";
-        document.querySelector('.stripe-button-el').innerText = "купити";
-
-        const buttons = document.getElementsByClassName("product__item-btn");
-        const buttonPressed = e => {
-            window.buttonID = e.target.id;
-        }
-        for (let button of buttons) {
-            button.addEventListener("click", buttonPressed);
-        }
-        
-        function showDetails() { 
-            $('#product-desc'+buttonID).fadeIn("slow");
-            document.getElementById('product-desc'+buttonID).style.display = "flex";
-        }
-        function closeDetails(){ 
-            $('.product__desc-wrapper').fadeOut("fast");
-        }
 
     </script>
 </body>

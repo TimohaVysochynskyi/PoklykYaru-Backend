@@ -1,34 +1,36 @@
 new WOW().init(); //Element loading animation
 
 if(window.screen.width > 968){
-    $('.whoarewe').hover( function(){
-        function textAnimate(){
-            document.getElementById('whoarewe-text').style.width = "85%";
-            document.getElementById('whoarewe-text').style.fontSize = "26px";
-            document.getElementById('whoarewe-text').style.fontWeight = "600";
-            document.getElementById('whoarewe-text').style.textAlign = "left";
-            document.getElementById('whoarewe-text').style.transform = "translateX(-25vw)";
-            document.getElementById('whoarewe-text').innerHTML = "Мета «Поклик Яру» - виховання відповідальної молоді. <br><br>Ми переконані, що це найкоротший шлях до процвітання і розвитку нашої Держави. <br><br>Наша команда — це свідома українська молодь, об'єднана цінностями Побратимства, Дисципліни та Патріотизму."
+    $('.whoarewe').hover(function () {
+        if (window.screen.width >= 968) {
+            function showText() {
+                $('#whoarewe-text').fadeIn("slow");
+            }
+            function textAnimate() {
+                $('#whoarewe-title').fadeOut("fast");
+                setTimeout(showText, 500);
+                document.getElementById('whoarewe-text').style.transform = "translateX(-23vw)";
+            }
+            setTimeout(textAnimate, 300);
+            document.getElementById('whoarewe-img').style.transform = "translateX(60vw) scale(1.3)";
+            document.getElementById('whoarewe-img').style.transition = "2s";
+            document.getElementById('whoarewe-img').style.transitionTimingFunction = "ease";
         }
-        setTimeout(textAnimate, 1100);
-        document.getElementById('whoarewe-img').style.transform = "translateX(60vw) scale(1.3)";
-        document.getElementById('whoarewe-img').style.transition = "2s";
-        document.getElementById('whoarewe-img').style.transitionTimingFunction = "ease";
-        if(window.screen.width <= 968){
-            document.getElementById('whoarewe-text').style.padding = "0px";
-            document.getElementById('whoarewe-text').style.transform = "translateX(0vw)";
+        else{
+            document.getElementById('whoarewe-title').style.display = "none";
+            $('#whoarewe-text').fadeIn("slow");
         }
     });
     $('.whatarewedoing').hover( function(){
-        function textAnimate(){
-            document.getElementById('whatarewedoing-text').style.fontSize = "26px";
-            document.getElementById('whatarewedoing-text').style.fontWeight = "600";
-            document.getElementById('whatarewedoing-text').style.textAlign = "left";
-            document.getElementById('whatarewedoing-text').style.transform = "translateX(22vw)";
-            document.getElementById('whatarewedoing-text').style.width = "80%";
-            document.getElementById('whatarewedoing-text').innerHTML = "Наша модель виховання — це систематична і регулярна робота з молоддю протягом років. <br><br>Ми організовуємо:<br>Табори національно-патріотичного виховання. <br>Освітні, виховні, вишкільні, культурні, туристичні заходи.<br>Популяризуємо історичний регіон Холодний Яр.<br>Волонтерські заходи на підтримку Збройних Сил України"
+        function showText() {
+            $('#whatarewedoing-text').fadeIn("slow");
         }
-        setTimeout(textAnimate, 1100);
+        function textAnimate() {
+            $('#whatarewedoing-title').fadeOut("fast");
+            setTimeout(showText, 500);
+            document.getElementById('whatarewedoing-text').style.transform = "translateX(23vw)";
+        }
+        setTimeout(textAnimate, 300);
         document.getElementById('whatarewedoing-img').style.transform = "translateX(-60vw) scale(1.3)";
         document.getElementById('whatarewedoing-img').style.transition = "2s";
         document.getElementById('whatarewedoing-img').style.transitionTimingFunction = "ease";

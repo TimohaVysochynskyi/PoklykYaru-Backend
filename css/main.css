@@ -365,6 +365,13 @@ body {
     width: 100%;
     transition: 0.3s;
 }
+.about__col-text{
+    width: 82%;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: justify;
+    display: none;
+}
 
 .statistic {
     height: 500px;
@@ -811,6 +818,14 @@ body {
         clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%)
     }
 }
+
+
+@media screen and (max-width: 1700px) {
+    .feedback__item{
+        height: 370px;
+    }
+}
+
 
 @media screen and (max-width: 968px) {
     .header{

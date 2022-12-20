@@ -231,3 +231,17 @@
     background-color: #4a565d;
     border-radius: 15px;
 }
+.product__desc-btn:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+    .product__desc{
+        width: 70vw;
+    }
+}
+@media screen and (max-width: 800px){
+    .product__desc {
+        width: 85vw;
+    }
+}

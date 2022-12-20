@@ -61,18 +61,27 @@ require './php/blocks.php';
 
         <!--About us block-->
         <div class="about" id="about">
+
             <a href="javascript:void(0)" class="whoarewe wow fadeInLeft" onclick="whoAreWe()">
                 <div class="about__col" id="whoarewe-img"></div>
                 <div class="about__col">
-                    <h1 class="about__col-title" id="whoarewe-text">ХТО МИ?</h1>
+                    <h1 class="about__col-title" id="whoarewe-title">ХТО МИ?</h1>
+                    <p class="about__col-text" id="whoarewe-text">Мета «Поклик Яру» - виховання відповідальної молоді. <br><br>Ми переконані, що це найкоротший шлях до процвітання і
+                        розвитку нашої Держави. <br><br>Наша команда — це свідома українська молодь, об'єднана цінностями Побратимства,
+                        Дисципліни та Патріотизму.</p>
                 </div>
             </a>
+
             <a href="javascript:void(0)" class="whatarewedoing wow fadeInRight" onclick="whatAreWeDoing()">
                 <div class="about__col">
-                    <h1 class="about__col-title" id="whatarewedoing-text">ЧИМ МИ ЗАЙМАЄМОСЬ?</h1>
+                    <h1 class="about__col-title" id="whatarewedoing-title">ЧИМ МИ ЗАЙМАЄМОСЬ?</h1>
+                    <p class="about__col-text" id="whatarewedoing-text">Наша модель виховання — це систематична і регулярна робота з молоддю протягом років. <br><br>Ми організовуємо:<br>Табори
+                        національно-патріотичного виховання. <br>Освітні, виховні, вишкільні, культурні, туристичні заходи.<br>Популяризуємо
+                        історичний регіон Холодний Яр.<br>Волонтерські заходи на підтримку Збройних Сил України</p>
                 </div>
                 <div class="about__col" id="whatarewedoing-img"></div>
             </a>
+
         </div>
 
         <!--Short statistic block-->
