@@ -2,13 +2,13 @@
 
 require '../php/connect.php';
 
-if(isset($_POST['board-btn'])){
+if (isset($_POST['board-btn'])) {
     $name = strip_tags($_POST['name']);
     $message = strip_tags($_POST['message']);
     $date = date("Y.m.d");
     $mysql->query("INSERT INTO `message` (`name`, `message`, `date`) VALUES ('$name', '$message', '$date')");
     header("Location: ./main.php");
-    echo $name.$message.$date;
+    echo $name . $message . $date;
 }
 
 $data = $mysql->query("SELECT * FROM `message`");
@@ -16,6 +16,7 @@ $data = $mysql->query("SELECT * FROM `message`");
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +24,7 @@ $data = $mysql->query("SELECT * FROM `message`");
     <title>Адмін панель | Головна</title>
     <link rel="stylesheet" href="./admin.css">
 </head>
+
 <body>
     <header class="header">
         <nav class="header__nav">
@@ -42,19 +44,19 @@ $data = $mysql->query("SELECT * FROM `message`");
         <div class="board-wrapper">
             <h1 class="board__title">Дошка повідомлень</h1>
             <div class="board" id="message-board">
-                <?php 
-                    foreach($data as $sms){
-                        $name = $sms['name'];
-                        $message = $sms['message'];
-                        $date = $sms['date'];
-                        echo'
+                <?php
+                foreach ($data as $sms) {
+                    $name = $sms['name'];
+                    $message = $sms['message'];
+                    $date = $sms['date'];
+                    echo '
                             <div class="board__message">
-                                <h3 class="board__name">'.$name.'</h3>
-                                <span class="board__date">'.$date.'</span>
-                                <p class="board_text">'.$message.'</p>
+                                <h3 class="board__name">' . $name . '</h3>
+                                <span class="board__date">' . $date . '</span>
+                                <p class="board_text">' . $message . '</p>
                             </div>
                         ';
-                    }
+                }
                 ?>
             </div>
             <form class="board__form" method="post" action="">
@@ -71,4 +73,5 @@ $data = $mysql->query("SELECT * FROM `message`");
 
     <script type="text/javascript" src="./script.js"></script>
 </body>
+
 </html>

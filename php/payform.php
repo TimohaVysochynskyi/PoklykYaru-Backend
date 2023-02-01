@@ -1,5 +1,7 @@
 <?php
 
+// AHHH, PLS DON'T TOUCH IT. IT IS SO FUCKING UNSTABLE. THIS SHIT CAN FALL EVERY MINUTE. I DON'T REALLY KNOW HOW THIS STUPID SYSTEM WORKS
+
 require_once "../vendor/autoload.php";
 require "./connect.php";
 

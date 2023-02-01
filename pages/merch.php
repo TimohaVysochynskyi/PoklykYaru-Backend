@@ -48,7 +48,7 @@ $data = $mysql->query("SELECT * FROM `product`");
     </a>
     <div class="cart-wrapper">
         <div class="cart">
-            
+
         </div>
     </div>
 
@@ -76,7 +76,7 @@ $data = $mysql->query("SELECT * FROM `product`");
                     <div class="product__desc-row">
                         <h2 class="product__desc-name">' . $name . '</h2>
                         <p class="product__item-price" style="font-size: 36px; color: #2a373d;">' . $price . '<span style="color: #2a373d;">грн</span></p>
-                        <a href="#" onclick=\'localStorage.setItem("product'.$id.'", "'.$name.'|'.$price.'");\'><img src="../images/merch/trolley.png"></a>
+                        <a href="#" onclick=\'localStorage.setItem("product' . $id . '", "' . $name . '|' . $price . '");\'><img src="../images/merch/trolley.png"></a>
                         <form action="../php/payform.php" method="post">
                             <input type="hidden" name="id" readonly value="' . $id . '">
                             <input type="hidden" name="name" readonly value="' . $name . '">

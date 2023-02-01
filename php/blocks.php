@@ -1,3 +1,7 @@
+
+// Something, lol
+
+
 <?php
 	function secondaryHeader(){
 		echo '
@@ -57,4 +61,3 @@
     		</footer>
 		';
 	}
-?>

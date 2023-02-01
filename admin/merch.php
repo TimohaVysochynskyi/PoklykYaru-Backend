@@ -104,7 +104,7 @@ if (isset($_POST['add-product'])) {
                             <form action="" method="post" enctype="multipart/form-data">
                                 <input type="text" name="e-name" class="form-control merch-input" value="' . $name . '" placeholder="Назва">
                                 <textarea name="e-description" class="form-control merch-input" placeholder="Опис">' . $description . '</textarea>
-                                <input type="file" class="form-control merch-input" name="e-image" value="'.$image.'">
+                                <input type="file" class="form-control merch-input" name="e-image" value="' . $image . '">
                                 <div class="product__row">
                                     <input type="number" name="e-cost" class="form-control merch-input" value="' . $price . '" placeholder="Ціна">
                                     <button type="submit" class="product__btn" name="edit-product' . $id . '">Редагувати</button>

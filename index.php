@@ -1,5 +1,5 @@
 <?php
-require './php/blocks.php';
+    require './php/blocks.php'; // Connection крінжатинa from another file
 ?>
 <!DOCTYPE html>
 <html lang="uk">
@@ -196,17 +196,20 @@ require './php/blocks.php';
             document.querySelector('body').style.overflow = "scroll";
         }, 2500);
 
+        // Idk how to use this shit so let's just leave it here :)
         document.addEventListener("DOMContentLoaded", () => {
-            
+
             const start = new Date().getTime();
             window.addEventListener("beforeunload", () => {
                 const end = new Date().getTime();
                 const totalTime = (end - start) / 1000
-            
+
                 console.log(totalTime)
             });
         });
     </script>
+
+    <!-- Frameworks/libraries and JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/script.js"></script>

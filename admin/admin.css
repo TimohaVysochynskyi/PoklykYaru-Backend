@@ -1,5 +1,6 @@
 @import "https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
 @import url(main.css);
+
 * {
     font-family: 'Mulish', sans-serif;
     margin: 0;
@@ -7,17 +8,19 @@
     box-sizing: border-box;
     color: #d6d0ba;
 }
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden !important;
 }
-body{
+
+body {
     background-color: #72838A;
 }
 
 /**** HEADER ****/
 
-.header{
+.header {
     padding: 25px 0px;
     width: 100vw;
     min-height: 8vh;
@@ -26,13 +29,15 @@ body{
     flex-direction: column;
     align-items: center;
 }
-.header__nav{
+
+.header__nav {
     margin: 10px 0px;
     width: 90vw;
     background-color: #5E7178;
     border-radius: 10px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
 }
+
 /*.header__nav:last-child{
     height: 8vh;
     display: flex;
@@ -42,18 +47,20 @@ body{
 .header__nav:last-child > .header__list > .header__item{
     margin: 0px 50px;
 }*/
-.header__list{
+.header__list {
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style: none;
 }
-.header__item{
+
+.header__item {
     padding: 8px;
     display: flex;
     justify-content: center;
 }
-.header__link{
+
+.header__link {
     text-decoration: none;
     font-size: 22px;
     font-weight: 600;
@@ -62,7 +69,8 @@ body{
     justify-content: center;
     align-items: center
 }
-.header__link>img{
+
+.header__link>img {
     transform: rotate(90deg);
     width: 50px;
 }
@@ -71,7 +79,7 @@ body{
 
 /**** FOOTER ****/
 
-.footer{
+.footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,7 +89,8 @@ body{
     border-radius: 10px 10px 0px 0px;
     box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.3);
 }
-.footer > p{
+
+.footer>p {
     font-size: 18px;
     font-weight: 500;
 }
@@ -89,17 +98,19 @@ body{
 
 /**** MESSAGE BOARD ****/
 
-.board-wrapper{
+.board-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 30px 0px;
 }
-.board__title{
+
+.board__title {
     font-weight: 700;
     font-size: 34px;
 }
-.board{
+
+.board {
     margin: 20px 0px;
     width: 70vw;
     min-height: 40vh;
@@ -112,7 +123,8 @@ body{
     box-shadow: 2px 2px 15px rgba(51, 51, 51, 0.75);
     scroll-behavior: smooth;
 }
-.board__message{
+
+.board__message {
     background-color: #72838A;
     width: 55%;
     padding: 30px;
@@ -121,34 +133,40 @@ body{
     margin: 10px;
     left: 0px;
 }
-.board__message:nth-child(even){
+
+.board__message:nth-child(even) {
     left: 29vw;
     border-radius: 40px 40px 5px 40px;
 }
-.board__name{
+
+.board__name {
     font-weight: 700;
     font-size: 24px;
 }
-.board__date{
+
+.board__date {
     font-weight: 600;
     font-size: 16px;
     position: absolute;
     top: 35px;
     right: 30px;
 }
-.board_text{
+
+.board_text {
     font-weight: 500;
     font-size: 20px;
     margin-top: 10px;
 }
-.board__form{
+
+.board__form {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
+
 .board__form-name,
 .board__form-text,
-.board__form-btn{
+.board__form-btn {
     padding: 8px 16px;
     border: 2px solid #4A565D;
     background-color: #4A565D;
@@ -161,17 +179,20 @@ body{
     letter-spacing: 0.5px;
     transition: .3s;
 }
+
 .board__form-name:focus,
-.board__form-text:focus{
+.board__form-text:focus {
     outline: none;
     transform: scale(1.01);
     transition: .3s;
 }
+
 .board__form-name:hover,
-.board__form-text:hover{
+.board__form-text:hover {
     background-color: #373d41;
 }
-.board__form-btn:hover{
+
+.board__form-btn:hover {
     cursor: pointer;
     background-color: #72838A;
     color: #d6d0ba;
@@ -183,14 +204,15 @@ body{
 
 /**** PRODUCTS KURWAAAAAAAAAAAAA ****/
 
-.product-wrapper{
+.product-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     padding: 30px;
 }
-.product{
+
+.product {
     position: relative;
     width: 40%;
     min-height: 300px;
@@ -202,7 +224,8 @@ body{
     border-radius: 15px;
     box-shadow: 2px 4px 6px rgba(20, 20, 20, 0.6);
 }
-.product__col{
+
+.product__col {
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -210,27 +233,33 @@ body{
     justify-content: center;
     padding: 20px;
 }
-.product__col:last-child{
+
+.product__col:last-child {
     width: 60%;
 }
-.product__img{
+
+.product__img {
     width: 100%;
 }
-.product__name{
+
+.product__name {
     font-size: 22px;
     margin-bottom: 50px;
 }
-.product__row{
+
+.product__row {
     display: flex;
     width: 100%;
     justify-content: space-around;
     align-items: center;
 }
-.product__cost{
+
+.product__cost {
     font-size: 20px;
     font-weight: 700;
 }
-.product__btn{
+
+.product__btn {
     background-color: #4A565D;
     border: 2px solid #4A565D;
     padding: 8px 12px;
@@ -242,27 +271,29 @@ body{
     transition: .3s;
     margin-left: 20px;
 }
-.product__btn:hover{
+
+.product__btn:hover {
     background-color: #5E7178;
     border-radius: 6px;
     transition: .3s;
 }
 
-.add-btn{
+.add-btn {
     width: 100px;
     height: 100px;
     position: fixed;
     bottom: 50px;
     right: 50px;
-    
+
 }
-.add-btn > img{
+
+.add-btn>img {
     width: inherit;
     transform: rotateZ(45deg);
     border-radius: 100%;
 }
 
-.delete-btn{
+.delete-btn {
     width: 32px;
     height: 32px;
     background: none;
@@ -272,10 +303,12 @@ body{
     left: 20px;
     transition: .3s;
 }
-.delete-btn > img{
+
+.delete-btn>img {
     width: 100%;
 }
-.delete-btn:hover{
+
+.delete-btn:hover {
     cursor: pointer;
     transform: scale(1.3);
     transition: .3s;
@@ -294,6 +327,7 @@ body{
     display: none;
     z-index: 2;
 }
+
 .product-coop-form {
     min-width: 330px;
     width: 35vw;
@@ -307,6 +341,7 @@ body{
     padding: 20px;
     position: relative;
 }
+
 .form-control {
     padding: 4px 12px;
     font-size: 18px;
@@ -317,6 +352,7 @@ body{
     margin: 4px;
     border-radius: 2px;
 }
+
 .form-button {
     width: 200px;
     margin: 4px;
@@ -329,18 +365,22 @@ body{
     font-weight: 600;
     transition: .3s;
 }
+
 .form-button:hover {
     cursor: pointer;
     background-color: #eee;
     color: #181818;
     transition: .3s;
 }
+
 .product-coop-form .form-control {
     width: 90%;
 }
+
 .product-coop-title {
     margin: 15px;
 }
+
 .product-coop-cross {
     font-size: 48px;
     position: absolute;
@@ -351,7 +391,8 @@ body{
     transform: rotateZ(45deg);
     transition: .4s;
 }
-.merch-input{
+
+.merch-input {
     width: 100%;
     margin: 10px 0px;
     background: none;
@@ -359,8 +400,9 @@ body{
     border: 0.5px solid rgba(0, 0, 0, 0);
     transition: .3s;
 }
+
 .merch-input:focus,
-.merch-input:hover{
+.merch-input:hover {
     outline: none;
     border-color: #4A565D;
 }
