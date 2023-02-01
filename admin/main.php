@@ -1,6 +1,17 @@
 <?php
 
+require '../php/connect.php';
 
+if(isset($_POST['board-btn'])){
+    $name = strip_tags($_POST['name']);
+    $message = strip_tags($_POST['message']);
+    $date = date("Y.m.d");
+    $mysql->query("INSERT INTO `message` (`name`, `message`, `date`) VALUES ('$name', '$message', '$date')");
+    header("Location: ./main.php");
+    echo $name.$message.$date;
+}
+
+$data = $mysql->query("SELECT * FROM `message`");
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +28,7 @@
         <nav class="header__nav">
             <ul class="header__list">
                 <li class="header__item"><a href="#" class="header__link"><img src="../images/events/event-list-arrow.png" alt="Головна"></a></li>
-                <li class="header__item"><a href="./merch.html" class="header__link">Мерч</a></li>
+                <li class="header__item"><a href="./merch.php" class="header__link">Мерч</a></li>
                 <li class="header__item"><a href="#" class="header__link">Платежі</a></li>
                 <li class="header__item"><a href="#" class="header__link">Реєстрація</a></li>
                 <li class="header__item"><a href="./statistics.html" class="header__link">Статистика</a></li>
@@ -30,19 +41,26 @@
     <main class="container">
         <div class="board-wrapper">
             <h1 class="board__title">Дошка повідомлень</h1>
-            <div class="board">
-                <div class="board__message">
-                    <h3 class="board__name">Зам</h3>
-                    <span class="board__date">26.11.2022 -- 00:03</span>
-                    <p class="board_text">
-                        Лагідне повідомлення від Зама <br> Я ТОБІ ВЖЕ 2 ТИЖДЕНЬ БЛІНА КАЖУ, ШО ТАМ ВИЛАЗИТЬ ТЕКСТ!!!!!!
-                    </p>
-                </div>
+            <div class="board" id="message-board">
+                <?php 
+                    foreach($data as $sms){
+                        $name = $sms['name'];
+                        $message = $sms['message'];
+                        $date = $sms['date'];
+                        echo'
+                            <div class="board__message">
+                                <h3 class="board__name">'.$name.'</h3>
+                                <span class="board__date">'.$date.'</span>
+                                <p class="board_text">'.$message.'</p>
+                            </div>
+                        ';
+                    }
+                ?>
             </div>
-            <form class="board__form" method="post" action="#">
+            <form class="board__form" method="post" action="">
                 <input type="text" name="name" class="board__form-name" placeholder="Псевдо">
-                <textarea name="text" class="board__form-text" placeholder="Повідомлення"></textarea>
-                <button type="submit" name="board__form-btn" class="board__form-btn">Лест гоууу</button>
+                <textarea name="message" class="board__form-text" placeholder="Повідомлення"></textarea>
+                <button type="submit" name="board-btn" class="board__form-btn">Лест гоууу</button>
             </form>
         </div>
     </main>
@@ -50,5 +68,7 @@
     <footer class="footer">
         <p>Адмін панель була зроблена Замом, Доном і Яриком</p>
     </footer>
+
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>

@@ -405,14 +405,15 @@ body {
     color: #E9E2C8;
     background: #293C43;
     border-radius: 0 0 72px 72px;
-    padding: 15px
+    padding: 15px;
 }
 
 .statistic__row {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 90%;
-    height: 55vh
+    height: 100%;
 }
 
 .statistic__col {
@@ -424,8 +425,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-    bottom: -320px
 }
 
 .statistic__col>span {

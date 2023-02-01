@@ -41,16 +41,19 @@
 	z-index: 2;
 }
 .history__year-text{
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 600;
-	width: 40vw;
-	color: #eee;position: relative;
+	width: 50vw;
+	color: #eee;
+	position: absolute;
+	text-align: justify;
+	right: 0;
 	z-index: 1;
 }
 .history__year-paralelogram-wrapper{
 	position: absolute;
-	right: 100px;
 	top: 0;
+	right: 0;
 	margin: 30px;
 }
 .history__year-paralelogram{

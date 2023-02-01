@@ -43,6 +43,15 @@ $data = $mysql->query("SELECT * FROM `product`");
     </header>
     <?php secondaryHeader() ?>
 
+    <a href="#" class="cart-btn">
+        <img src="../images/merch/trolley.png" alt="Cart">
+    </a>
+    <div class="cart-wrapper">
+        <div class="cart">
+            
+        </div>
+    </div>
+
     <main class="container">
 
         <?php foreach ($data as $product) {
@@ -53,34 +62,27 @@ $data = $mysql->query("SELECT * FROM `product`");
             $image = $product['image'];
             echo '
             <div class="product__desc-wrapper" id="product-desc' . $id . '">
-                <a href="javascript:void(0)" class="product__desc-back" onclick="document.getElementById(\'product-desc' . $id . '\').style.display = \'none\'"><img src="../images/events/event-list-arrow.png" alt="Назад"></a>
                 <div class="product__desc">
+                <a href="javascript:void(0)" class="product__desc-back" onclick="document.getElementById(\'product-desc' . $id . '\').style.display = \'none\'"><img src="../images/events/event-list-arrow.png" alt="Назад"></a>
                     <div class="product__desc-row">
                         <div class="product__desc-col">
-                            <img src="../test/' . $image . '" alt="Картинка товару" id="parallax" class="product__desc-img">
+                            <img src="../temp/' . $image . '" alt="Картинка товару" id="parallax" class="product__desc-img">
                         </div>
                         <div class="product__desc-col">
-                            <h2 class="product__desc-name">' . $name . '</h2>
-                            <p class="product__desc-desc">&nbsp' . $description . '</p>
+                            <h2 class="product__desc-desc">' . $description . '</h2>
+                            
                         </div> <!-- Flex -->
                     </div>
                     <div class="product__desc-row">
-                        <div class="product__desc-col">
-                            <ul class="product__desc-list">
-                                <li class="product__desc-item">Фіча 1</li>
-                                <li class="product__desc-item">Фіча 2</li>
-                                <li class="product__desc-item">Фіча 3</li>
-                            </ul>
-                            <!-- Загуглить як робляться ці вогники/зірочки -->
-                        </div>
-                        <div class="product__desc-col">
-                            <p class="product__item-price" style="font-size: 36px; color: #2a373d;">' . $price . '<span style="color: #2a373d;">грн</span></p>
-                            <form action="../php/payform.php" method="post">
-                                <input type="hidden" name="name" value="' . $name . '">
-                                <input type="hidden" name="price" value="' . $price . '">
-                                <button type="submit" class="product__desc-btn">Гоу</button>
-                            </form>
-                        </div> <!-- Flex -->
+                        <h2 class="product__desc-name">' . $name . '</h2>
+                        <p class="product__item-price" style="font-size: 36px; color: #2a373d;">' . $price . '<span style="color: #2a373d;">грн</span></p>
+                        <a href="#" onclick=\'localStorage.setItem("product'.$id.'", "'.$name.'|'.$price.'");\'><img src="../images/merch/trolley.png"></a>
+                        <form action="../php/payform.php" method="post">
+                            <input type="hidden" name="id" readonly value="' . $id . '">
+                            <input type="hidden" name="name" readonly value="' . $name . '">
+                            <input type="hidden" name="price" readonly value="' . $price . '">
+                            <button type="submit" class="product__desc-btn">оплатити</button>
+                        </form>
                     </div>
                 </div>
             </div>';
@@ -104,7 +106,7 @@ $data = $mysql->query("SELECT * FROM `product`");
                         echo '
                             <li class="product__item">
                                 <div class="product__item-row">
-                                    <img src="../test/' . $image . '" alt="Картинка товару" class="product__item-image">
+                                    <img src="../temp/' . $image . '" alt="Картинка товару" class="product__item-image">
                                 </div>
                                 <div class="product__item-row">
                                     <h2 class="product__item-name">' . $name . '</h2>
@@ -131,7 +133,7 @@ $data = $mysql->query("SELECT * FROM `product`");
                         echo '
                             <li class="product__item">
                                 <div class="product__item-row">
-                                    <img src="../test/' . $image . '" alt="Картинка товару" class="product__item-image">
+                                    <img src="../temp/' . $image . '" alt="Картинка товару" class="product__item-image">
                                 </div>
                                 <div class="product__item-row">
                                     <h2 class="product__item-name">' . $name . '</h2>
@@ -158,7 +160,7 @@ $data = $mysql->query("SELECT * FROM `product`");
                         echo '
                             <li class="product__item">
                                 <div class="product__item-row">
-                                    <img src="../test/' . $image . '" alt="Картинка товару" class="product__item-image">
+                                    <img src="../temp/' . $image . '" alt="Картинка товару" class="product__item-image">
                                 </div>
                                 <div class="product__item-row">
                                     <h2 class="product__item-name">' . $name . '</h2>
@@ -185,7 +187,7 @@ $data = $mysql->query("SELECT * FROM `product`");
                         echo '
                             <li class="product__item">
                                 <div class="product__item-row">
-                                    <img src="../test/' . $image . '" alt="Картинка товару" class="product__item-image">
+                                    <img src="../temp/' . $image . '" alt="Картинка товару" class="product__item-image">
                                 </div>
                                 <div class="product__item-row">
                                     <h2 class="product__item-name">' . $name . '</h2>
@@ -212,7 +214,7 @@ $data = $mysql->query("SELECT * FROM `product`");
                         echo '
                             <li class="product__item">
                                 <div class="product__item-row">
-                                    <img src="../test/' . $image . '" alt="Картинка товару" class="product__item-image">
+                                    <img src="../temp/' . $image . '" alt="Картинка товару" class="product__item-image">
                                 </div>
                                 <div class="product__item-row">
                                     <h2 class="product__item-name">' . $name . '</h2>

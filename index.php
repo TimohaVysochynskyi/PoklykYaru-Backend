@@ -36,7 +36,7 @@ require './php/blocks.php';
         </section>
     </header>
     <nav class="header__nav">
-        <a href="./index.html"><img src="./images/header&footer/logo.png" alt="Логотип" class="header__logo"></a>
+        <a href="./index.php"><img src="./images/header&footer/logo.png" alt="Логотип" class="header__logo"></a>
         <ul class="header__list">
             <li>
                 <a href="./pages/aboutus.php" class="header__link">про нас</a>
@@ -89,8 +89,8 @@ require './php/blocks.php';
             <h2 class="statistic-title">ПОКЛИК ЯРУ В ЦИФРАХ - ЦЕ: </h2>
             <div class="statistic__row">
                 <div class="statistic__col"><span>24</span><span>Згадки в ЗМІ</span></div>
-                <div class="statistic__col"><span>509</span><span>учасників</span></div>
-                <div class="statistic__col"><span style="color: #293C43cc;">16</span><span>заходів</span></div>
+                <div class="statistic__col"><span>710</span><span>учасників</span></div>
+                <div class="statistic__col"><span style="color: #293C43cc;">15</span><span>заходів</span></div>
             </div>
         </div>
 
@@ -186,7 +186,7 @@ require './php/blocks.php';
             <h3 class="footer__license">ГО “Поклик яру” 2020-2021. Всі права захищені</h3>
             <h3 class="footer__license">Дизайн сайту Olha Skarzhynets, графічний дизайн Катя Вспишка, верстка сайту Дон</h3>
         </div>
-        <a href="./pages/panel.php">Panel</a>
+        <a href="./admin/main.php">Panel</a>
     </footer>
 
     <!--Scripts-->
@@ -195,6 +195,17 @@ require './php/blocks.php';
             $("#preloader").slideUp("slow");
             document.querySelector('body').style.overflow = "scroll";
         }, 2500);
+
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            const start = new Date().getTime();
+            window.addEventListener("beforeunload", () => {
+                const end = new Date().getTime();
+                const totalTime = (end - start) / 1000
+            
+                console.log(totalTime)
+            });
+        });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
