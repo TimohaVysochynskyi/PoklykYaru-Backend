@@ -1,5 +1,5 @@
 
-// Something, lol
+<!-- Something, lol -->
 
 
 <?php

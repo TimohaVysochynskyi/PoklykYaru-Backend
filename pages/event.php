@@ -39,6 +39,7 @@ require '../php/blocks.php';
     </header>
     <?php secondaryheader() ?>
 
+    <!-- Container -->
     <main class="container">
         <div class="default-title__wrapper">
             <h2 class="default-title">ЗАХОДИ</h2>

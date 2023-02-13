@@ -134,7 +134,7 @@ if (isset($_POST['add-product'])) {
                     $eTempname = $_FILES['e-image']["tmp_name"];
                     $folder = "../temp/" . $eFilename;
 
-                    $mysql->query("UPDATE `product` SET `name` = '$eName', `description` = '$eDescription', `cost` = '$ePrice', `heart` = 0, `image` = '$eFilename' WHERE `id` = '$id' AND `cost` = '$price'");
+                    $mysql->query("UPDATE `product` SET `name` = '$eName', `description` = '$eDescription', `cost` = '$ePrice', `heart` = 0, `image` = '$eFilename' WHERE `id` = '$id'");
 
                     move_uploaded_file($eTempname, $folder);
 
