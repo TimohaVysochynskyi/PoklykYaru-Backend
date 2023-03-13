@@ -6,22 +6,22 @@
 	function secondaryHeader(){
 		echo '
 			<nav class="header__nav">
-        		<a href="../index.php"><img src="../images/header&footer/logo.png" alt="Логотип" class="header__logo"></a>
+        		<a href="http://poklukyary.com/"><img src="../images/header&footer/logo.png" alt="Логотип" class="header__logo"></a>
         		<ul class="header__list">
         		    <li>
-        		        <a href="./aboutus.php" class="header__link" id="aboutusheader">про нас</a>
+        		        <a href="./aboutus" class="header__link" id="aboutusheader">про нас</a>
         		    </li>
-        		    <li><a href="./tabir.php" class="header__link">табір</a></li>
+        		    <li><a href="./tabir" class="header__link">табір</a></li>
         		    <li>
-        		        <a href="./event.php" class="header__link" id="eventheader" onclick="eventHeader()">заходи</a>
+        		        <a href="./event" class="header__link" id="eventheader" onclick="eventHeader()">заходи</a>
         		    </li>
         		    <li>
-        		        <a href="./merch.php" class="header__link" id="merchheader">мерч</a>
+        		        <a href="./merch" class="header__link" id="merchheader">мерч</a>
         		        <!--<a href="#" class="header__link" id="merchheader2">одяг</a>
         		        <a href="#" class="header__link" id="merchheader3">аксесуари</a>
         		        <a href="#" class="header__link" id="merchheader4">книги</a>-->
         		    </li>
-        		    <li><a href="#" class="header__link">допомога</a></li>
+        		    <li><a href="./help"" class="header__link">допомога</a></li>
         		    <li><a href="#" class="header__link">комерційні заходи</a></li>
         		</ul>
     		</nav>

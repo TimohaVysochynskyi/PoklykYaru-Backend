@@ -1,19 +1,3 @@
-<?php
-
-require '../php/connect.php';
-
-if (isset($_POST['board-btn'])) {
-    $name = strip_tags($_POST['name']);
-    $message = strip_tags($_POST['message']);
-    $date = date("Y.m.d");
-    $mysql->query("INSERT INTO `message` (`name`, `message`, `date`) VALUES ('$name', '$message', '$date')");
-    header("Location: ./main.php");
-    echo $name . $message . $date;
-}
-
-$data = $mysql->query("SELECT * FROM `message`");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,57 +5,50 @@ $data = $mysql->query("SELECT * FROM `message`");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Адмін панель | Головна</title>
-    <link rel="stylesheet" href="./admin.css">
+    <title>Адмінка</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="header">
-        <nav class="header__nav">
-            <ul class="header__list">
-                <li class="header__item"><a href="#" class="header__link"><img src="../images/events/event-list-arrow.png" alt="Головна"></a></li>
-                <li class="header__item"><a href="./merch.php" class="header__link">Мерч</a></li>
-                <li class="header__item"><a href="#" class="header__link">Платежі</a></li>
-                <li class="header__item"><a href="#" class="header__link">Реєстрація</a></li>
-                <li class="header__item"><a href="./statistics.html" class="header__link">Статистика</a></li>
-                <li class="header__item"><a href="#" class="header__link">База даних</a></li>
-                <li class="header__item"><a href="#" class="header__link">Повідомити про проблему</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header class="header"><a href="/">Повернутися до сайту</a></header>
 
+    <button class="notification-btn" id="show-help-msg"><img src="./images/notification-bell.png" alt="Повідомлення"></button>
+    <div id="help-msg-window">
+        <div class="help-msg">
+            <button id="help-msg__close">+</button>
+            <h3>Повідомлення зі сторінки допомоги</h3>
+            <ul id="help-msg-box"></ul>
+        </div>
+    </div>
+    
     <main class="container">
-        <div class="board-wrapper">
-            <h1 class="board__title">Дошка повідомлень</h1>
-            <div class="board" id="message-board">
-                <?php
-                foreach ($data as $sms) {
-                    $name = $sms['name'];
-                    $message = $sms['message'];
-                    $date = $sms['date'];
-                    echo '
-                            <div class="board__message">
-                                <h3 class="board__name">' . $name . '</h3>
-                                <span class="board__date">' . $date . '</span>
-                                <p class="board_text">' . $message . '</p>
-                            </div>
-                        ';
-                }
-                ?>
-            </div>
-            <form class="board__form" method="post" action="">
-                <input type="text" name="name" class="board__form-name" placeholder="Псевдо">
-                <textarea name="message" class="board__form-text" placeholder="Повідомлення"></textarea>
-                <button type="submit" name="board-btn" class="board__form-btn">Лест гоууу</button>
-            </form>
+        <div class="category-wrapper">
+            <a href="chat" class="category"><img src="./images/chat.png"><span>Чат</span></a>
+            <a href="merch" class="category"><img src="./images/t-shirt.png"><span>Мерч</span></a>
+            <a href="#" class="category"><img src="./images/copywriting.png"><span>Редагування</span></a>
+            <a href="#" class="category"><img src="./images/line-chart.png"><span>Статистика</span></a>
+            <a href="#" class="category"><img src="./images/user.png"><span>Користувачі</span></a>
+            <a href="#" class="category"><img src="./images/dollar-sign.png"><span>Надходження</span></a>
         </div>
     </main>
 
-    <footer class="footer">
-        <p>Адмін панель була зроблена Замом, Доном і Яриком</p>
-    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src="./script.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#show-help-msg").click(function() {
+                document.querySelector("#help-msg-window").style.visibility = "unset";
+                $("#help-msg-box").load("./validation/mail/get_messages.php");
+            });
+            $("#help-msg__close").click(function() {
+                var id = $(this).attr('id');
+                console.log(id);
+                document.querySelector("#help-msg-window").style.visibility = "hidden";
+            });
+        });
+    </script>
+
 </body>
 
 </html>

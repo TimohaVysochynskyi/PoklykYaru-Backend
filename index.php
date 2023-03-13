@@ -36,22 +36,22 @@
         </section>
     </header>
     <nav class="header__nav">
-        <a href="./index.php"><img src="./images/header&footer/logo.png" alt="Логотип" class="header__logo"></a>
+        <a href="http://poklukyary.com/"><img src="./images/header&footer/logo.png" alt="Логотип" class="header__logo"></a>
         <ul class="header__list">
             <li>
-                <a href="./pages/aboutus.php" class="header__link">про нас</a>
+                <a href="./pages/aboutus" class="header__link">про нас</a>
             </li>
-            <li><a href="./pages/tabir.php" class="header__link">табір</a></li>
+            <li><a href="./pages/tabir" class="header__link">табір</a></li>
             <li>
-                <a href="./pages/event.php" class="header__link" id="eventheader" onclick="eventHeader()">заходи</a>
+                <a href="./pages/event" class="header__link" id="eventheader" onclick="eventHeader()">заходи</a>
             </li>
             <li>
-                <a href="./pages/merch.php" class="header__link" id="merchheader">мерч</a>
+                <a href="./pages/merch" class="header__link" id="merchheader">мерч</a>
                 <!--<a href="#" class="header__link" id="merchheader2">одяг</a>
                 <a href="#" class="header__link" id="merchheader3">аксесуари</a>
                 <a href="#" class="header__link" id="merchheader4">книги</a>-->
             </li>
-            <li><a href="#" class="header__link">допомога</a></li>
+            <li><a href="./pages/help" class="header__link">допомога</a></li>
             <li><a href="#" class="header__link">комерційні заходи</a></li>
         </ul>
     </nav>
@@ -147,7 +147,7 @@
                 <div class="feedback__gradient"></div>
             </div>
             <div class="default-title__wrapper">
-                <a href="./pages/feedback.php#feedback-page" id="showfeedbackbtn" class="default-title feedback__btn">БІЛЬШЕ ВІДГУКІВ</a>
+                <a href="./pages/feedback#feedback-page" id="showfeedbackbtn" class="default-title feedback__btn">БІЛЬШЕ ВІДГУКІВ</a>
                 <hr>
             </div>
         </div>

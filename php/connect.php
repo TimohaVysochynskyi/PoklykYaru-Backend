@@ -1,7 +1,10 @@
 <?php
 
-$mysql = new mysqli('localhost', 'root', 'root', 'poklykyaru');
-//$mysql = new mysqli('sql304.byethost22.com', 'b22_32947244', '401376dq', 'b22_32947244_poklykyaru');
+$mysql = new mysqli('localhost', 'root', '', 'poklykyaru');
+//$mysql = new mysqli('localhost', 'poklukya', 'b1e5gN8gE2', 'poklukya_poklykyaru');
 
+if ($mysql->connect_error) {
+    die("Connection failed: ");
+}
 
 $data = $mysql->query("SELECT * FROM `product`"); // heze nasho oce

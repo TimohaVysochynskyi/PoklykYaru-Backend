@@ -25,7 +25,7 @@ require '../php/blocks.php';
 	<?php secondaryHeader() ?>
 
 	<!-- Container -->
-	<main class="container" style="margin-top: 100px;">
+	<main class="container">
 		<div class="aboutus-wraper">
 			<a class="aboutus__item wow fadeInLeft" href="./team.php">
 				<h2 class="aboutus__item-title">наша команда</h2>
