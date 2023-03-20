@@ -22,6 +22,21 @@ $disciplines = array(
     ['впоряд', 'тактика', 'домедичка', 'ммг', 'виживання', 'правознавство', 'стрільба', 'історія', 'орієнтування', 'самозахист', 'туризм']
 );
 
+
+$guests = array(
+    [
+        'Михайло Шитко', 'Сергій Золотаренко, "Петрович"', 'Вікторія Гуро', 'Ольга Галушко', 'Богдан Легоняк',
+        'Сергій Василюк', 'Сергій Кривонос', 'Олексій Святенко', 'Тереха',
+        'Сергій Мазур', 'Валентина Поліщук', 'Смутна Ірина'
+    ],
+    [
+        'Інструктор з тактичної медицини', 'Інструктор з боксу та самооборони', 'Психолог', 'Краєзнавець Холодного Яру',
+        'Дослідник Холодного Яру', 'Лідер гурту "Тінь Сонця"', 'Генерал Збройних сил України', 'Військовий волонтер',
+        'Друг "Поклик Яру"', 'Друг "Поклик Яру"', 'Фотограф', 'Фотограф'
+    ],
+    ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+);
+
 ?>
 
 <!DOCTYPE html>
@@ -40,6 +55,7 @@ $disciplines = array(
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../assets/3d-slider-style.css">
     <link rel="modulepreload" href="../assets/3d-slider-library.js">
+
 </head>
 
 <body>
@@ -81,28 +97,32 @@ $disciplines = array(
         <div class="tabir__features">
             <ul class="tabir__features-list">
                 <li>
-                    <h3 class="tabir__feature-title">1. &nbsp&nbspМи виховуємо відповідальну молодь.</h3>
-                    <p class="tabir__feature-text">З цією метою заснований табір. Ми переконані, що майбутнє України за відповідальними. Тому формуємо літню програму так,
-                        щоб молодь навчалась приймати самостійні рішення і брати відповідальність за себе та побратимів</p>
+                    <a onmouseout="$('#tabir-feature-text-1').slideDown(200);" href="javascript:void(0)">
+                        <h3>Виховання відповідальної молоді</h3>
+                        <p class="tabir__feature-text" id="tabir-feature-text-1">&nbsp&nbspЗ цією метою заснований табір. Ми переконані, що майбутнє України за відповідальними. Тому формуємо літню програму так, щоб молодь навчалась приймати самостійні рішення і брати відповідальність за себе та побратимів</p>
+                    </a>
                 </li>
                 <li>
-                    <h3 class="tabir__feature-title">2. &nbsp&nbspЧіткі принципи виховання:</h3>
-                    <p class="tabir__feature-text">Побратимство - головний елемент виховання гідної людини. Взаємопідтримка для нас понад усе.
-                        Дисципліна – основа порядку. Чіткий розпорядок дня, рівні правила і можливості, відповідальність за колектив
-                        Патріотизм. Патріотична молодь, що шанує рідне, беззаперечно стане справжнім фундаментом сильної України.</p>
+                    <a onmouseout="$('#tabir-feature-text-2').slideDown(200);" href="javascript:void(0)">
+                        <h3>Чіткі принципи виховання:</h3>
+                        <p class="tabir__feature-text" id="tabir-feature-text-2">&nbsp&nbspПобратимство - головний елемент виховання гідної людини. Взаємопідтримка для нас понад усе. Дисципліна – основа порядку. Чіткий розпорядок дня, рівні правила і можливості, відповідальність за колектив. Патріотична молодь, що шанує рідне, беззаперечно стане справжнім фундаментом сильної України.</p></a>
                 </li>
                 <li>
-                    <h3 class="tabir__feature-title" style="line-height: 25px;">3. &nbsp&nbsp10 днів насиченої програми, яка цікава і водночас корисна для життя.</h3>
+                    <a href="javascript:void(0)">
+                        <h3>10 днів насиченої програми, яка цікава і водночас корисна для життя.</h3>
+                    </a>
                 </li>
                 <li>
-                    <h3 class="tabir__feature-title">4. &nbsp&nbspЧисте довкілля і жодних гаджетів</h3>
-                    <p class="tabir__feature-text">Холодноярський ліс, віддаленість від великих міст, свіже повітря, смачна і здорова їжа. Телефони видаються вихованцям
-                        лише на одну годину ввечері для зв'язку з рідними, що повністю занурює дитину у світ Поклик Яру.</p>
+                    <a onmouseout="$('#tabir-feature-text-4').slideDown(200);" href="javascript:void(0)">
+                        <h3>Чисте довкілля і жодних гаджетів</h3>
+                        <p class="tabir__feature-text" id="tabir-feature-text-4">&nbsp&nbspХолодноярський ліс, віддаленість від великих міст, свіже повітря, смачна і здорова їжа. Телефони видаються вихованцям лише на одну годину ввечері для зв'язку з рідними, що повністю занурює дитину у світ Поклик Яру.</p>
+                    </a>
                 </li>
                 <li>
-                    <h3 class="tabir__feature-title">5. &nbsp&nbspМолода команда виховників</h3>
-                    <p class="tabir__feature-text">Наша команда стане для вихованців не лише наставниками і прикладом, а й справжніми друзями. Ми тримаємо зв'язок з
-                        дитиною протягом року, тому що Родина Поклик Яру - це назавжди.</p>
+                    <a onmouseout="$('#tabir-feature-text-5').slideDown(200);" href="javascript:void(0)">
+                        <h3>Молода команда виховників</h3>
+                        <p class="tabir__feature-text" id="tabir-feature-text-5">&nbsp&nbspНаша команда стане для вихованців не лише наставниками і прикладом, а й справжніми друзями. Ми тримаємо зв'язок з дитиною протягом року, тому що Родина Поклик Яру - це назавжди.</p>   
+                    </a>        
                 </li>
             </ul>
         </div>
@@ -166,7 +186,7 @@ $disciplines = array(
                     <div class="swiper-wrapper">
                         <?php for ($i = 0; $i < count($disciplines) - 2; $i++) : ?>
                             <?php for ($j = 0; $j < count($disciplines[$i]); $j++) : ?>
-                                <? echo '
+                                <?php echo '
                                     <div class="swiper-slide">
                                         <div class="swiper-carousel-animate-opacity">
                                             <img src="../images/tabir/disciplines/' . $disciplines[$i + 2][$j] . '.jpg">
@@ -188,19 +208,19 @@ $disciplines = array(
         </div>
 
         <div class="disciplines-wrapper">
-            <h2 class="tabir__slider-wrapper__title">табір</h2>
+            <h2 class="tabir__slider-wrapper__title">гості</h2>
             <div id="app">
                 <div class="swiper swiper-carousel tabir-swiper">
                     <div class="swiper-wrapper">
-                        <?php for ($i = 0; $i < count($disciplines) - 2; $i++) : ?>
-                            <?php for ($j = 0; $j < count($disciplines[$i]); $j++) : ?>
-                                <? echo '
+                        <?php for ($i = 0; $i < count($guests) - 2; $i++) : ?>
+                            <?php for ($j = 0; $j < count($guests[$i]); $j++) : ?>
+                                <?php echo '
                                     <div class="swiper-slide">
                                         <div class="swiper-carousel-animate-opacity">
-                                            <img src="../images/tabir/disciplines/' . $disciplines[$i + 2][$j] . '.jpg">
+                                            <img src="../images/tabir/guests/' . $guests[$i + 2][$j] . '.jpg" style="object-position: top;">
                                             <div class="slide-content">
-                                                <h2>' . $disciplines[$i][$j] . '</h2>
-                                                <p>' . $disciplines[$i + 1][$j] . '</p>
+                                                <h2>' . $guests[$i][$j] . '</h2>
+                                                <p>' . $guests[$i + 1][$j] . '</p>
                                             </div>
                                         </div>
                                     </div>

@@ -35,10 +35,15 @@ if (isset($name)) {
                                 <img src='../temp/" . $row['image'] . "' alt='картинка мерчинки зроз'>
                             </div>
                             <div>
-                                <h3>" . $row['name'] . "</h3>
-                                <h4>" . $row['description'] . "</h4>
-                                <p>" . $row['cost'] . "<span>грн</span></p>
-                                <button class='merch-content__edit-btn'>Редагувати</button>
+                                <form method='post' action='./validation/merch/edit_merch.php' enctype='multipart/form-data'>
+                                    <input type='text' name='e-name' value='".$row['name']."' placeholder=\"Ім'я\">
+                                    <input type='text' name='e-desc' value='".$row['description']."' placeholder='Опис'>
+                                    <input type='text' name='e-cost' value='".$row['cost']."' placeholder='Ціна'>
+                                    <input type='file' name='e-image' value='".$row['image']."'>
+                                    <input type='hidden' name='old-e-image' value='".$row['image']."'>
+                                    <input type='hidden' name='e-id' value='".$row['id']."'>
+                                    <button type='submit' class='merch-content__edit-btn'>Редагувати</button>
+                                </form>
                             </div>
                         </li>
                     ";

@@ -264,6 +264,7 @@ html {
     border-radius: 2px;
     text-align: center;
     position: relative;
+    margin: 15px 0px;
 }
 .merch-content__del-btn {
     position: absolute;
@@ -273,27 +274,29 @@ html {
 #merch-content__list li div img{
     width: 200px;
 }
-#merch-content__list li div:last-child h3{
-    font-size: 18px;
-    font-weight: 500;
-    margin: 10px 0px;
+#merch-content__list li div:last-child form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
-#merch-content__list li div:last-child h4{
+#merch-content__list li div:last-child form input{
+    padding: 6px 10px;
+    border: 1px solid #72838A;
+    border-color: rgba(0, 0, 0, 0);
     font-size: 16px;
-    font-weight: 400;
+    text-align: center;
+    width: 80%;
+    margin: 8px 0px;
+    transition: .2s;
+    border-radius: 2px;
+    outline: none;
 }
-#merch-content__list li div:last-child p{
-    font-size: 24px;
-    margin: 10px 0px;
-    font-weight: 700;
-}
-#merch-content__list li div:last-child p span{
-    font-weight: 400;
-    font-size: 16px;
-    margin-left: 2px;
+#merch-content__list li div:last-child form input:hover{
+    border-color: #72838A;
 }
 .merch-content__edit-btn{
-    width: auto;
+    width: 80%;
 }
 
 #create-new-merch-btn{

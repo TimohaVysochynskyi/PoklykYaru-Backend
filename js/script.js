@@ -245,6 +245,3 @@ function showFlags() {
     document.querySelector("#merch-page-title").innerText = "прапори";
 }
 
-
-
-

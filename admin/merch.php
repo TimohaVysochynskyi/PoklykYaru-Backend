@@ -24,25 +24,26 @@ if (isset($_POST['create-new-merch__submit-btn'])) {
     }
     header("Location: ./merch.php");
 }
-
-if (isset($_POST['edit-merch__submit-btn'])) {
-	$aName = $_POST['create-new-merch__name'];
-	$aDescription = $_POST['create-new-merch__desc'];
-	$aCost = $_POST['create-new-merch__price'];
-	$aType = $_POST['create-new-merch__type'];
+if (isset($_POST['merch-content__edit-btn'])) {
+	$id = strip_tags($_POST['e-id']);
+	$name = strip_tags($_POST['e-name']);
+	$description = strip_tags($_POST['e-desc']);
+	$cost = strip_tags($_POST['e-cost']);
+	$oldImage = $_FILES['old-image']["name"];
 	
-	$aFilename = $_FILES['create-new-merch__image']["name"];
-	$aTempname = $_FILES['create-new-merch__image']["tmp_name"];
-	$folder = "../temp/" . $aFilename;
+	if (file_exists("../temp/" . $oldImage)) {
+		unlink("../temp/" . $oldImage);
+	}
 	
-    $conn->query("INSERT INTO `product` (`name`, `description`, `cost`, `image`, `type`) 
-    VALUES ('$aName', '$aDescription', '$aCost', '$aFilename', '$aType')");
-    if (move_uploaded_file($aTempname, $folder)) {
-        echo "<h3>  Image uploaded successfully!</h3>";
-    } else {
-        echo "<h3>  Failed to upload image!</h3>";
-    }
-    header("Location: ./merch.php");
+	$eFilename = $_FILES['e-image']["name"];
+	$eTempname = $_FILES['e-image']["tmp_name"];
+	$folder = "../temp/" . $eFilename;
+	
+	$conn->query("UPDATE `product` SET `name` = '$name', `description` = '$description', `cost` = '$cost', `image` = '	$eFilename' WHERE `id` = '$id'");
+	
+	move_uploaded_file($eTempname, $folder);
+	
+	header("Location: ./merch.php");
 }
 ?>
 

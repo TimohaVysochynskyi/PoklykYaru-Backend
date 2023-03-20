@@ -92,37 +92,48 @@
     background-image: url(../images/tabir/features-bg.png);
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    height: auto;
+    transition: .3s;
 }
 .tabir__features-list{
-    backdrop-filter: contrast(70%) brightness(80%);
     width: 100%;
-    height: 100%;
-    padding: 20px 100px 20px 50px;
+    height: auto;
+    padding: 30px 100px 30px 50px;
     list-style: none;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 .tabir__features-list > li{
     margin: 12px 0px;
-}
-.tabir__feature-title{
-    font-size: 24px;
-    color: #fff;
-    text-shadow: 0px 0px 10px #1b292c;
-    line-height: 25px;
+    width: 85%;
 }
 .tabir__feature-text{
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     text-shadow: 0px 0px 5px #1b292c;
-    margin-left: 2em;
     letter-spacing: 0.4px;
     font-weight: 500;
     margin-top: 10px;
+    display: none;
+    text-align: justify;
 }
+.tabir__features-list  li a h3{
+    font-size: 26px;
+}
+.tabir__features-list  li a{
+    text-decoration: none;
+    text-shadow: 0px 0px 10px #1b292c;
+    padding: 36px 36px;
+    background-color: #293C43BF;
+    border: 2px solid #FFD537;
+    border-radius: 30px;
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
 
+}
 
 .registration-wrapper{
     height: 100vh;
@@ -243,6 +254,9 @@ a.default-title:hover{
 }
 
 @media screen and (max-width: 769px) {
+    .tabir__features-list li{
+        width: 95%;
+    }
     .video__message-col:first-child{
         width: 40%;
     }
