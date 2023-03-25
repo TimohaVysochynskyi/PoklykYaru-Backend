@@ -54,7 +54,7 @@ require '../php/blocks.php';
                 </div>
 
                 <div class="want-help">
-                    <h2 class="help__title">Бажаєте допомогти?</h2>
+                    <h2 class="help__title">Бажаєте допомогти інакше?</h2>
                     <form class="want-help__form" method="post" action="">
                         <input type="text" name="name" class="want-help__form-input" placeholder="Ім'я" required>
                         <input type="email" name="email" class="want-help__form-input" placeholder="Електронна адреса" required>

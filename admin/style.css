@@ -309,7 +309,7 @@ html {
     text-align: center;
     cursor: pointer;
     font-weight: 600;
-    position: absolute;
+    position: fixed;
     bottom: 50px;
     right: 50px;
 }

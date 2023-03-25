@@ -33,13 +33,13 @@
     list-style: none
 }
 .event__list>li {
-    width: 520px;
+    width: 40%;
     height: 80px;
     margin: 20px
 }
 .event__link {
     text-decoration: none;
-    fotn-weight: 700;
+    font-weight: 700;
     letter-spacing: .5px;
     background-color: #293c43d0;
     padding: 10px;

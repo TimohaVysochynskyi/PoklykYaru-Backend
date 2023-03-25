@@ -43,15 +43,6 @@ $data = $mysql->query("SELECT * FROM `product`");
     </header>
     <?php secondaryHeader() ?>
 
-    <a href="#" class="cart-btn">
-        <img src="../images/merch/trolley.png" alt="Cart">
-    </a>
-    <div class="cart-wrapper">
-        <div class="cart">
-
-        </div>
-    </div>
-
     <main class="container">
 
         <?php foreach ($data as $product) {
@@ -71,12 +62,11 @@ $data = $mysql->query("SELECT * FROM `product`");
                         <div class="product__desc-col">
                             <h2 class="product__desc-desc">' . $description . '</h2>
                             
-                        </div> <!-- Flex -->
+                        </div>
                     </div>
                     <div class="product__desc-row">
                         <h2 class="product__desc-name">' . $name . '</h2>
                         <p class="product__item-price" style="font-size: 36px; color: #2a373d;">' . $price . '<span style="color: #2a373d;">грн</span></p>
-                        <a href="#" onclick=\'localStorage.setItem("product' . $id . '", "' . $name . '|' . $price . '");\'><img src="../images/merch/trolley.png"></a>
                         <form action="../php/payform.php" method="post">
                             <input type="hidden" name="id" readonly value="' . $id . '">
                             <input type="hidden" name="name" readonly value="' . $name . '">
@@ -89,11 +79,11 @@ $data = $mysql->query("SELECT * FROM `product`");
         }
         ?>
 
-        <div class="default-title__wrapper" style="position: relative; bottom: 55px; margin: 0">
-            <h2 class="default-title" id="merch-page-title">новинки</h2>
-            <hr>
-        </div>
         <div class="product__list-wrapper" id="merchCategories">
+            <div class="default-title__wrapper" style="position: relative; bottom: 55px; margin-top: -5px">
+                <h2 class="default-title" id="merch-page-title">новинки</h2>
+                <hr>
+            </div>
             <ul class="product__list" id="new">
                 <?php
                 foreach ($data as $product) {
@@ -121,6 +111,11 @@ $data = $mysql->query("SELECT * FROM `product`");
                 }
                 ?>
             </ul>
+
+            <div class="default-title__wrapper" style="position: relative; bottom: 55px; margin: 0">
+                <h2 class="default-title" id="merch-page-title">одяг</h2>
+                <hr>
+            </div>
             <ul class="product__list" id="clothes">
                 <?php
                 foreach ($data as $product) {
@@ -148,6 +143,10 @@ $data = $mysql->query("SELECT * FROM `product`");
                 }
                 ?>
             </ul>
+            <div class="default-title__wrapper" style="position: relative; bottom: 55px; margin: 0">
+                <h2 class="default-title" id="merch-page-title">стікери</h2>
+                <hr>
+            </div>
             <ul class="product__list" id="stickers">
                 <?php
                 foreach ($data as $product) {
@@ -175,6 +174,10 @@ $data = $mysql->query("SELECT * FROM `product`");
                 }
                 ?>
             </ul>
+            <div class="default-title__wrapper" style="position: relative; bottom: 55px; margin: 0">
+                <h2 class="default-title" id="merch-page-title">книги</h2>
+                <hr>
+            </div>
             <ul class="product__list" id="books">
                 <?php
                 foreach ($data as $product) {
@@ -202,6 +205,10 @@ $data = $mysql->query("SELECT * FROM `product`");
                 }
                 ?>
             </ul>
+            <div class="default-title__wrapper" style="position: relative; bottom: 55px; margin: 0">
+                <h2 class="default-title" id="merch-page-title">прапори</h2>
+                <hr>
+            </div>
             <ul class="product__list" id="flags">
                 <?php
                 foreach ($data as $product) {

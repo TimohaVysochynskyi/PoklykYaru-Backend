@@ -49,9 +49,8 @@
         		        </nav>
         		    </div>
         		    <div class="footer__col">
-        		        <h3 class="footer__adress">2972 Westheimer Rd. Santa Ana, Illinois 85486 </h3>
-        		        <h3 class="footer__adress">(207) 555-0119</h3>
-        		        <h3 class="footer__adress">(207) 555-0119</h3>
+        		        <h3 class="footer__adress">20933, Черкаська область, с. Мельники, вул. Підлісна, 4</h3>
+                		<h3 class="footer__adress">+380 96 092 31 10</h3>
         		    </div>
         		</div>
         		<div class="footer-block">
