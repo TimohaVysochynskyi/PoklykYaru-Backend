@@ -9,14 +9,15 @@ if (isset($_POST['create-new-merch__submit-btn'])) {
 	$aName = $_POST['create-new-merch__name'];
 	$aDescription = $_POST['create-new-merch__desc'];
 	$aCost = $_POST['create-new-merch__price'];
+	$aSize = $_POST['create-new-merch__size'];
 	$aType = $_POST['create-new-merch__type'];
 	
 	$aFilename = $_FILES['create-new-merch__image']["name"];
 	$aTempname = $_FILES['create-new-merch__image']["tmp_name"];
 	$folder = "../temp/" . $aFilename;
 	
-    $conn->query("INSERT INTO `product` (`name`, `description`, `cost`, `image`, `type`) 
-    VALUES ('$aName', '$aDescription', '$aCost', '$aFilename', '$aType')");
+    $conn->query("INSERT INTO `product` (`name`, `description`, `cost`, `size`, `image`, `type`) 
+    VALUES ('$aName', '$aDescription', '$aCost', '$aSize', '$aFilename', '$aType')");
     if (move_uploaded_file($aTempname, $folder)) {
         echo "<h3>  Image uploaded successfully!</h3>";
     } else {
@@ -52,7 +53,7 @@ if (isset($_POST['merch-content__edit-btn'])) {
 <html>
 
 <head>
-	<title>Merch</title>
+	<title>Адмінка | Мерч</title>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -100,15 +101,16 @@ if (isset($_POST['merch-content__edit-btn'])) {
 				<h2 style="margin: 10px 0px;">Створення нової мерчинки xD</h2>
 				<form action="#" method="post" id="create-new-merch__form" enctype="multipart/form-data">
 					<input type="text" name="create-new-merch__name" placeholder="Назва">
-					<input type="text" name="create-new-merch__desc" placeholder="Опис зроз">
+					<textarea name="create-new-merch__desc" placeholder="Опис зроз"></textarea>
 					<input type="number" name="create-new-merch__price" placeholder="Ціна">
+					<input type="text" name="create-new-merch__size" placeholder="Розмір">
 					<label for="create-new-merch__type" style="float: left;">Тип: </label>
 					<select name="create-new-merch__type">
-						<option value="new">Новинка</option>
 						<option value="clothe">Одяг</option>
-						<option value="sticker">Стікери</option>
-						<option value="book">Книги</option>
+						<option value="box">Бокси</option>
 						<option value="flag">Прапори</option>
+						<option value="chevron">Шеврони</option>
+						<option value="book">Книги</option>
 					</select>
 					<input type="file" name="create-new-merch__image" placeholder="Картинка">
 					<button type="submit" name="create-new-merch__submit-btn">Створити</button>

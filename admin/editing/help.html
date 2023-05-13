@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адмінка | Редагування допомоги</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../validation/editing/help/script.js"></script>
+</head>
+
+<body>
+    <header class="header"><a href="../main">Повернутися до головної</a></header>
+
+    <main class="container">
+        <div class="help-way">
+            <h2 align="center">Цільова допомога</h2>
+            <ul class="help-way__list" id="goal-help">
+                <li class="help-way__item">
+                    <form method="post" action="">
+                        <input type="text" placeholder="Імя" value="Пусто" name="" id="">
+                        <input type="text" placeholder="Імя" value="Пусто" name="" id="">
+                        <input type="text" placeholder="Імя" value="Пусто" name="" id="">
+                        <button type="submit" name="Пусто">типу кнопочка</button>
+                    </form>
+                    <img class="help__img" src="" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="help-way">
+            <h2 align="center">Допомога іншим</h2>
+            <ul class="help-way__list" id="other-help">
+                <li class="help-way__item">
+                    <form method="post" action="">
+                        <input type="text" placeholder="Імя" value="Пусто" name="" id="">
+                        <input type="text" placeholder="Імя" value="Пусто" name="" id="">
+                        <input type="text" placeholder="Імя" value="Пусто" name="" id="">
+                        <button type="submit" name="Пусто">типу кнопочка</button>
+                    </form>
+                    <img class="help__img" src="" alt="">
+                </li>
+            </ul>
+        </div>
+
+
+        <div id="create-new-zbir-wrapper">
+            <div class="create-new-zbir">
+                <button id="create-new-zbir__close">+</button>
+                <h2 style="margin: 10px 0px;">Створення нової мерчинки xD</h2>
+                <form action="#" method="post" id="create-new-zbir__form" enctype="multipart/form-data">
+                    <input type="text" name="create-new-zbir__name" placeholder="Назва">
+                    <input type="number" name="create-new-zbir__price" placeholder="Треба зібрати">
+                    <label for="create-new-zbir__type" style="float: left;">Тип: </label>
+                    <select name="create-new-zbir__type">
+                        <option value="goal-help">Цільова допомога</option>
+                        <option value="other-help">Допомога іншим</option>
+                    </select>
+                    <input type="file" name="create-new-zbir__image" placeholder="Картинка">
+                    <button type="submit" name="create-new-zbir__submit-btn">Створити</button>
+                </form>
+            </div>
+        </div>
+
+        <button id="create-new-zbir-btn"><span style="position: relative; top: -3.5px;">+</span></button>
+    </main>
+
+</body>
+
+</html>

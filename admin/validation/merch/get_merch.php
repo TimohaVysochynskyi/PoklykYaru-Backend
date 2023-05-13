@@ -31,8 +31,9 @@ if ($result->num_rows > 0) {
                 <div>
                     <form method='post' action='./validation/merch/edit_merch.php' enctype='multipart/form-data'>
                         <input type='text' name='e-name' value='".$row['name']."' placeholder=\"Ім'я\">
-                        <input type='text' name='e-desc' value='".$row['description']."' placeholder='Опис'>
+                        <textarea name='e-desc' placeholder='Опис'>".$row['description']."</textarea>
                         <input type='text' name='e-cost' value='".$row['cost']."' placeholder='Ціна'>
+                        <input type='text' name='e-size' value='".$row['size']."' placeholder='Розміри'>
                         <input type='file' name='e-image' value='".$row['image']."'>
                         <input type='hidden' name='old-e-image' value='".$row['image']."'>
                         <input type='hidden' name='e-id' value='".$row['id']."'>

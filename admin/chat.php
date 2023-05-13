@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Chat</title>
+	<title>Адмінка | Чат</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="./validation/chat/script.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">

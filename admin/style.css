@@ -119,7 +119,8 @@ html {
 }
 
 #help-msg-window,
-#create-new-merch-wrapper {
+#create-new-merch-wrapper,
+#create-new-zbir-wrapper {
     position: fixed;
     top: 0;
     left: 0;
@@ -134,7 +135,8 @@ html {
 }
 
 .help-msg,
-.create-new-merch {
+.create-new-merch,
+.create-new-zbir {
     width: 60%;
     height: 75%;
     background-color: #dedede;
@@ -145,7 +147,8 @@ html {
 }
 
 #help-msg__close,
-#create-new-merch__close {
+#create-new-merch__close,
+#create-new-zbir__close {
     font-size: 42px;
     font-family: 900;
     background: none;
@@ -198,22 +201,24 @@ html {
     margin: 0px 15px;
 }
 
-.merch-wrapper{
+.merch-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 90%;
     margin: 0 auto;
 }
-.search-bar{
+
+.search-bar {
     width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 #search-merch-input,
 .merch-content__edit-btn,
-#filter-pop-up__btn{
+#filter-pop-up__btn {
     padding: 10px 16px;
     margin: 0px 5px;
     outline: none;
@@ -224,38 +229,44 @@ html {
     transition: .3s;
     width: 60%;
 }
-#filter-pop-up__btn{
+
+#filter-pop-up__btn {
     width: auto;
     cursor: pointer;
 }
-.merch-content__edit-btn{
+
+.merch-content__edit-btn {
     cursor: pointer;
     width: 15%;
 }
+
 .merch-content__edit-btn:hover,
-#filter-pop-up__btn:hover{
+#filter-pop-up__btn:hover {
     background-color: #72838A;
     color: #fefefe;
 }
+
 #filter-merch-btn,
-.merch-content__del-btn{
+.merch-content__del-btn {
     border: none;
     cursor: pointer;
     background: none;
     margin: 0px 5px;
 }
 
-.merch-content{
+.merch-content {
     width: 80%;
     margin: 25px 0px;
 }
-#merch-content__list{
+
+#merch-content__list {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-#merch-content__list li{
+
+#merch-content__list li {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -266,21 +277,26 @@ html {
     position: relative;
     margin: 15px 0px;
 }
+
 .merch-content__del-btn {
     position: absolute;
     top: 10px;
     right: 10px;
 }
-#merch-content__list li div img{
+
+#merch-content__list li div img {
     width: 200px;
 }
-#merch-content__list li div:last-child form{
+
+#merch-content__list li div:last-child form {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
-#merch-content__list li div:last-child form input{
+
+#merch-content__list li div:last-child form input,
+#merch-content__list li div:last-child form textarea {
     padding: 6px 10px;
     border: 1px solid #72838A;
     border-color: rgba(0, 0, 0, 0);
@@ -292,14 +308,21 @@ html {
     border-radius: 2px;
     outline: none;
 }
-#merch-content__list li div:last-child form input:hover{
+#merch-content__list li div:last-child form textarea{
+    height: 80px;
+}
+
+#merch-content__list li div:last-child form input:hover ,
+#merch-content__list li div:last-child form textarea:hover{
     border-color: #72838A;
 }
-.merch-content__edit-btn{
+
+.merch-content__edit-btn {
     width: 80%;
 }
 
-#create-new-merch-btn{
+#create-new-merch-btn,
+#create-new-zbir-btn {
     border-radius: 40px;
     width: 80px;
     height: 80px;
@@ -314,7 +337,7 @@ html {
     right: 50px;
 }
 
-#filter-pop-up{
+#filter-pop-up {
     display: none;
     width: 60%;
     padding: 15px;
@@ -324,7 +347,8 @@ html {
     margin-bottom: 5px;
     position: relative;
 }
-#filter-pop-up__close{
+
+#filter-pop-up__close {
     font-size: 38px;
     transform: rotate(45deg);
     background: none;
@@ -334,21 +358,24 @@ html {
     top: -3px;
     right: 8px;
 }
-.filter-pop-up__list{
+
+.filter-pop-up__list {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
     width: 95%;
 }
-.filter-pop-up__item{
+
+.filter-pop-up__item {
     margin: 0px 10px;
     font-weight: 500;
     letter-spacing: .5px;
     text-align: center;
 }
+
 .filter-pop-up__item input,
-.filter-pop-up__item select{
+.filter-pop-up__item select {
     padding: 8px 12px;
     outline: none;
     border: 1px solid #72838A;
@@ -356,31 +383,81 @@ html {
     font-size: 16px;
     margin: 6px 0px;
 }
+
 .create-new-merch,
-#create-new-merch__form{
+#create-new-merch__form,
+.create-new-zbir,
+#create-new-zbir__form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-#create-new-merch__form{
+
+#create-new-merch__form,
+#create-new-zbir__form {
     width: 40%;
 }
+
 #create-new-merch__form input,
+#create-new-merch__form textarea,
 #create-new-merch__form select,
-#create-new-merch__form button{
+#create-new-merch__form button,
+.help-way__item form input,
+.help-way__item form button,
+#create-new-zbir__form input,
+#create-new-zbir__form button  {
     padding: 8px 12px;
-    border: 1px solid #72838A; border-radius: 2px;
+    border: 1px solid #72838A;
+    border-radius: 2px;
     outline: none;
     width: 100%;
     margin: 5px 0px;
     font-size: 16px;
 }
-#create-new-merch__form button{
+
+#create-new-merch__form button {
     cursor: pointer;
     background: none;
 }
-#create-new-merch__form button:hover{
+
+#create-new-merch__form button:hover {
     background: #72838A;
     color: #fefefe;
+}
+
+
+
+
+
+
+
+
+
+
+.help-way__list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.help-way__item {
+    width: 30%;
+    height: auto;
+    border: 1px solid #72838A;
+    border-radius: 2px;
+    padding: 15px;
+    margin: 10px 0px;
+
+    display: flex;
+    align-items: center;
+}
+
+.help-way__item form {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+.help-way__item img{
+    width: 30%;
 }

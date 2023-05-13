@@ -6,23 +6,23 @@
 	function secondaryHeader(){
 		echo '
 			<nav class="header__nav">
-        		<a href="http://poklukyary.com/"><img src="../images/header&footer/logo.png" alt="Логотип" class="header__logo"></a>
+        		<a href="../"><img src="../images/header&footer/logo.png" alt="Логотип" class="header__logo"></a>
         		<ul class="header__list">
         		    <li>
-        		        <a href="./aboutus" class="header__link" id="aboutusheader">про нас</a>
+        		        <a href="../aboutus" class="header__link" id="aboutusheader">про нас</a>
         		    </li>
-        		    <li><a href="./tabir" class="header__link">табір</a></li>
+        		    <li><a href="../tabir" class="header__link">табір</a></li>
         		    <li>
-        		        <a href="./event" class="header__link" id="eventheader" onclick="eventHeader()">заходи</a>
+        		        <a href="../event" class="header__link" id="eventheader" onclick="eventHeader()">заходи</a>
         		    </li>
         		    <li>
-        		        <a href="./merch" class="header__link" id="merchheader">мерч</a>
+        		        <a href="../merch" class="header__link" id="merchheader">мерч</a>
         		        <!--<a href="#" class="header__link" id="merchheader2">одяг</a>
         		        <a href="#" class="header__link" id="merchheader3">аксесуари</a>
         		        <a href="#" class="header__link" id="merchheader4">книги</a>-->
         		    </li>
-        		    <li><a href="./help"" class="header__link">допомога</a></li>
-        		    <li><a href="#" class="header__link">комерційні заходи</a></li>
+        		    <li><a href="../help"" class="header__link">допомога</a></li>
+        		    <li><a href="../comevent" class="header__link">комерційні заходи</a></li>
         		</ul>
     		</nav>
 		';
@@ -49,7 +49,7 @@
         		        </nav>
         		    </div>
         		    <div class="footer__col">
-        		        <h3 class="footer__adress">20933, Черкаська область, с. Мельники, вул. Підлісна, 4</h3>
+        		        <h3 class="footer__adress">20933, Черкаська область,<br>с. Мельники, вул. Підлісна, 4</h3>
                 		<h3 class="footer__adress">+380 96 092 31 10</h3>
         		    </div>
         		</div>
