@@ -66,8 +66,8 @@ $guests = array(
     </header>
     <?php secondaryHeader() ?>
     <main class="container">
-        <div class="default-title__wrapper" style="position: relative; margin: 0px;">
-            <h2 class="default-title" style="position: absolute; top: -25px; height: 50px;">цінності табору</h2>
+        <div class="default-title__wrapper">
+            <h2 class="default-title">цінності табору</h2>
             <hr>
         </div>
         <div class="tabir__video-wrapper">
@@ -127,8 +127,8 @@ $guests = array(
             </ul>
         </div>
 
-        <div class="default-title__wrapper" style="position: relative; margin: 0px;">
-            <h2 class="default-title" style="position: absolute; top: -25px; height: 50px;">Реєстрація</h2>
+        <div class="default-title__wrapper">
+            <h2 class="default-title">Реєстрація</h2>
             <hr style="border-color: #FFD537;">
         </div>
 
@@ -189,7 +189,7 @@ $guests = array(
 
             <div class="registration-wrapper__row">
                 <div class="default-title__wrapper-y" style="top: 60px;">
-                    <a href="#" class="default-title" style="box-shadow: 0px 0px 10px #293C43;">зареєструватись</a>
+                    <a href="https://docs.google.com/forms/d/1IbLFIOxB1vnz4VdcdKWWGTlkIBd15mXIeui1fcPnb0k/edit" class="default-title" style="box-shadow: 0px 0px 10px #293C43;">зареєструватись</a>
                     <hr>
                 </div>
             </div>
@@ -251,31 +251,8 @@ $guests = array(
             </div>
         </div>
     </main>
-    <footer class="footer wow fadeInUp" style="margin-top: 50px;">
-        <div class="footer-block">
-            <div class="footer__col">
-                <nav class="footer__nav">
-                    <ul class="footer__list">
-                        <li><a href="https://www.youtube.com/channel/UCROFrx6_3YVPx2pKHyY8C2w" class="footer__link"><img src="../images/header&footer/yt-link.png" alt=""></a></li>
-                        <li><a href="https://www.tiktok.com/@pokluk.yary?_t=8VGQqhNHl7G&_r=1" class="footer__link"><img src="../images/header&footer/tt-link.png" alt=""></a></li>
-                        <li><a href="https://t.me/PoklykYaru" class="footer__link">
-                                <img src="../images/header&footer/tg-link.png" alt=""></a></li>
-                        <li><a href="https://www.facebook.com/poklyk.yaru" class="footer__link"><img src="../images/header&footer/fc-link.png" alt=""></a></li>
-                        <li><a href="https://www.instagram.com/poklyk.yaru/" class="footer__link"><img src="../images/header&footer/inst-link.png" alt=""></a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer__col">
-                <h3 class="footer__adress">2972 Westheimer Rd. Santa Ana, Illinois 85486 </h3>
-                <h3 class="footer__adress">(207) 555-0119</h3>
-                <h3 class="footer__adress">(207) 555-0119</h3>
-            </div>
-        </div>
-        <div class="footer-block">
-            <h3 class="footer__license">ГО “Поклик яру” 2020-2021. Всі права захищені</h3>
-            <h3 class="footer__license">Дизайн сайту Olha Skarzhynets, графічний дизайн Катя Вспишка, верстка сайту Дон</h3>
-        </div>
-    </footer>
+
+    <?php secondaryFooter() ?>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>

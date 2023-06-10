@@ -37,7 +37,7 @@
         		            <ul class="footer__list">
         		                <li><a href="https://www.youtube.com/channel/UCROFrx6_3YVPx2pKHyY8C2w" class="footer__link"><img
         		                            src="../images/header&footer/yt-link.png" alt=""></a></li>
-        		                <li><a href="https://www.tiktok.com/@pokluk.yary?_t=8VGQqhNHl7G&_r=1" class="footer__link"><img
+        		                <li><a href="https://www.tiktok.com/@poklyk.yaru" class="footer__link"><img
         		                            src="../images/header&footer/tt-link.png" alt=""></a></li>
         		                <li><a href="https://t.me/PoklykYaru" class="footer__link">
         		                        <img src="../images/header&footer/tg-link.png" alt=""></a></li>

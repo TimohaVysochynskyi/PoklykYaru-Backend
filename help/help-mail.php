@@ -1,6 +1,6 @@
 <?php
 
-include '../php/connect.php';
+require '../php/connect.php';
 
 // here we check if all fields are filled.
 $required = array('name', 'email', 'message');
@@ -26,7 +26,7 @@ else {
 
     $fullmessage = "Ім'я відправника: " . $name . "\n\n" . "Повідомлення: \n" . $message;
     // Set your email address where you want to receive emails.
-    $to = 'timohavysach@gmail.com';
+    $to = 'pokluk.yary@gmail.com';
     $subject = 'Повідомлення зі сторінки допомоги';
     $send_email = mail($to, $subject, $fullmessage, $email);
 

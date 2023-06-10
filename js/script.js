@@ -2,26 +2,21 @@ new WOW().init(); //Element loading animation
 
 if (window.screen.width > 968) {
   $(".whoarewe").hover(function () {
-    if (window.screen.width >= 968) {
-      function showText() {
-        $("#whoarewe-text").fadeIn("slow");
-      }
-      function textAnimate() {
-        $("#whoarewe-title").fadeOut("fast");
-        setTimeout(showText, 500);
-        document.getElementById("whoarewe-text").style.transform =
-          "translateX(-23vw)";
-      }
-      setTimeout(textAnimate, 300);
-      document.getElementById("whoarewe-img").style.transform =
-        "translateX(60vw) scale(1.3)";
-      document.getElementById("whoarewe-img").style.transition = "2s";
-      document.getElementById("whoarewe-img").style.transitionTimingFunction =
-        "ease";
-    } else {
-      document.getElementById("whoarewe-title").style.display = "none";
+    function showText() {
       $("#whoarewe-text").fadeIn("slow");
     }
+    function textAnimate() {
+      $("#whoarewe-title").fadeOut("fast");
+      setTimeout(showText, 500);
+      document.getElementById("whoarewe-text").style.transform =
+        "translateX(-23vw)";
+    }
+    setTimeout(textAnimate, 300);
+    document.getElementById("whoarewe-img").style.transform =
+      "translateX(60vw)";
+    document.getElementById("whoarewe-img").style.transition = "2s";
+    document.getElementById("whoarewe-img").style.transitionTimingFunction =
+      "ease";
   });
   $(".whatarewedoing").hover(function () {
     function showText() {
@@ -35,37 +30,24 @@ if (window.screen.width > 968) {
     }
     setTimeout(textAnimate, 300);
     document.getElementById("whatarewedoing-img").style.transform =
-      "translateX(-60vw) scale(1.3)";
+      "translateX(-60vw)";
     document.getElementById("whatarewedoing-img").style.transition = "2s";
     document.getElementById(
       "whatarewedoing-img"
     ).style.transitionTimingFunction = "ease";
-    if (window.screen.width <= 968) {
-      document.getElementById("whatarewedoing-text").style.padding = "0px";
-      document.getElementById("whatarewedoing-text").style.transform =
-        "translateX(0vw)";
-    }
   });
 }
 
 function whoAreWe() {
   if (window.screen.width < 968) {
-    document.getElementById("whoarewe-text").innerHTML =
-      "Мета «Поклик Яру» - виховання відповідальної молоді. <br>Ми переконані, що це найкоротший шлях до процвітання і розвитку нашої Держави. <br>Наша команда — це свідома українська молодь, об'єднана цінностями Побратимства, Дисципліни та Патріотизму.";
-    document.getElementById("whoarewe-text").style.fontSize = "16px";
-    document.getElementById("whoarewe-text").style.fontWeight = "600";
-    document.getElementById("whoarewe-text").style.lineHeight = "20px";
-    document.getElementById("whoarewe-text").style.textAlign = "left";
+    document.querySelector("#whoarewe-title").style.display = "none";
+    document.querySelector("#whoarewe-text").style.display = "unset";
   }
 }
 function whatAreWeDoing() {
   if (window.screen.width < 968) {
-    document.getElementById("whatarewedoing-text").innerHTML =
-      "Наша модель виховання — це систематична і регулярна робота з молоддю протягом років. <br>Ми організовуємо:<br>Табори національно-патріотичного виховання. <br>Освітні, виховні, вишкільні, культурні, туристичні заходи.<br>Популяризуємо історичний регіон Холодний Яр.<br>Волонтерські заходи на підтримку Збройних Сил України";
-    document.getElementById("whatarewedoing-text").style.fontSize = "16px";
-    document.getElementById("whatarewedoing-text").style.fontWeight = "600";
-    document.getElementById("whatarewedoing-text").style.lineHeight = "20px";
-    document.getElementById("whatarewedoing-text").style.textAlign = "left";
+    document.querySelector("#whatarewedoing-title").style.display = "none";
+    document.querySelector("#whatarewedoing-text").style.display = "unset";
   }
 }
 function showBorder() {

@@ -1,3 +1,8 @@
+<?php
+    if(empty($_COOKIE['auth']) || $_COOKIE['auth'] != md5("success")){
+        header("Location: ../admin");
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>

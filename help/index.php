@@ -41,14 +41,15 @@ require '../php/blocks.php';
                     <h2 class="help__title">Цільова допомога</h2>
 
                     <div class="help__zbir">
-                        <div class="help__zbir-col"><img src="../temp/phone.png" class="help__zbir-img" alt="На що збираємо"></div>
+                        <div class="help__zbir-col"><img src="./data/toloka.jpg" class="help__zbir-img" alt="На що збираємо"></div>
                         <div class="help__zbir-col">
-                            <h3 class="help__zbir-title">Збір на мобілку</h3>
-                            <div class="help__progress-wrapper">
+                            <h3 class="help__zbir-title">Матеріали на толоку</h3>
+                            <!--<div class="help__progress-wrapper">
                                 <div class="help__progress-col" style="width: 68%;">68%</div>
                                 <div class="help__progress-col" style="width: 32%;">32%</div>
-                            </div>
-                            <a href="#" class="help__zbir-btn">Допомогти</a>
+                            </div>-->
+                            <a href="https://t.me/PoklykYaru/2127" align="center" style="margin: 10px 0px;">Детальніша інформація</a>
+                            <a href="https://send.monobank.ua/jar/4sw3MHjcRW" class="help__zbir-btn">Допомогти</a>
                         </div>
                     </div>
                 </div>
@@ -65,28 +66,7 @@ require '../php/blocks.php';
             </div>
             <div class="help__col">
                 <h2 class="help__title" style="margin-top: 20px;">Допомогти іншим</h2>
-                <div class="help__zbir">
-                    <div class="help__zbir-col"><img src="../temp/phone.png" class="help__zbir-img" alt="На що збираємо"></div>
-                    <div class="help__zbir-col">
-                        <h3 class="help__zbir-title">Збір на мобілку</h3>
-                        <div class="help__progress-wrapper">
-                            <div class="help__progress-col" style="width: 68%;">68%</div>
-                            <div class="help__progress-col" style="width: 32%;">32%</div>
-                        </div>
-                        <a href="#" class="help__zbir-btn">Допомогти</a>
-                    </div>
-                </div>
-                <div class="help__zbir">
-                    <div class="help__zbir-col"><img src="../temp/phone.png" class="help__zbir-img" alt="На що збираємо"></div>
-                    <div class="help__zbir-col">
-                        <h3 class="help__zbir-title">Збір на мобілку</h3>
-                        <div class="help__progress-wrapper">
-                            <div class="help__progress-col" style="width: 68%;">68%</div>
-                            <div class="help__progress-col" style="width: 32%;">32%</div>
-                        </div>
-                        <a href="#" class="help__zbir-btn">Допомогти</a>
-                    </div>
-                </div>
+                <p>Тут покищо нічого немає ;)</p>
             </div>
         </div>
     </main>
@@ -120,7 +100,7 @@ require '../php/blocks.php';
                         } else if (y == 'miss') {
                             $('.want-help__output_message').text('Please fill in all the fields above.');
                         } else {
-                            $('.want-help__output_message').text('Error Sending email!');
+                            $('.want-help__output_message').text('Message Sent!');
                         }
                     }
                 });

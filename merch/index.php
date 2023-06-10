@@ -19,10 +19,18 @@ $data = $mysql->query("SELECT * FROM `product`");
 </head>
 
 <body>
+
+    <!--Preloader-->
+    <div class="preloader" id="preloader">
+        <!--<div class="preloader-eraser"></div>-->
+        <img src="../images/header&footer/preloader.gif" class="preloader__gif">
+    </div>
+
+
     <header class="header">
         <section class="header__info">
             <h1 class="header__info-title">МЕРЧ</h1>
-            <h2 class="header__info-event-title" id="eventListButton" onclick="showEventList()">Обрати захід <img src="../images/events/event-list-arrow.png" id="event__list-arrow"></h2>
+            <h2 class="header__info-event-title" id="eventListButton" onclick="showEventList()">Обрати відділ <img src="../images/events/event-list-arrow.png" id="event__list-arrow"></h2>
             <ul class="event__list-mobile">
                 <li><a href="#clothes" class="event__link-mobile">ОДЯГ</a></li>
                 <li><a href="#boxes" class="event__link-mobile">БОКСИ</a></li>
@@ -50,6 +58,8 @@ $data = $mysql->query("SELECT * FROM `product`");
             $name = $product['name'];
             $description = $product['description'];
             $price = $product['cost'];
+            $size = $product['size'];
+            $size_arr = explode (", ", $size); 
             $image = $product['image'];
             echo '
             <div class="product__desc-wrapper" id="product-desc' . $id . '">
@@ -61,26 +71,30 @@ $data = $mysql->query("SELECT * FROM `product`");
                         </div>
                         <div class="product__desc-col">
                             <h2 class="product__desc-desc">' . $description . '</h2>
-                            <!-- Зробити можливість вибору розміру -->
                         </div>
                     </div>
                     <div class="product__desc-row">
                         <h2 class="product__desc-name">' . $name . '</h2>
                         <p class="product__item-price" style="font-size: 36px; color: #2a373d;">' . $price . '<span style="color: #2a373d;">грн</span></p>
-                        <form action="./payform.php" method="post">
+                    </div>
+                    <form action="./payform.php" method="post" class="product__desc-form">
                             <input type="hidden" name="id" readonly value="' . $id . '">
-                            <input type="hidden" name="name" readonly value="' . $name . '">
-                            <input type="hidden" name="price" readonly value="' . $price . '">
+                            <input type="hidden" name="name" readonly value="' . $name . '">';
+                            for($i = 0; $i < count($size_arr); $i++ ){
+                                if(!empty($size_arr[$i])){
+                                    echo '<input type="radio" name="size" class="product__desc-size" value="' . $size_arr[$i] . '"><span class="product__desc-size-span">' . $size_arr[$i] . '</span>';
+                                }
+                            }
+                            echo '<input type="hidden" name="price" readonly value="' . $price . '">
                             <button type="submit" class="product__desc-btn">оплатити</button>
                         </form>
-                    </div>
                 </div>
             </div>';
         }
         ?>
 
         <div class="product__list-wrapper" id="merchCategories">
-            <div class="default-title__wrapper" style="position: relative; bottom: 55px; margin-top: -5px">
+            <div class="default-title__wrapper">
                 <h2 class="default-title" id="merch-page-title">одяг</h2>
                 <hr>
             </div>
@@ -112,7 +126,7 @@ $data = $mysql->query("SELECT * FROM `product`");
                 ?>
             </ul>
 
-            <div class="default-title__wrapper" style="position: relative; bottom: 55px; margin: 0">
+            <div class="default-title__wrapper">
                 <h2 class="default-title" id="merch-page-title">бокси</h2>
                 <hr>
             </div>
@@ -143,7 +157,7 @@ $data = $mysql->query("SELECT * FROM `product`");
                 }
                 ?>
             </ul>
-            <div class="default-title__wrapper" style="position: relative; bottom: 55px; margin: 0">
+            <div class="default-title__wrapper">
                 <h2 class="default-title" id="merch-page-title">прапори</h2>
                 <hr>
             </div>
@@ -174,7 +188,7 @@ $data = $mysql->query("SELECT * FROM `product`");
                 }
                 ?>
             </ul>
-            <div class="default-title__wrapper" style="position: relative; bottom: 55px; margin: 0">
+            <div class="default-title__wrapper">
                 <h2 class="default-title" id="merch-page-title">шеврони</h2>
                 <hr>
             </div>
@@ -205,7 +219,7 @@ $data = $mysql->query("SELECT * FROM `product`");
                 }
                 ?>
             </ul>
-            <div class="default-title__wrapper" style="position: relative; bottom: 55px; margin: 0">
+            <div class="default-title__wrapper">
                 <h2 class="default-title" id="merch-page-title">книги</h2>
                 <hr>
             </div>
@@ -241,10 +255,14 @@ $data = $mysql->query("SELECT * FROM `product`");
 
     <?php secondaryFooter() ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         new WOW().init();
+        window.onload = setTimeout(function () {
+            $("#preloader").slideUp("slow");
+            document.querySelector('body').style.overflow = "scroll";
+        }, 2500);
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../js/script.js"></script>
     <script>
 

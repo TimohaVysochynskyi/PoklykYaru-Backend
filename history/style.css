@@ -58,7 +58,7 @@
 }
 .history__year-paralelogram{
 	width: 80vw;
-	height: 70vh;
+	height: 80vh;
 	position: absolute;
 	z-index: 1;
 	top: 0;
@@ -136,7 +136,7 @@
 		height: auto !important;
 	}
 	.history__year-row:last-child{
-		min-height: 93vh;
+		min-height: 105vh;
 		height: auto;
 	}
 	.history__year-wrapper:nth-child(5) .history__year-row:last-child{

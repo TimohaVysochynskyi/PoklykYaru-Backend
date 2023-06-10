@@ -1,10 +1,10 @@
 let slidesPerView = 2;
 let rows = 2;
 
-if (window.screen.width > 1700){
+if (window.screen.width > 1400) {
   slidesPerView = 2;
   rows = 2;
-} else if (window.screen.width <= 1700){
+} else if (window.screen.width <= 1400) {
   slidesPerView = 1;
   rows = 2;
 } else {
@@ -12,8 +12,8 @@ if (window.screen.width > 1700){
   rows = 1;
 }
 let swiper = new Swiper(".feedback-swiper", {
-    slidesPerView: slidesPerView,
-    /*autoplay: {
+  slidesPerView: slidesPerView,
+  /*autoplay: {
         delay: 15000,
         disableOnInteraction: false,
   },*/

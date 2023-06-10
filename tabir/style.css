@@ -13,6 +13,7 @@
     justify-content: center;
     align-items: center;
     background: rgba(41, 60, 67, 0.75);
+    margin-top: -55px;
 }
 .tabir__video{
     width: 70%;
@@ -145,6 +146,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: -55px;
 }
 .registration__course-title,
 .registration__course-subtitle{
@@ -265,7 +267,7 @@ a.default-title:hover{
         font-size: 20px;
     }
     .tabir__feature-text{
-        font-size: 16px;
+        font-size: 1.9vh;
     }
 
     .registration-wrapper{

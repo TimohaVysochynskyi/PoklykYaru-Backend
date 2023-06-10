@@ -2,7 +2,8 @@
 
 .team__text-wrapper{
 	width: 100vw;
-	height: 65vh;
+	min-height: 65vh;
+	height: auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -11,9 +12,9 @@
 
 .team__text{
 	width: 80vw;
-	font-weight: 700;
+	font-weight: 600;
 	letter-spacing: 0.4px;
-	font-size: 17px;
+	font-size: 2vh;
 	position: relative;
 	z-index: 1;
 	text-align: justify;

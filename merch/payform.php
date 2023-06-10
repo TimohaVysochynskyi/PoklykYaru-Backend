@@ -9,6 +9,7 @@ $stripe = new \Stripe\StripeClient("sk_test_51M0i6fA98pVLsS87VeLApCzrQwuPYAoRmRP
 
 $id = strip_tags($_POST['id']);
 $name = strip_tags($_POST['name']);
+$size = strip_tags($_POST['size']);
 $amount = strip_tags($_POST['price']);
 
 $data = $mysql->query("SELECT * FROM `product` WHERE `id` = '$id' AND `name` = '$name' AND `cost` = '$amount'");
@@ -18,6 +19,8 @@ $productData = $data->fetch_assoc();
 $databaseID = $productData['id'];
 $databaseName = $productData['name'];
 $databaseAmount = $productData['cost'];
+
+$name .= " | Розмір: ".$size;
 
 if ($databaseID == $id && $databaseAmount == $amount) {
     $payment_intent = $stripe->paymentIntents->create([

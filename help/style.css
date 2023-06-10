@@ -123,12 +123,12 @@
 
 .help__zbir-img {
     width: 100%;
+    border-radius: 25px;
 }
 
 .help__zbir-title {
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: -10px;
     letter-spacing: .4px;
 }
 

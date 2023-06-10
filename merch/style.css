@@ -234,6 +234,24 @@
 .product__desc-item{
     text-shadow: 1px 1px 4px #aaa;
 }
+.product__desc-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.product__desc-size{
+    width: 38px;
+    height: 24px;
+    margin-left: 5px;
+}
+.product__desc-size-span{
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+    top: 0px;
+    color: #2a373d;
+}
 .product__desc-btn{
     text-decoration: none;
     text-transform: uppercase;
@@ -243,6 +261,8 @@
     border: 2px solid #4a565d;
     background-color: #4a565d;
     border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .product__desc-btn:hover{
     cursor: pointer;

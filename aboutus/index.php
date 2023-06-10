@@ -27,13 +27,13 @@ require '../php/blocks.php';
 	<!-- Container -->
 	<main class="container">
 		<div class="aboutus-wraper">
-			<a class="aboutus__item wow fadeInLeft" href="./team.php">
+			<a class="aboutus__item wow fadeInLeft" href="../team">
 				<h2 class="aboutus__item-title">наша команда</h2>
 			</a>
-			<a class="aboutus__item wow fadeInRight" href="./history.php">
+			<a class="aboutus__item wow fadeInRight" href="../history">
 				<h2 class="aboutus__item-title" style="color: #293C43;">історія</h2>
 			</a>
-			<a class="aboutus__item wow fadeInLeft" href="./feedback.php">
+			<a class="aboutus__item wow fadeInLeft" href="../feedback">
 				<h2 class="aboutus__item-title">відгуки та змі</h2>
 			</a>
 		</div>
