@@ -54,7 +54,7 @@
         		    </div>
         		</div>
         		<div class="footer-block">
-        		    <h3 class="footer__license">ГО “Поклик яру”    2020-2021. Всі права захищені</h3>
+        		    <h3 class="footer__license">ГО “Поклик яру”    2020-2023. Всі права захищені</h3>
         		    <h3 class="footer__license">Дизайн сайту Olha Skarzhynets, графічний дизайн Катя Вспишка, верстка сайту Дон</h3>
         		</div>
     		</footer>

@@ -136,7 +136,7 @@ function showFeedback() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
   const deadline = new Date(2023, 06, 01);
 
   let timerId = null;
@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
   countdownTimer();
 
   timerId = setInterval(countdownTimer, 1000);
-});
+});*/
 
 let eventListShown = false;
 function showEventList() {

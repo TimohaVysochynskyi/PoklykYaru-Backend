@@ -20,7 +20,6 @@ if ($result->num_rows > 0) {
                 <div>
                     <button class=\"help-msg-btn-read\" id='" . $row['id'] . "' onclick=\"
                         let id = $(this).attr('id');
-                        console.log(id);
                         $.ajax({
                             url: './validation/mail/read.php',
                             type: 'POST',
@@ -35,7 +34,6 @@ if ($result->num_rows > 0) {
                     
                     <button class=\"help-msg-btn-del\" id='" . $row['id'] . "' onclick=\"
                         let id = $(this).attr('id');
-                        console.log(id);
                         $.ajax({
                             url: './validation/mail/delete.php',
                             type: 'POST',

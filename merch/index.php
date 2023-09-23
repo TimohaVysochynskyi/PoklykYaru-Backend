@@ -2,7 +2,7 @@
 require '../php/blocks.php';
 require '../php/connect.php';
 
-$data = $mysql->query("SELECT * FROM `product`");
+$data = $mysql->query("SELECT DISTINCT `type` FROM `product`");
 ?>
 
 <!DOCTYPE html>
@@ -32,20 +32,20 @@ $data = $mysql->query("SELECT * FROM `product`");
             <h1 class="header__info-title">МЕРЧ</h1>
             <h2 class="header__info-event-title" id="eventListButton" onclick="showEventList()">Обрати відділ <img src="../images/events/event-list-arrow.png" id="event__list-arrow"></h2>
             <ul class="event__list-mobile">
-                <li><a href="#clothes" class="event__link-mobile">ОДЯГ</a></li>
-                <li><a href="#boxes" class="event__link-mobile">БОКСИ</a></li>
-                <li><a href="#flags" class="event__link-mobile">ПРАПОРИ</a></li>
-                <li><a href="#chevrons" class="event__link-mobile">ШЕВРОНИ</a></li>
-                <li><a href="#books" class="event__link-mobile">КНИГИ</a></li>
+                <li><a href="#clothe" class="event__link-mobile">ОДЯГ</a></li>
+                <li><a href="#box" class="event__link-mobile">БОКСИ</a></li>
+                <li><a href="#flag" class="event__link-mobile">ПРАПОРИ</a></li>
+                <li><a href="#chevron" class="event__link-mobile">ШЕВРОНИ</a></li>
+                <li><a href="#book" class="event__link-mobile">КНИГИ</a></li>
             </ul>
         </section>
         <nav class="event__nav">
             <ul class="event__list">
-                <li><a href="#clothes" class="event__link wow fadeInLeft">ОДЯГ</a></li>
-                <li><a href="#boxes" class="event__link wow fadeInRight">БОКСИ</a></li>
-                <li><a href="#flags" class="event__link wow fadeInLeft">ПРАПОРИ</a></li>
-                <li><a href="#chevrons" class="event__link wow fadeInRight">ШЕВРОНИ</a></li>
-                <li><a href="#books" class="event__link wow fadeInRight">КНИГИ</a></li>
+                <li><a href="#clothe" class="event__link wow fadeInLeft">ОДЯГ</a></li>
+                <li><a href="#box" class="event__link wow fadeInRight">БОКСИ</a></li>
+                <li><a href="#flag" class="event__link wow fadeInLeft">ПРАПОРИ</a></li>
+                <li><a href="#chevron" class="event__link wow fadeInRight">ШЕВРОНИ</a></li>
+                <li><a href="#book" class="event__link wow fadeInRight">КНИГИ</a></li>
             </ul>
         </nav>
     </header>
@@ -53,203 +53,70 @@ $data = $mysql->query("SELECT * FROM `product`");
 
     <main class="container">
 
-        <?php foreach ($data as $product) {
-            $id = $product['id'];
-            $name = $product['name'];
-            $description = $product['description'];
-            $price = $product['cost'];
-            $size = $product['size'];
-            $size_arr = explode (", ", $size); 
-            $image = $product['image'];
-            echo '
-            <div class="product__desc-wrapper" id="product-desc' . $id . '">
-                <div class="product__desc">
-                <a href="javascript:void(0)" class="product__desc-back" onclick="document.getElementById(\'product-desc' . $id . '\').style.display = \'none\'"><img src="../images/events/event-list-arrow.png" alt="Назад"></a>
-                    <div class="product__desc-row">
-                        <div class="product__desc-col">
-                            <img src="../temp/' . $image . '" alt="Картинка товару" id="parallax" class="product__desc-img">
-                        </div>
-                        <div class="product__desc-col">
-                            <h2 class="product__desc-desc">' . $description . '</h2>
-                        </div>
-                    </div>
-                    <div class="product__desc-row">
-                        <h2 class="product__desc-name">' . $name . '</h2>
-                        <p class="product__item-price" style="font-size: 36px; color: #2a373d;">' . $price . '<span style="color: #2a373d;">грн</span></p>
-                    </div>
-                    <form action="./payform.php" method="post" class="product__desc-form">
-                            <input type="hidden" name="id" readonly value="' . $id . '">
-                            <input type="hidden" name="name" readonly value="' . $name . '">';
-                            for($i = 0; $i < count($size_arr); $i++ ){
-                                if(!empty($size_arr[$i])){
-                                    echo '<input type="radio" name="size" class="product__desc-size" value="' . $size_arr[$i] . '"><span class="product__desc-size-span">' . $size_arr[$i] . '</span>';
-                                }
-                            }
-                            echo '<input type="hidden" name="price" readonly value="' . $price . '">
-                            <button type="submit" class="product__desc-btn">оплатити</button>
-                        </form>
-                </div>
-            </div>';
-        }
-        ?>
+        <div id="merch-onclick-window"></div>
 
         <div class="product__list-wrapper" id="merchCategories">
-            <div class="default-title__wrapper">
-                <h2 class="default-title" id="merch-page-title">одяг</h2>
-                <hr>
-            </div>
-            <ul class="product__list" id="clothes">
-                <?php
-                foreach ($data as $product) {
-                    $id = $product['id'];
-                    $name = $product['name'];
-                    $price = $product['cost'];
-                    $image = $product['image'];
-                    $type = $product['type'];
-                    if ($type == "clothe") {
-                        echo '
-                            <li class="product__item">
-                                <div class="product__item-row">
-                                    <img src="../temp/' . $image . '" alt="Картинка товару" class="product__item-image">
-                                </div>
-                                <div class="product__item-row">
-                                    <h2 class="product__item-name">' . $name . '</h2>
-                                    <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
-                                        <p class="product__item-price">' . $price . '<span>грн</span></p>
-                                        <a href="javascript:void(0)" id="' . $id . '" class="product__item-btn" onclick="$(\'#product-desc' . $id . '\').fadeIn(); document.getElementById(\'product-desc' . $id . '\').style.display = \'flex\'">купити</a>
-                                    </div>
-                                </div>
-                            </li>
-                        ';
-                    }
-                }
-                ?>
-            </ul>
 
-            <div class="default-title__wrapper">
-                <h2 class="default-title" id="merch-page-title">бокси</h2>
-                <hr>
-            </div>
-            <ul class="product__list" id="boxes">
-                <?php
-                foreach ($data as $product) {
-                    $id = $product['id'];
-                    $name = $product['name'];
-                    $price = $product['cost'];
-                    $image = $product['image'];
-                    $type = $product['type'];
-                    if ($type == "box") {
-                        echo '
-                            <li class="product__item">
-                                <div class="product__item-row">
-                                    <img src="../temp/' . $image . '" alt="Картинка товару" class="product__item-image">
-                                </div>
-                                <div class="product__item-row">
-                                    <h2 class="product__item-name">' . $name . '</h2>
-                                    <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
-                                        <p class="product__item-price">' . $price . '<span>грн</span></p>
-                                        <a href="javascript:void(0)" id="' . $id . '" class="product__item-btn" onclick="$(\'#product-desc' . $id . '\').fadeIn(); document.getElementById(\'product-desc' . $id . '\').style.display = \'flex\'">купити</a>
-                                    </div>
-                                </div>
-                            </li>
-                        ';
+            <?php
+                foreach ($data as $row) {
+                    $type = $row['type'];
+
+                    switch ($type){
+                        case "clothe":
+                            $displayType = "одяг";
+                            break;
+                        case "box":
+                            $displayType = "бокси";
+                            break;
+                        case "flag":
+                            $displayType = "прапори";
+                            break;
+                        case "chevron":
+                            $displayType = "шеврони";
+                            break;
+                        case "book":
+                            $displayType = "книги";
+                            break;
+                        default:
+                            $displayType = "інше";
+                            break;
                     }
-                }
-                ?>
-            </ul>
-            <div class="default-title__wrapper">
-                <h2 class="default-title" id="merch-page-title">прапори</h2>
-                <hr>
-            </div>
-            <ul class="product__list" id="flags">
-                <?php
-                foreach ($data as $product) {
-                    $id = $product['id'];
-                    $name = $product['name'];
-                    $price = $product['cost'];
-                    $image = $product['image'];
-                    $type = $product['type'];
-                    if ($type == "flag") {
-                        echo '
-                            <li class="product__item">
-                                <div class="product__item-row">
-                                    <img src="../temp/' . $image . '" alt="Картинка товару" class="product__item-image">
-                                </div>
-                                <div class="product__item-row">
-                                    <h2 class="product__item-name">' . $name . '</h2>
-                                    <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
-                                        <p class="product__item-price">' . $price . '<span>грн</span></p>
-                                        <a href="javascript:void(0)" id="' . $id . '" class="product__item-btn" onclick="$(\'#product-desc' . $id . '\').fadeIn(); document.getElementById(\'product-desc' . $id . '\').style.display = \'flex\'">купити</a>
+
+                    echo '
+                        <div class="default-title__wrapper">
+                            <h2 class="default-title" id="merch-page-title">'.$displayType.'</h2> <hr>
+                        </div>
+                    ';
+                
+                    $result_products = $mysql->query("SELECT * FROM `product` WHERE `type` = '$type'");
+                
+                    echo '<ul class="product__list" id="'.$type.'">';
+                        foreach ($result_products as $product) {
+                            $id = $product['id']; $name = $product['name']; $price = $product['cost']; $image = $product['image']; $type = $product['type'];
+                            echo '
+                                <li class="product__item wow fadeInUp">
+                                    <div class="product__item-row">
+                                        <img src="../temp/' . $image . '" alt="Картинка товару" class="product__item-image">
                                     </div>
-                                </div>
-                            </li>
-                        ';
-                    }
-                }
-                ?>
-            </ul>
-            <div class="default-title__wrapper">
-                <h2 class="default-title" id="merch-page-title">шеврони</h2>
-                <hr>
-            </div>
-            <ul class="product__list" id="chevrons">
-                <?php
-                foreach ($data as $product) {
-                    $id = $product['id'];
-                    $name = $product['name'];
-                    $price = $product['cost'];
-                    $image = $product['image'];
-                    $type = $product['type'];
-                    if ($type == "chevron") {
-                        echo '
-                            <li class="product__item">
-                                <div class="product__item-row">
-                                    <img src="../temp/' . $image . '" alt="Картинка товару" class="product__item-image">
-                                </div>
-                                <div class="product__item-row">
-                                    <h2 class="product__item-name">' . $name . '</h2>
-                                    <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
-                                        <p class="product__item-price">' . $price . '<span>грн</span></p>
-                                        <a href="javascript:void(0)" id="' . $id . '" class="product__item-btn" onclick="$(\'#product-desc' . $id . '\').fadeIn(); document.getElementById(\'product-desc' . $id . '\').style.display = \'flex\'">купити</a>
+                                    <div class="product__item-row">
+                                        <h2 class="product__item-name">' . $name . '</h2>
+                                        <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
+                                            <p class="product__item-price">' . $price . '<span>грн</span></p>
+                                            <a href="javascript:void(0)" id="' . $id . '" class="product__item-btn" 
+                                                onclick="$(\'#merch-onclick-window\').load(\'./get_merch_details\', {
+                                                    Id:'.$id.', 
+                                                    Price:'.$price.'
+                                                });"
+                                            >купити</a>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                        ';
-                    }
+                                </li>
+                            ';
+                        }
+                    echo '</ul>';
                 }
-                ?>
-            </ul>
-            <div class="default-title__wrapper">
-                <h2 class="default-title" id="merch-page-title">книги</h2>
-                <hr>
-            </div>
-            <ul class="product__list" id="books">
-                <?php
-                foreach ($data as $product) {
-                    $id = $product['id'];
-                    $name = $product['name'];
-                    $price = $product['cost'];
-                    $image = $product['image'];
-                    $type = $product['type'];
-                    if ($type == "book") {
-                        echo '
-                            <li class="product__item">
-                                <div class="product__item-row">
-                                    <img src="../temp/' . $image . '" alt="Картинка товару" class="product__item-image">
-                                </div>
-                                <div class="product__item-row">
-                                    <h2 class="product__item-name">' . $name . '</h2>
-                                    <div class="product__item-row" style="display: flex; flex-direction: row; align-items: center">
-                                        <p class="product__item-price">' . $price . '<span>грн</span></p>
-                                        <a href="javascript:void(0)" id="' . $id . '" class="product__item-btn" onclick="$(\'#product-desc' . $id . '\').fadeIn(); document.getElementById(\'product-desc' . $id . '\').style.display = \'flex\'">купити</a>
-                                    </div>
-                                </div>
-                            </li>
-                        ';
-                    }
-                }
-                ?>
-            </ul>
+            ?>
+        
         </div>
     </main>
 
@@ -262,6 +129,7 @@ $data = $mysql->query("SELECT * FROM `product`");
             $("#preloader").slideUp("slow");
             document.querySelector('body').style.overflow = "scroll";
         }, 2500);
+
     </script>
     <script src="../js/script.js"></script>
     <script>

@@ -19,6 +19,7 @@
     width: 70%;
     height: 65%;
     filter: contrast(100%);
+    position: relative;
 }
 .tabir__video-player{
     width: 100%;
@@ -82,10 +83,10 @@
     font-size: 68px;
 }
 .video__message-number{
-    font-family: FuturaLT-Bold;
+    font-family: Gagalin;
     font-size: 144px;
     color: #FFD537;
-    font-family: 700;
+    font-weight: 400;
 }
 
 
@@ -121,6 +122,7 @@
 }
 .tabir__features-list  li a h3{
     font-size: 26px;
+    text-transform: uppercase;
 }
 .tabir__features-list  li a{
     text-decoration: none;
@@ -148,11 +150,13 @@
     align-items: center;
     margin-top: -55px;
 }
+.registration__course-title{
+    color: #d6d0ba;
+}
 .registration__course-title,
 .registration__course-subtitle{
     margin-top: 9vh;
     text-shadow: 1px 1px 4px #1b292c;
-    -webkit-text-stroke: 0.1px #000;
     font-family: 'Montserrat';
     color: #DEB92D;
     font-size: 44px;
@@ -439,4 +443,9 @@ a.default-title:hover{
         width: 300px;
         font-size: 22px;
     }
+}
+
+@font-face {
+    font-family: Gagalin;
+    src: url(../font/Gagalin-Regular.otf)
 }

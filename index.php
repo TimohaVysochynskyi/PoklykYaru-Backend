@@ -93,8 +93,8 @@
         <div class="statistic wow fadeInUp">
             <h2 class="statistic-title">ПОКЛИК ЯРУ В ЦИФРАХ - ЦЕ: </h2>
             <div class="statistic__row">
-                <div class="statistic__col"><span>24</span><span>Згадки в ЗМІ</span></div>
-                <div class="statistic__col"><span>710</span><span>учасників</span></div>
+                <div class="statistic__col"><span>28</span><span>Згадок в ЗМІ</span></div>
+                <div class="statistic__col"><span>864</span><span>учасників</span></div>
                 <div class="statistic__col"><span style="color: #293C43cc;">15</span><span>заходів</span></div>
             </div>
         </div>
@@ -110,7 +110,7 @@
                     <div class="feedback__item-col"><img src="./images/feedback/feedback-istoryk.png"
                             class="feedback__item-img"></div>
                     <div class="feedback__item-col">
-                        <h4 class="feedback__item-title">ДРУГ ІСТОРИК — координатор організації «Поклик Яру»</h4>
+                        <h4 class="feedback__item-title">ІСТОРИК<br><span>Координатор організації «Поклик Яру»</span></h4>
                         <p class="feedback__item-text">&nbspКоманда з 17-ти людей, які щодня, безкоштовно будують
                             організацію, що хоче виховувати відповідальну молодь. Понад 100 вихованців, які щороку
                             проводять своє літо на таборі "Поклик Яру". Вони змінюються під нашим впливом і обирають
@@ -125,7 +125,7 @@
                     <div class="feedback__item-col"><img src="./images/feedback/feedback-major.png"
                             class="feedback__item-img"></div>
                     <div class="feedback__item-col">
-                        <h4 class="feedback__item-title">МАЖОР<br><span>РОЙОВИЙ «ХОЛОДНОЯРСЬКИЙ ВІТЕР»</span></h4>
+                        <h4 class="feedback__item-title">МАЖОР<br><span>Ройовий «Холодноярський вітер»</span></h4>
                         <p class="feedback__item-text">Їдучи на табір третє літо поспіль, я мав за честь стати ройовим.
                             24/7 відчував відповідальність. Хтось не почергував, хтось забув автомат, хтось не встиг на
                             збірку. Все це тепер контролював я. Особливо запам'ятав момент, коли вночі повинен був
@@ -156,7 +156,7 @@
                     <div class="feedback__item-col"><img src="./images/feedback/feedback-volyn.png"
                             class="feedback__item-img"></div>
                     <div class="feedback__item-col">
-                        <h4 class="feedback__item-title">ПОДРУГА ВОЛИНЬ<br><span>член команди «ПОКЛИК ЯРУ»</span></h4>
+                        <h4 class="feedback__item-title">ВОЛИНЬ<br><span>Член команди «ПОКЛИК ЯРУ»</span></h4>
                         <p class="feedback__item-text">&nbspНайпомітніша зміна від перебування в команді «Поклик Яру» —
                             починає зникати етап «а нашо, може пізніше, а воно мені треба?» у виконанні будь-чого.
                             Натомість, з’являється стійке і холодне розуміння невідкладності роботи. Я навчилась більш
@@ -170,7 +170,7 @@
                     <div class="feedback__item-col"><img src="./images/feedback/feedback-sonce.png"
                             class="feedback__item-img"></div>
                     <div class="feedback__item-col">
-                        <h4 class="feedback__item-title">ПОДРУГА СОНЦЕ<br><span>рій імені Василя Чучупаки</span></h4>
+                        <h4 class="feedback__item-title">СОНЦЕ<br><span>Рій імені Василя Чучупаки</span></h4>
                         <p class="feedback__item-text">&nbspГортаючи стрічку в тік тоці, я наштовхнулася на відео про
                             «Поклик Яру». Так і прийняла рішення, яке врешті дуже вплинуло на моє життя. Численні
                             гутірки, виховні моменти від проводу, випробування і велика кількість нових для мене
@@ -185,7 +185,7 @@
                     <div class="feedback__item-col"><img src="./images/feedback/feedback-nadia.png"
                             class="feedback__item-img"></div>
                     <div class="feedback__item-col">
-                        <h4 class="feedback__item-title">НАДІЯ ЗАМРИГА<br><span>мама подруги Волинь</span></h4>
+                        <h4 class="feedback__item-title">НАДІЯ ЗАМРИГА<br><span>Мама подруги Волинь</span></h4>
                         <p class="feedback__item-text">&nbspЇї перша зміна на таборі була цікавою, складною, емоційною,
                             випробувальною. Не передати мій подив, коли на половині моєї дороги до Черкас вона
                             подзвонила і сказала, що хоче залишитися ще на одну зміну! Друга зміна, під час якої моя
@@ -241,7 +241,7 @@
             </div>
         </div>
         <div class="footer-block">
-            <h3 class="footer__license">ГО “Поклик яру” 2020-2021. Всі права захищені</h3>
+            <h3 class="footer__license">ГО “Поклик яру” 2020-2023. Всі права захищені</h3>
             <h3 class="footer__license">Дизайн сайту Olha Skarzhynets, графічний дизайн Катя Вспишка, верстка сайту Дон
             </h3>
         </div>

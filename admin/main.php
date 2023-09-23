@@ -1,5 +1,5 @@
 <?php
-    if(empty($_COOKIE['auth']) || $_COOKIE['auth'] != md5("success")){
+    if(empty($_COOKIE['name']) || empty($_COOKIE['login']) || empty($_COOKIE['contact'])){
         header("Location: ../admin");
     }
 ?>
@@ -33,8 +33,8 @@
             <a href="merch" class="category"><img src="./images/t-shirt.png"><span>Мерч</span></a>
             <a href="#" class="category"><img src="./images/copywriting.png"><span>Редагування</span></a>
             <a href="#" class="category"><img src="./images/line-chart.png"><span>Статистика</span></a>
-            <a href="#" class="category"><img src="./images/user.png"><span>Користувачі</span></a>
-            <a href="#" class="category"><img src="./images/dollar-sign.png"><span>Надходження</span></a>
+            <a href="users" class="category"><img src="./images/user.png"><span>Користувачі</span></a>
+            <a href="income" class="category"><img src="./images/dollar-sign.png"><span>Надходження</span></a>
         </div>
     </main>
 

@@ -308,12 +308,13 @@ html {
     border-radius: 2px;
     outline: none;
 }
-#merch-content__list li div:last-child form textarea{
+
+#merch-content__list li div:last-child form textarea {
     height: 80px;
 }
 
-#merch-content__list li div:last-child form input:hover ,
-#merch-content__list li div:last-child form textarea:hover{
+#merch-content__list li div:last-child form input:hover,
+#merch-content__list li div:last-child form textarea:hover {
     border-color: #72838A;
 }
 
@@ -406,7 +407,7 @@ html {
 .help-way__item form input,
 .help-way__item form button,
 #create-new-zbir__form input,
-#create-new-zbir__form button  {
+#create-new-zbir__form button {
     padding: 8px 12px;
     border: 1px solid #72838A;
     border-radius: 2px;
@@ -425,9 +426,6 @@ html {
     background: #72838A;
     color: #fefefe;
 }
-
-
-
 
 
 
@@ -458,6 +456,7 @@ html {
     display: flex;
     flex-direction: column;
 }
-.help-way__item img{
+
+.help-way__item img {
     width: 30%;
 }

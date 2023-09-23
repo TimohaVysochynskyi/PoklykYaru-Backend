@@ -1,5 +1,5 @@
 <?php
-	if(empty($_COOKIE['auth']) || $_COOKIE['auth'] != md5("success")){
+    if(empty($_COOKIE['name']) || empty($_COOKIE['login']) || empty($_COOKIE['contact'])){
         header("Location: ../admin");
     }
 ?>

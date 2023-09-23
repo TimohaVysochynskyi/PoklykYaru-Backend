@@ -18,9 +18,9 @@ if ($error) {
 // if everything is filled then we execute the mail function
 else {
 
-    $name = $_REQUEST['name'];
-    $email = $_REQUEST['email'];
-    $message = $_REQUEST['message'];
+    $name = htmlentities(strip_tags($_REQUEST['name']));
+    $email = htmlentities(strip_tags($_REQUEST['email']));
+    $message = htmlentities(strip_tags($_REQUEST['message']));
 
     $mysql->query("INSERT INTO `help-mail` (`name`, `email`, `message`, `status`) VALUES ('$name', '$email', '$message', 'unread')");
 
@@ -28,7 +28,7 @@ else {
     // Set your email address where you want to receive emails.
     $to = 'pokluk.yary@gmail.com';
     $subject = 'Повідомлення зі сторінки допомоги';
-    $send_email = mail($to, $subject, $fullmessage, $email);
+    //$send_email = mail($to, $subject, $fullmessage, $email);
 
     $mysql->close();
 }

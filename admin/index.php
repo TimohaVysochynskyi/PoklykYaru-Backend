@@ -1,20 +1,23 @@
 <?php
-if(empty($_COOKIE['auth'])){
-    if(isset($_POST['auth-btn'])){
-        $pin = htmlentities($_POST['pin']);
-        if(mb_strlen($pin) <= 0){
-            echo "Нізя залишати поле пустим, броу";
-        } else {
-            $pin = md5($pin);
-            if($pin == md5("1111")){
-                setcookie("auth", md5("success"), time()+3600*24*30, "../admin");
-                header("Location: ./main");
-            }
-        }
+
+    require './validation/connect.php';
+
+    if (isset($_POST['auth-btn'])) {
+        $login = htmlentities(strip_tags($_POST['login']));
+        $password = htmlentities(strip_tags($_POST['password']));
+
+        $password = md5($password);
+
+        $admin = $conn->query("SELECT * FROM `admin` WHERE `login` = '$login' AND `password` = '$password'");
+        $admin = $admin->fetch_assoc();
+    
+        setcookie('name', $admin['name'], time()+3600*24*30, "./");
+        setcookie('login', $admin['login'], time()+3600*24*30, "./");
+        setcookie('contact', $admin['contact'], time()+3600*24*30, "./");
+
+        header("Location: ./main.php");
     }
-} else{
-    header("Location: ./main");
-}
+
 ?>
 
 
@@ -41,6 +44,7 @@ if(empty($_COOKIE['auth'])){
 
         form{
             display: flex;
+            min-width: 20%;
             flex-direction: column;
 
         }
@@ -58,10 +62,12 @@ if(empty($_COOKIE['auth'])){
     </style>
 </head>
 <body>
-    <h1>Перед підключенням до адмінки треба ввести Pin код</h1>
+    <h1>Для входу, введіть дані</h1>
+    <br>
     <form action="#" method="post">
-        <input type="number" name="pin" placeholder="Pin">
-        <button name="auth-btn" type="submit">Гоу</button>
+        <input type="text" name="login" placeholder="Логін" required>
+        <input type="password" name="password" placeholder="Пароль" required>
+        <button name="auth-btn" type="submit">Увійти</button>
     </form>
 </body>
 </html>

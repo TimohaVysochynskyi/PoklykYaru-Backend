@@ -1,4 +1,5 @@
 @import url(../css/secondary.css);
+
 .help-wrapper {
     display: flex;
     justify-content: center;
@@ -115,6 +116,8 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    justify-content: center;
 }
 
 .help__zbir-col:last-child {
@@ -122,8 +125,8 @@
 }
 
 .help__zbir-img {
-    width: 100%;
     border-radius: 25px;
+    height: 100%;
 }
 
 .help__zbir-title {
@@ -177,12 +180,13 @@
     background: none;
 }
 
-.want-help{
+.want-help {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .want-help__form {
     display: flex;
     flex-direction: column;
@@ -228,28 +232,48 @@
 }
 
 @media screen and (max-width: 968px) {
-    .container{
+    .container {
         margin: 0px !important;
     }
-    .help-wrapper{
+
+    .help-wrapper {
         flex-direction: column;
     }
-    .help__col{
+
+    .help__col {
         width: 100%;
         border: none;
         padding: 20px 0px;
     }
-    .help__col:first-child{
+
+    .help__col:first-child {
         border-bottom: 1.5px solid #293C43;
     }
+
+    .help__zbir-col {
+        height: auto;
+    }
+
+    .help__zbir-img {
+        width: 100%;
+        height: auto;
+    }
 }
+
 @media screen and (max-width: 560px) {
-    .help__zbir{
+    .help__zbir {
         height: auto;
         flex-direction: column;
         align-items: center;
     }
-    .help__zbir-col{
+
+    .help__zbir-col {
         width: 100% !important;
+    }
+
+    .want-help__form-input {
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
     }
 }

@@ -41,15 +41,15 @@ require '../php/blocks.php';
                     <h2 class="help__title">Цільова допомога</h2>
 
                     <div class="help__zbir">
-                        <div class="help__zbir-col"><img src="./data/toloka.jpg" class="help__zbir-img" alt="На що збираємо"></div>
+                        <div class="help__zbir-col"><img src="./data/mriya.jpg" class="help__zbir-img" alt="На що збираємо"></div>
                         <div class="help__zbir-col">
-                            <h3 class="help__zbir-title">Матеріали на толоку</h3>
+                            <h3 class="help__zbir-title">Збираємо на мрію</h3>
                             <!--<div class="help__progress-wrapper">
                                 <div class="help__progress-col" style="width: 68%;">68%</div>
                                 <div class="help__progress-col" style="width: 32%;">32%</div>
                             </div>-->
-                            <a href="https://t.me/PoklykYaru/2127" align="center" style="margin: 10px 0px;">Детальніша інформація</a>
-                            <a href="https://send.monobank.ua/jar/4sw3MHjcRW" class="help__zbir-btn">Допомогти</a>
+                            <a href="https://t.me/PoklykYaru/2292" align="center" style="margin: 20px 0px;">Детальніша інформація</a>
+                            <a href="https://send.monobank.ua/jar/EdxuZE5H8" class="help__zbir-btn">Допомогти</a>
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@ require '../php/blocks.php';
             </div>
             <div class="help__col">
                 <h2 class="help__title" style="margin-top: 20px;">Допомогти іншим</h2>
-                <p>Тут покищо нічого немає ;)</p>
+                <p align="center" style="font-size: 18px">На жаль, тут немає зборів :( <br>Якщо ви маєте якийсь збір, відправте інформацію про нього сюди: <a href="mailto:pokluk.yary@gmail.com">pokluk.yary@gmail.com</a></p>
             </div>
         </div>
     </main>

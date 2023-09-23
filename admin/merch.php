@@ -1,8 +1,8 @@
-
 <?php
-if(empty($_COOKIE['auth']) || $_COOKIE['auth'] != md5("success")){
-        header("Location: ../admin");
-    }
+
+if(empty($_COOKIE['name']) || empty($_COOKIE['login']) || empty($_COOKIE['contact'])){
+    header("Location: ../admin");
+}
 
 // Підключення до бази даних
 require './validation/connect.php';
@@ -83,8 +83,8 @@ if (isset($_POST['merch-content__edit-btn'])) {
 						<select id="filter-pop-up__type">
 							<option value="no">Все</option>
 							<option value="new">Новинка</option>
-							<option value="clothe">Одяг</option>
-							<option value="sticker">Стікери</option>
+							<option value="cloth">Одяг</option>
+							<option value="chevron">Шеврони</option>
 							<option value="book">Книги</option>
 							<option value="flag">Прапори</option>
 						</select>
