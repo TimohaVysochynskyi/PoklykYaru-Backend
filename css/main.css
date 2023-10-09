@@ -377,8 +377,7 @@ body {
 
 .default-title__wrapper {
     position: relative;
-    bottom: 50px !important;
-    margin: 0;
+    bottom: 53px !important;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -419,9 +418,9 @@ body {
     min-width: 200px;
     text-align: center;
     position: relative;
-    bottom: -22px;
+    bottom: -28px;
     border: 2px solid #293C43;
-    box-shadow: 6px 6px 6px #32383b;
+    box-shadow: 2px 2px 4px #4444449f;
     text-decoration: none;
 }
 

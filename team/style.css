@@ -57,8 +57,8 @@
 		width: 90vw;
 	}
 
-	.team__paralelogram {
-		height: 80vh;
+	.swiper-carousel{
+		max-width: 100vw !important;
 	}
 }
 
@@ -66,10 +66,14 @@
 	.header__info {
 		height: 60%;
 	}
-
-	.team__paralelogram {
-		left: -20vw;
-		height: 70vh;
+	.istoryk-wrapper{
+		flex-direction: column;
+		padding: 20px;
+	}
+	.team__text {
+		font-size: 2vh;
+		padding: 0;
+		width: 100%;
 	}
 }
 
@@ -79,12 +83,12 @@
 	}
 
 	.team__text {
-		width: 98vw;
 		font-weight: 600;
 	}
-
-	.team__paralelogram {
-		height: 40vh;
-		left: -30vw;
+	.istoryk-wrapper{
+		padding: 20px 0;
+	}
+	.team-wrapper{
+		padding: 0;
 	}
 }

@@ -328,7 +328,7 @@
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1400px) {
     .product__desc {
         width: 85vw;
         padding: 20px;
@@ -367,6 +367,7 @@
         border: none;
         border-radius: 0px;
         z-index: 3;
+        justify-content: center;
     }
 
     .product__desc-row {
@@ -397,9 +398,20 @@
 
     .product__desc-name {
         text-align: center;
+        width: 100%;
+    }
+    .product__desc-desc{
+        font-size: 14px;
+    }
+    .product__item-price{
+        font-size: 42px;
+    }
+    .product__item-price>span{
+        font-size: 18px;
+        margin-right: 10px;
     }
 
     .product__desc-btn {
-        margin: 15px 0px;
+        margin: 15px 10px;
     }
 }

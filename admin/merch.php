@@ -28,27 +28,6 @@ if (isset($_POST['create-new-merch__submit-btn'])) {
     }
     header("Location: ./merch.php");
 }
-if (isset($_POST['merch-content__edit-btn'])) {
-	$id = strip_tags($_POST['e-id']);
-	$name = strip_tags($_POST['e-name']);
-	$description = strip_tags($_POST['e-desc']);
-	$cost = strip_tags($_POST['e-cost']);
-	$oldImage = $_FILES['old-image']["name"];
-	
-	if (file_exists("../temp/" . $oldImage)) {
-		unlink("../temp/" . $oldImage);
-	}
-	
-	$eFilename = $_FILES['e-image']["name"];
-	$eTempname = $_FILES['e-image']["tmp_name"];
-	$folder = "../temp/" . $eFilename;
-	
-	$conn->query("UPDATE `product` SET `name` = '$name', `description` = '$description', `cost` = '$cost', `image` = '	$eFilename' WHERE `id` = '$id'");
-	
-	move_uploaded_file($eTempname, $folder);
-	
-	header("Location: ./merch.php");
-}
 ?>
 
 

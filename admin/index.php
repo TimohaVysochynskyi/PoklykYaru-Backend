@@ -6,7 +6,7 @@
         $login = htmlentities(strip_tags($_POST['login']));
         $password = htmlentities(strip_tags($_POST['password']));
 
-        $password = md5($password);
+        //$password = md5($password);
 
         $admin = $conn->query("SELECT * FROM `admin` WHERE `login` = '$login' AND `password` = '$password'");
         $admin = $admin->fetch_assoc();

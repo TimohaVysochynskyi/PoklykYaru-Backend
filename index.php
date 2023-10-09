@@ -23,7 +23,7 @@
 
     <!--Header-->
     <header class="header" id="header">
-        <section class="header__registration">
+        <!--<section class="header__registration">
             <div class="header__register-timer-wrapper">
                 <a target="blank"
                     href="https://docs.google.com/forms/d/1IbLFIOxB1vnz4VdcdKWWGTlkIBd15mXIeui1fcPnb0k/edit"
@@ -33,7 +33,7 @@
                     <h1 class="header__register-title">РЕЄСТРАЦІЯ ПОЧАЛАСЯ</h1>
                 </a>
             </div>
-        </section>
+        </section>-->
     </header>
     <nav class="header__nav">
         <a href="./"><img src="./images/header&footer/logo.png" alt="Логотип" class="header__logo"></a>
@@ -222,15 +222,15 @@
             <div class="footer__col">
                 <nav class="footer__nav">
                     <ul class="footer__list">
-                        <li><a href="https://www.youtube.com/channel/UCROFrx6_3YVPx2pKHyY8C2w" class="footer__link"><img
+                        <li><a href="https://www.youtube.com/channel/UCROFrx6_3YVPx2pKHyY8C2w" target="blank" class="footer__link"><img
                                     src="./images/header&footer/yt-link.png" alt=""></a></li>
-                        <li><a href="https://www.tiktok.com/@poklyk.yaru" class="footer__link"><img
+                        <li><a href="https://www.tiktok.com/@poklyk.yaru" target="blank" class="footer__link"><img
                                     src="./images/header&footer/tt-link.png" alt=""></a></li>
-                        <li><a href="https://t.me/PoklykYaru" class="footer__link">
+                        <li><a href="https://t.me/PoklykYaru" target="blank" class="footer__link">
                                 <img src="./images/header&footer/tg-link.png" alt=""></a></li>
-                        <li><a href="https://www.facebook.com/poklyk.yaru" class="footer__link"><img
+                        <li><a href="https://www.facebook.com/poklyk.yaru" target="blank" class="footer__link"><img
                                     src="./images/header&footer/fc-link.png" alt=""></a></li>
-                        <li><a href="https://www.instagram.com/poklyk.yaru/" class="footer__link"><img
+                        <li><a href="https://www.instagram.com/poklyk.yaru/" target="blank" class="footer__link"><img
                                     src="./images/header&footer/inst-link.png" alt=""></a></li>
                     </ul>
                 </nav>

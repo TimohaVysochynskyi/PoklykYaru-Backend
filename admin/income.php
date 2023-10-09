@@ -40,7 +40,7 @@
 </head>
 
 <body>
-    <header class="header"><a href="./">Повернутися до головної</a></header>
+    <header class="header"><a href="main">Повернутися до головної</a></header>
     
     <main class="container">
         <ul id="purchases-box"></ul>

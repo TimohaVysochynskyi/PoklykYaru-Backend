@@ -13,7 +13,6 @@ if ($result->num_rows > 0) {
     echo "
         <table> <tr> <th>№</th> <th>Товар</th> <th>Ціна</th> <th>Розмір</th> <th>Замовник</th> <th>Телефон</th> <th>Область/місто</th> <th>Відділення НП</th> <th>Дата</th> <th></th></tr>";
             foreach ($result as $row) {
-                var_dump($row);
                 echo "
                     <tr>
                         <td>".$row['id']."</td>

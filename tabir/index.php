@@ -134,65 +134,14 @@ $guests = array(
 
         <!-- СУДА -->
         <div class="registration-wrapper">
-            <h2 class="registration__course-title">Стаціонарні зміни</h2>
-            <section class="registration-course-type">
-                <div class="registration__course">
-                    <div class="registration__course-row">
-                        <h3 class="registration__course-subtitle">Перша зміна</h3>
-                    </div>
-                    <div class="registration__course-row">
-                        <h4 class="registration__course-option">Дата: <span>25/06 - 04/07 </span></h4>
-                        <h4 class="registration__course-option">Особливості: <span>10 - 13 років</span></h4>
-                    </div>
-                </div>
-                <div class="registration__course">
-                    <div class="registration__course-row">
-                        <h3 class="registration__course-subtitle">Друга зміна</h3>
-                    </div>
-                    <div class="registration__course-row">
-                        <h4 class="registration__course-option">Дата: <span>07/07 - 16/07</span></h4>
-                        <h4 class="registration__course-option">Особливості: <span>14 - 17 років</span></h4>
-                    </div>
-                </div>
-                <div class="registration__course">
-                    <div class="registration__course-row">
-                        <h3 class="registration__course-subtitle">Третя зміна</h3>
-                    </div>
-                    <div class="registration__course-row">
-                        <h4 class="registration__course-option">Дата: <span>20/07 - 29/07</span></h4>
-                        <h4 class="registration__course-option">Особливості: <span>14 - 17 років</span></h4>
-                    </div>
-                </div>
-            </section>
+            <h2 class="registration__course-title" style="font-size: 8vh">ДО ЗУСТРІЧІ НАСТУПНОГО ЛІТА!</h2>
 
-            <h2 class="registration__course-title">Мандрівні зміни</h2>
-            <section class="registration-course-type">
-                <div class="registration__course">
-                    <div class="registration__course-row">
-                        <h3 class="registration__course-subtitle">Холодним яром</h3>
-                    </div>
-                    <div class="registration__course-row">
-                        <h4 class="registration__course-option">Дата: <span>07/07 - 16/07</span></h4>
-                        <h4 class="registration__course-option">Особливості: <span>14 - 17 років</span></h4>
-                    </div>
-                </div>
-                <div class="registration__course">
-                    <div class="registration__course-row">
-                        <h3 class="registration__course-subtitle">Карпатами</h3>
-                    </div>
-                    <div class="registration__course-row">
-                        <h4 class="registration__course-option">Дата: <span>03/08 - 10/08</span></h4>
-                        <h4 class="registration__course-option">Особливості: <span>15 - 18 років</span></h4>
-                    </div>
-                </div>
-            </section>
-
-            <div class="registration-wrapper__row">
+            <!--<div class="registration-wrapper__row">
                 <div class="default-title__wrapper-y" style="top: 60px;">
                     <a href="https://docs.google.com/forms/d/1IbLFIOxB1vnz4VdcdKWWGTlkIBd15mXIeui1fcPnb0k/edit" class="default-title" style="box-shadow: 0px 0px 10px #293C43;">зареєструватись</a>
                     <hr>
                 </div>
-            </div>
+            </div>-->
         </div>
 
         <div class="disciplines-wrapper">

@@ -29,10 +29,10 @@ html {
     background: none;
     border: none;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     z-index: 2;
-    bottom: 50px;
-    right: 55px;
+    bottom: 40px;
+    right: 45px;
 }
 
 .container {
@@ -459,4 +459,25 @@ html {
 
 .help-way__item img {
     width: 30%;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .container{
+        margin-top: 8vh;
+        width: 100vw;
+        min-height: auto;
+    }
+    .category-wrapper{
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .category{
+        width: 80%;
+    }
 }

@@ -5,3 +5,5 @@ $conn = new mysqli('localhost', 'root', '', 'poklykyaru');
 if ($conn->connect_error) {
     die("Помилка з'єднання з базою даних: "/* . $conn->connect_error*/);
 }
+
+$conn->set_charset("utf8");
