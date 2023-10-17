@@ -25,7 +25,7 @@ require '../php/blocks.php';
                 <li><a href="#щедруй для захисників" class="event__link-mobile">ЩЕДРУЙ ДЛЯ ЗАХИСНИКІВ</a></li>
                 <li><a href="#туристичне змагання ім. в. чучупаки" class="event__link-mobile">ТУРИСТИЧНЕ ЗМАГАННЯ ІМ. В. ЧУЧУПАКИ</a></li>
                 <li><a href="#покрова в холодному яру" class="event__link-mobile">СВЯТО ПОКРОВИ В ХОЛОДНОМУ ЯРУ</a></li>
-                <li><a href="#зимовий похід" class="event__link-mobile">ЗИМОВИЙ ПОХІД</a></li>
+                <li><a href="#зимовий похід" class="event__link-mobile">ЗИМОВИЙ ПОХІД ІМЕНІ ГОРЛІСА-ГОРСЬКОГО</a></li>
             </ul>
         </section>
         <nav class="event__nav">
