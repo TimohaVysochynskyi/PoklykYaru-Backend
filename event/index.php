@@ -24,7 +24,7 @@ require '../php/blocks.php';
             <ul class="event__list-mobile">
                 <li><a href="#щедруй для захисників" class="event__link-mobile">ЩЕДРУЙ ДЛЯ ЗАХИСНИКІВ</a></li>
                 <li><a href="#туристичне змагання ім. в. чучупаки" class="event__link-mobile">ТУРИСТИЧНЕ ЗМАГАННЯ ІМ. В. ЧУЧУПАКИ</a></li>
-                <li><a href="#покрова в холодному яру" class="event__link-mobile">ПОКРОВА В ХОЛОДНОМУ ЯРУ</a></li>
+                <li><a href="#покрова в холодному яру" class="event__link-mobile">СВЯТО ПОКРОВИ В ХОЛОДНОМУ ЯРУ</a></li>
                 <li><a href="#зимовий похід" class="event__link-mobile">ЗИМОВИЙ ПОХІД</a></li>
             </ul>
         </section>
@@ -32,7 +32,7 @@ require '../php/blocks.php';
             <ul class="event__list">
                 <li><a href="#щедруй для захисників" class="event__link wow fadeInLeft">ЩЕДРУЙ ДЛЯ ЗАХИСНИКІВ</a></li>
                 <li><a href="#туристичне змагання ім. в. чучупаки" class="event__link wow fadeInRight">ТУРИСТИЧНЕ ЗМАГАННЯ ІМ. В. ЧУЧУПАКИ</a></li>
-                <li><a href="#покрова в холодному яру" class="event__link wow fadeInLeft">ПОКРОВА В ХОЛОДНОМУ ЯРУ</a></li>
+                <li><a href="#покрова в холодному яру" class="event__link wow fadeInLeft">СВЯТО ПОКРОВИ В ХОЛОДНОМУ ЯРУ</a></li>
                 <li><a href="#зимовий похід" class="event__link wow fadeInRight">ЗИМОВИЙ ПОХІД</a></li>
             </ul>
         </nav>
