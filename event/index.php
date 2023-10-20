@@ -33,7 +33,7 @@ require '../php/blocks.php';
                 <li><a href="#щедруй для захисників" class="event__link wow fadeInLeft">ЩЕДРУЙ ДЛЯ ЗАХИСНИКІВ</a></li>
                 <li><a href="#туристичне змагання ім. в. чучупаки" class="event__link wow fadeInRight">ТУРИСТИЧНЕ ЗМАГАННЯ ІМ. В. ЧУЧУПАКИ</a></li>
                 <li><a href="#покрова в холодному яру" class="event__link wow fadeInLeft">СВЯТО ПОКРОВИ В ХОЛОДНОМУ ЯРУ</a></li>
-                <li><a href="#зимовий похід" class="event__link wow fadeInRight">ЗИМОВИЙ ПОХІД</a></li>
+                <li><a href="#зимовий похід" class="event__link wow fadeInRight">ЗИМОВИЙ ПОХІД ІМЕНІ ГОРЛІСА-ГОРСЬКОГО</a></li>
             </ul>
         </nav>
     </header>
@@ -97,7 +97,7 @@ require '../php/blocks.php';
                 <div class="event__row">
                     <section class="event__info">
                         <div class="event-paralelogram"></div>
-                        <h1 class="event-title">покрова в холодному яру</h1>
+                        <h1 class="event-title"> свято покрови в холодному яру</h1>
                         <h2 class="event-time">01.10.2023</h2>
                     </section>
                 </div>
@@ -119,7 +119,7 @@ require '../php/blocks.php';
                 <div class="event__row">
                     <section class="event__info">
                         <div class="event-paralelogram"></div>
-                        <h1 class="event-title">зимовий похід</h1>
+                        <h1 class="event-title">зимовий похід імені горліса-горського</h1>
                         <h2 class="event-time">13.12.2023</h2>
                     </section>
                 </div>
