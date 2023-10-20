@@ -130,16 +130,13 @@ require '../php/blocks.php';
                     </h2>
                 </a>
                 <a class="swiper-slide" target="blank" href="http://slovoprosvity.org/wp-content/uploads/2021/10/42-1146-21-27-zhovtnia-2021.pdf" class="zmi__item _33" style="background-image: url(../images/zmi/zmi33.png);">
-                    <h2 class="_33"></h2>
+                    <h2 class="_33">Холодний Яр – земля вільних</h2>
                 </a>
                 <a class="swiper-slide" target="blank" href="https://kzread.info/dash/u-asniki-taboru-poklik-ru-v-anuvati-otamana-holodno-rs-ko-respubl-ki/aX6Zz5SciKvbeKg.html" class="zmi__item _34" style="background-image: url(../images/zmi/zmi34.png);">
-                    <h2 class="_34"></h2>
+                    <h2 class="_34">ЩЕДРУЄМО ДЛЯ ЗСУ В ЧЕРКАСАХ ТА ХОЛОДНОМУ ЯРУ. ЩЕДРІВКИ РАЗОМ З ПОКЛИК ЯРУ</h2>
                 </a>
                 <a class="swiper-slide" target="blank" href="https://kzhead.info/sun/mteyiK2PoWqqrIk/edru-mo-dl.html" class="zmi__item _35" style="background-image: url(../images/zmi/zmi35.png);">
-                    <h2 class="_35"></h2>
-                </a>
-                <a class="swiper-slide" target="blank" href="https://kzpost.info/ex/mshs15ednIWMis0/stor-holodnogo-ru-vipusk-per-ij-r-j-gorl-s-gors-kij" class="zmi__item _36" style="background-image: url(../images/zmi/zmi36.png);">
-                    <h2 class="_36"></h2>
+                    <h2 class="_35">Учасники Табору „Поклик Яру“ Вшанувати Отамана Холодноярської Республіки</h2>
                 </a>
             </div>
             <div class="swiper-button-next swiper-zmi2-next"></div>
