@@ -1,24 +1,22 @@
-let slidesPerView = 2;
-let rows = 2;
+let feedbackRows = 2;
+let feedbackSlidesPerView = 1;
 
-if (window.screen.width > 1400) {
-  slidesPerView = 2;
-  rows = 2;
-} else if (window.screen.width <= 1400) {
-  slidesPerView = 1;
-  rows = 2;
-} else {
-  slidesPerView = 1;
-  rows = 1;
+if (window.innerWidth < 850 && window.innerHeight > 505) {
+  feedbackRows = 1;
+  feedbackSlidesPerView = 1;
+} else if (window.innerWidth > 768 && window.innerHeight < 505) {
+  feedbackRows = 1;
+  feedbackSlidesPerView = 1;
 }
-let swiper = new Swiper(".feedback-swiper", {
-  slidesPerView: slidesPerView,
+
+let feedbackSwiper = new Swiper(".feedback-swiper", {
+  slidesPerView: feedbackSlidesPerView,
   /*autoplay: {
         delay: 15000,
         disableOnInteraction: false,
   },*/
   grid: {
-    rows: rows,
+    rows: feedbackRows,
   },
   spaceBetween: 30,
   pagination: {

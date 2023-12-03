@@ -21,8 +21,9 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     margin: 20px 0;
+    gap: 20px;
 }
 
 .product__item {
@@ -137,13 +138,16 @@
 }
 
 
+
+/***** PRODUCT DESCRIPTION *****/
+
 .product__desc-wrapper {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
     position: fixed;
     top: 0;
     left: 0;
@@ -165,16 +169,17 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 20px 0;
 }
 
 .product__desc-back {
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 10px;
+    left: 5px;
     z-index: 5;
 }
 
@@ -195,6 +200,10 @@
     width: 100%;
 }
 
+.product__desc-row:first-child {
+    width: 90%;
+}
+
 .product__desc-row {
     justify-content: center !important;
 }
@@ -207,7 +216,7 @@
 .product__desc-col:last-child {
     display: flex;
     align-items: center;
-    padding: 0px 40px;
+    padding-left: 40px;
     width: 50%;
 }
 
@@ -328,9 +337,10 @@
     }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
     .product__desc {
         width: 85vw;
+        height: 90vh;
         padding: 20px;
     }
 
@@ -368,6 +378,8 @@
         border-radius: 0px;
         z-index: 3;
         justify-content: center;
+        padding-top: 70px;
+        gap: 0;
     }
 
     .product__desc-row {
@@ -400,13 +412,16 @@
         text-align: center;
         width: 100%;
     }
-    .product__desc-desc{
+
+    .product__desc-desc {
         font-size: 14px;
     }
-    .product__item-price{
-        font-size: 42px;
+
+    .product__item-price {
+        font-size: 42px !important;
     }
-    .product__item-price>span{
+
+    .product__item-price>span {
         font-size: 18px;
         margin-right: 10px;
     }

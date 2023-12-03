@@ -16,24 +16,23 @@
 <body>
 
     <!--Preloader-->
-    <div class="preloader" id="preloader">
-        <!--<div class="preloader-eraser"></div>-->
+    <!--<div class="preloader" id="preloader">
+        <div class="preloader-eraser"></div>
         <img src="./images/header&footer/preloader.gif" class="preloader__gif">
-    </div>
+    </div>-->
 
     <!--Header-->
     <header class="header" id="header">
-        <!--<section class="header__registration">
+        <section class="header__registration">
             <div class="header__register-timer-wrapper">
-                <a target="blank"
-                    href="https://docs.google.com/forms/d/1IbLFIOxB1vnz4VdcdKWWGTlkIBd15mXIeui1fcPnb0k/edit"
-                    class="header__register-timer">
+                <a target="blank" href="#" class="header__register-timer">
                     <img src="./images/header&footer/header-arrow.png" class="header__register-img">
-                    <span class="header__register-timer-text"> ЗАРЕЄСТРУВАТИСЬ </span>
-                    <h1 class="header__register-title">РЕЄСТРАЦІЯ ПОЧАЛАСЯ</h1>
+                    <span class="header__register-timer-text"> <span id="days"></span>дн. <span id="hours"></span>год.
+                        <span id="minutes"></span>хв.</span>
+                    <h1 class="header__register-title">РЕЄСТРАЦІЯ ПОЧНЕТЬСЯ ЧЕРЕЗ</h1>
                 </a>
             </div>
-        </section>-->
+        </section>
     </header>
     <nav class="header__nav">
         <a href="./"><img src="./images/header&footer/logo.png" alt="Логотип" class="header__logo"></a>
@@ -61,16 +60,14 @@
 
         <!--About us block-->
         <div class="about" id="about">
-
             <a href="javascript:void(0)" class="whoarewe wow fadeInLeft" onclick="whoAreWe()">
                 <img id="whoarewe-img" src="./images/whoarewe-img.png">
                 <div class="about__col">
                     <h1 class="about__col-title" id="whoarewe-title">ХТО МИ?</h1>
                     <p class="about__col-text" id="whoarewe-text">Мета «Поклик Яру» - виховання відповідальної молоді.
-                        <br><br>Ми переконані, що це найкоротший шлях до процвітання і
-                        розвитку нашої Держави. <br><br>Наша команда — це свідома українська молодь, об'єднана
-                        цінностями Побратимства,
-                        Дисципліни та Патріотизму.
+                        Ми переконані, що це найкоротший шлях до процвітання і розвитку нашої Держави. <br><br>Наша
+                        команда — це свідома українська молодь, об'єднана цінностями Побратимства, Дисципліни та
+                        Патріотизму.
                     </p>
                 </div>
             </a>
@@ -78,15 +75,15 @@
             <a href="javascript:void(0)" class="whatarewedoing wow fadeInRight" onclick="whatAreWeDoing()">
                 <div class="about__col">
                     <h1 class="about__col-title" id="whatarewedoing-title">ЧИМ МИ ЗАЙМАЄМОСЬ?</h1>
-                    <p class="about__col-text" id="whatarewedoing-text">Наша модель виховання — це систематична і
-                        регулярна робота з молоддю протягом років. <br><br>Ми організовуємо:<br>Табори
-                        національно-патріотичного виховання. <br>Освітні, виховні, вишкільні, культурні, туристичні
-                        заходи.<br>Популяризуємо
-                        історичний регіон Холодний Яр.<br>Волонтерські заходи на підтримку Збройних Сил України</p>
+                    <p class="about__col-text" id="whatarewedoing-text">
+                        Наша модель виховання — це систематична і регулярна робота з молоддю протягом років. <br><br>Ми
+                        організовуємо:<br>Табори національно-патріотичного виховання. <br>Освітні, виховні, вишкільні,
+                        культурні, туристичні заходи.<br>Популяризуємо історичний регіон Холодний Яр.<br>Волонтерські
+                        заходи на підтримку Збройних Сил України
+                    </p>
                 </div>
                 <img id="whatarewedoing-img" src="./images/whatarewedoing-img.png">
             </a>
-
         </div>
 
         <!--Short statistic block-->
@@ -110,7 +107,8 @@
                     <div class="feedback__item-col"><img src="./images/feedback/feedback-istoryk.png"
                             class="feedback__item-img"></div>
                     <div class="feedback__item-col">
-                        <h4 class="feedback__item-title">ІСТОРИК<br><span>Координатор організації «Поклик Яру»</span></h4>
+                        <h4 class="feedback__item-title">ІСТОРИК<br><span>Координатор організації «Поклик Яру»</span>
+                        </h4>
                         <p class="feedback__item-text">&nbspКоманда з 17-ти людей, які щодня, безкоштовно будують
                             організацію, що хоче виховувати відповідальну молодь. Понад 100 вихованців, які щороку
                             проводять своє літо на таборі "Поклик Яру". Вони змінюються під нашим впливом і обирають
@@ -222,8 +220,8 @@
             <div class="footer__col">
                 <nav class="footer__nav">
                     <ul class="footer__list">
-                        <li><a href="https://www.youtube.com/channel/UCROFrx6_3YVPx2pKHyY8C2w" target="blank" class="footer__link"><img
-                                    src="./images/header&footer/yt-link.png" alt=""></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCROFrx6_3YVPx2pKHyY8C2w" target="blank"
+                                class="footer__link"><img src="./images/header&footer/yt-link.png" alt=""></a></li>
                         <li><a href="https://www.tiktok.com/@poklyk.yaru" target="blank" class="footer__link"><img
                                     src="./images/header&footer/tt-link.png" alt=""></a></li>
                         <li><a href="https://t.me/PoklykYaru" target="blank" class="footer__link">
@@ -242,17 +240,19 @@
         </div>
         <div class="footer-block">
             <h3 class="footer__license">ГО “Поклик яру” 2020-2023. Всі права захищені</h3>
-            <h3 class="footer__license">Дизайн сайту: Ольга Скаржинець, графічний дизайн: Катерина Дорошенко, "Вспишка", верстка сайту: Дон
+            <h3 class="footer__license">
+                Дизайн сайту: Ольга Скаржинець; Графічний дизайн: Катерина Дорошенко, "Вспишка"; Верстка сайту:
+                Височинський Тимофій, "Дон"
             </h3>
         </div>
     </footer>
 
     <!--Scripts-->
     <script>
-        window.onload = setTimeout(function () {
+        /*window.onload = setTimeout(function () {
             $("#preloader").slideUp("slow");
-            document.querySelector('body').style.overflow = "scroll";
-        }, 2500);
+                document.querySelector('body').style.overflow = "scroll";
+        }, 2500);*/
     </script>
 
     <!-- Frameworks/libraries and JavaScript -->

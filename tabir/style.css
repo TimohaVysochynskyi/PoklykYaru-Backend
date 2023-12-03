@@ -1,12 +1,14 @@
 @import url(../css/secondary.css);
-.header__info{
+
+.header__info {
     height: 50%;
 }
-.feedback__title{
+
+.feedback__title {
     bottom: 0px;
 }
 
-.tabir__video-wrapper{
+.tabir__video-wrapper {
     height: 130vh;
     display: flex;
     flex-direction: column;
@@ -15,18 +17,21 @@
     background: rgba(41, 60, 67, 0.75);
     margin-top: -55px;
 }
-.tabir__video{
+
+.tabir__video {
     width: 70%;
     height: 65%;
     filter: contrast(100%);
     position: relative;
 }
-.tabir__video-player{
+
+.tabir__video-player {
     width: 100%;
     height: 100%;
     background: none;
     filter: brightness(80%);
 }
+
 .tabir-video__controls {
     display: flex;
     position: absolute;
@@ -39,9 +44,11 @@
     align-items: center;
     transition: opacity .2s;
 }
+
 .tabir-video__controls {
     opacity: 0.5;
 }
+
 .tabir__video:hover .tabir-video__controls {
     opacity: 1;
 }
@@ -53,36 +60,42 @@
     opacity: .8;
     transition: all .2s;
 }
+
 .tabir-video__control-button:hover {
     opacity: 1;
 }
+
 .tabir-video__control-button img {
     width: 90px;
     height: 90px;
 }
 
-.tabir__video-message{
+.tabir__video-message {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 80vw;
 }
-.video__message-col:first-child{
+
+.video__message-col:first-child {
     width: 25%;
     display: flex;
     justify-content: center;
 }
-.video__message-col:last-child{
+
+.video__message-col:last-child {
     width: 90%;
 }
+
 .video__message-number,
-.video__message-text{
+.video__message-text {
     font-family: Montserrat;
     color: #fff;
     font-weight: 800;
     font-size: 68px;
 }
-.video__message-number{
+
+.video__message-number {
     font-family: Gagalin;
     font-size: 144px;
     color: #FFD537;
@@ -90,14 +103,15 @@
 }
 
 
-.tabir__features{
+.tabir__features {
     background-image: url(../images/tabir/features-bg.png);
     background-size: cover;
     background-position: center;
     height: auto;
     transition: .3s;
 }
-.tabir__features-list{
+
+.tabir__features-list {
     width: 100%;
     height: auto;
     padding: 30px 100px 30px 50px;
@@ -106,11 +120,13 @@
     flex-direction: column;
     align-items: center;
 }
-.tabir__features-list > li{
+
+.tabir__features-list>li {
     margin: 12px 0px;
     width: 85%;
 }
-.tabir__feature-text{
+
+.tabir__feature-text {
     font-size: 18px;
     color: #fff;
     text-shadow: 0px 0px 5px #1b292c;
@@ -120,11 +136,13 @@
     display: none;
     text-align: justify;
 }
-.tabir__features-list  li a h3{
+
+.tabir__features-list li a h3 {
     font-size: 26px;
     text-transform: uppercase;
 }
-.tabir__features-list  li a{
+
+.tabir__features-list li a {
     text-decoration: none;
     text-shadow: 0px 0px 10px #1b292c;
     padding: 36px 36px;
@@ -138,7 +156,7 @@
 
 }
 
-.registration-wrapper{
+.registration-wrapper {
     padding: 6vh 0px;
     height: 70vh;
     width: 100%;
@@ -150,11 +168,14 @@
     align-items: center;
     margin-top: -55px;
 }
-.registration__course-title{
+
+.registration__course-title {
     color: #d6d0ba;
+    font-size: 6vh;
 }
+
 .registration__course-title,
-.registration__course-subtitle{
+.registration__course-subtitle {
     margin-top: 9vh;
     text-shadow: 1px 1px 4px #1b292c;
     font-family: 'Montserrat';
@@ -165,21 +186,24 @@
     letter-spacing: 1.4px;
     font-weight: 800;
 }
-.registration__course-subtitle{
+
+.registration__course-subtitle {
     font-size: 28px;
     margin: 0;
     font-weight: 700;
     letter-spacing: 1px;
     margin-bottom: 10px;
 }
-.registration-course-type{
+
+.registration-course-type {
     margin: 2vh 0;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
 }
-.registration-wrapper__row:first-child{
+
+.registration-wrapper__row:first-child {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,14 +212,15 @@
     width: 100%;
     height: 80%;
 }
-.registration-wrapper__row:last-child{
+
+.registration-wrapper__row:last-child {
     height: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.registration__course{
+.registration__course {
     width: 40%;
     height: 35%;
     background-color: #293C43BF;
@@ -204,17 +229,20 @@
     padding: 50px;
     margin: 20px 30px;
 }
-.registration__course-option{
+
+.registration__course-option {
     margin-left: 40px;
     line-height: 25px;
     color: #DEB92D;
     margin-top: 4px;
     font-size: 24px;
 }
-.registration__course-option > span{
+
+.registration__course-option>span {
     margin-left: 1em;
 }
-a.default-title{
+
+a.default-title {
     height: 70px;
     width: 350px;
     display: flex;
@@ -223,15 +251,17 @@ a.default-title{
     bottom: -35px;
     transition: 0.6s;
 }
-a.default-title:hover{
+
+a.default-title:hover {
     transform: scale(1.05);
     transition: 0.3s;
 }
 
-.disciplines-wrapper{
+.disciplines-wrapper {
     margin: 50px 30px;
 }
-.tabir__slider-wrapper__title{
+
+.tabir__slider-wrapper__title {
     font-family: Montserrat;
     text-transform: uppercase;
     font-size: 24px;
@@ -242,51 +272,61 @@ a.default-title:hover{
     font-weight: 700;
 }
 
-@media screen and (max-width: 968px){
-    .tabir__video-wrapper{
+@media screen and (max-width: 968px) {
+    .tabir__video-wrapper {
         height: auto;
         padding: 50px;
     }
-    .tabir__video-message{
+
+    .tabir__video-message {
         width: 100vw;
     }
-    .video__message-col:last-child{
+
+    .video__message-col:last-child {
         width: 95%;
     }
-    .video__message-number{
+
+    .video__message-number {
         font-size: 112px;
     }
-    .video__message-text{
+
+    .video__message-text {
         font-size: 48px;
     }
 
-    .tabir__features{
+    .tabir__features {
         height: auto;
     }
-    .tabir__features-list{
+
+    .tabir__features-list {
         padding: 20px;
         padding-right: 5px;
     }
-    .tabir__feature-title{
+
+    .tabir__feature-title {
         font-size: 20px;
     }
-    .tabir__feature-text{
+
+    .tabir__feature-text {
         font-size: 1.9vh;
     }
 
-    .registration-wrapper{
+    .registration-wrapper {
         height: auto;
         padding-top: 40px;
     }
-    .registration-course-type{
+
+    .registration-course-type {
         flex-direction: column;
         align-items: center;
     }
-    .registration__course{
+
+    .registration__course {
         margin: 10px;
         width: 80%;
         height: 50vh;
     }
+
     .registration__course {
         height: 30%;
         display: flex;
@@ -294,13 +334,13 @@ a.default-title:hover{
         align-items: center;
         justify-content: center;
     }
-    
+
     .registration__course-row {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
+
     .registration__course-option {
         align-items: center;
         margin: 0px;
@@ -308,33 +348,43 @@ a.default-title:hover{
 }
 
 @media screen and (max-width: 769px) {
-    .tabir__features-list li{
+    .tabir__features-list li {
         width: 95%;
     }
-    .video__message-col:first-child{
+
+    .video__message-col:first-child {
         width: 40%;
     }
-    .video__message-col:last-child{
+
+    .video__message-col:last-child {
         width: 100%;
     }
-    .tabir__feature-title{
+
+    .tabir__feature-title {
         font-size: 18px;
     }
-    .registration__course{
+
+    .registration__course {
         height: 30%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .registration__course-row{
+
+    .registration__course-row {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .registration__course-option{
+
+    .registration__course-option {
         align-items: center;
         margin: 0px;
+    }
+
+    .registration__course-title {
+        font-size: 44px;
     }
 }
 
@@ -384,9 +434,10 @@ a.default-title:hover{
 }
 
 @media screen and (max-width: 375px) {
-    .header__info{
+    .header__info {
         height: 60%;
     }
+
     .tabir__video {
         width: 85vw;
     }
@@ -404,9 +455,11 @@ a.default-title:hover{
         width: 100%;
         margin: -10px;
     }
-    .video__message-number{
+
+    .video__message-number {
         font-size: 78px;
     }
+
     .video__message-text {
         text-align: center;
         font-size: 26px;
@@ -433,13 +486,15 @@ a.default-title:hover{
 }
 
 @media screen and (max-width: 320px) {
-    .registration__course{
+    .registration__course {
         border-radius: 50px;
     }
+
     .registration__course-title {
         font-size: 22px;
     }
-    a.default-title{
+
+    a.default-title {
         width: 300px;
         font-size: 22px;
     }

@@ -21,10 +21,9 @@ $data = $mysql->query("SELECT DISTINCT `type` FROM `product`");
 <body>
 
     <!--Preloader-->
-    <div class="preloader" id="preloader">
-        <!--<div class="preloader-eraser"></div>-->
+    <!--<div class="preloader" id="preloader">
         <img src="../images/header&footer/preloader.gif" class="preloader__gif">
-    </div>
+    </div>-->
 
 
     <header class="header">
@@ -125,11 +124,10 @@ $data = $mysql->query("SELECT DISTINCT `type` FROM `product`");
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         new WOW().init();
-        window.onload = setTimeout(function () {
+        /*window.onload = setTimeout(function () {
             $("#preloader").slideUp("slow");
-            document.querySelector('body').style.overflow = "scroll";
-        }, 2500);
-
+                document.querySelector('body').style.overflow = "scroll";
+        }, 2500);*/
     </script>
     <script src="../js/script.js"></script>
     <script>

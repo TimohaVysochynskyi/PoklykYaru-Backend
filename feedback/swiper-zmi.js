@@ -1,41 +1,30 @@
-if (window.screen.width > 968) {
-  let swiper2 = new Swiper(".zmi-swiper", {
-    slidesPerView: 2,
-    autoplay: {
-      delay: 10000,
-      disableOnInteraction: false,
-    },
-    grid: {
-      rows: 2,
-    },
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-zmi2-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-zmi2-next",
-      prevEl: ".swiper-zmi2-prev",
-    },
-  });
-} else { 
-  let swiper2 = new Swiper(".zmi-swiper", {
-    slidesPerView: 1,
-    autoplay: {
-      delay: 10000,
-      disableOnInteraction: false,
-    },
-    grid: {
-      rows: 1,
-    },
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-zmi2-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-zmi2-next",
-      prevEl: ".swiper-zmi2-prev",
-    },
-  });
+let zmiRows = 2;
+let zmiSlidesPerView = 2;
+
+if (window.innerWidth < 850 && window.innerHeight > 505) {
+  zmiRows = 2;
+  zmiSlidesPerView = 1;
+} else if (window.innerWidth > 768 && window.innerHeight < 505) {
+  zmiRows = 1;
+  zmiSlidesPerView = 1;
 }
+
+let zmiSwiper = new Swiper(".zmi-swiper", {
+  slidesPerView: zmiSlidesPerView,
+  autoplay: {
+    delay: 10000,
+    disableOnInteraction: false,
+  },
+  grid: {
+    rows: zmiRows,
+  },
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-zmi-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-zmi-next",
+    prevEl: ".swiper-zmi-prev",
+  },
+});

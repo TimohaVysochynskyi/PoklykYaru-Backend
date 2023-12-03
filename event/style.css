@@ -148,16 +148,13 @@
     background: #293c43d0
 }
 
-.event-block:nth-child(2)>.event__row:first-child>.event__info>.event-title {
-    font-size: 52px;
-    width: 100vw;
-}
 
 .event-title {
     position: absolute;
     text-transform: uppercase;
     font-size: 7vh;
     top: 30px;
+    width: 95vw;
     font-weight: 900;
     letter-spacing: .5px;
     left: -10px;
@@ -204,7 +201,8 @@
     font-weight: 500;
     text-align: justify;
     margin: 10px 0;
-    text-shadow: 0 0 4px #555
+    text-shadow: 0 0 4px #555;
+    width: 100%;
 }
 
 .event__btn {
@@ -237,7 +235,7 @@
     z-index: -1
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 1024px) {
     .header__info-event-title {
         margin-top: 15px;
         background-color: #293c43af;

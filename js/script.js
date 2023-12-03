@@ -1,53 +1,46 @@
 new WOW().init(); //Element loading animation
 
-if (window.screen.width > 968) {
-  $(".whoarewe").hover(function () {
-    function showText() {
-      $("#whoarewe-text").fadeIn("slow");
+if (window.innerWidth > 758 && window.innerHeight > 505) {
+  $(".whoarewe").hover(
+    function () {
+      let leftProperty = document.querySelector(".whoarewe").offsetWidth - 350;
+      document.querySelector("#whoarewe-img").style.left = leftProperty + "px";
+      $("#whoarewe-title").fadeOut(0);
+      $("#whoarewe-text").fadeIn(0);
+    },
+    function () {
+      document.querySelector("#whoarewe-img").style.left = "0px";
+      $("#whoarewe-text").fadeOut(0);
+      $("#whoarewe-title").fadeIn(0);
     }
-    function textAnimate() {
-      $("#whoarewe-title").fadeOut("fast");
-      setTimeout(showText, 500);
-      document.getElementById("whoarewe-text").style.transform =
-        "translateX(-23vw)";
+  );
+  $(".whatarewedoing").hover(
+    function () {
+      let rightProperty =
+        document.querySelector(".whatarewedoing").offsetWidth - 350;
+      document.querySelector("#whatarewedoing-img").style.right =
+        rightProperty + "px";
+      $("#whatarewedoing-title").fadeOut(0);
+      $("#whatarewedoing-text").fadeIn(0);
+    },
+    function () {
+      document.querySelector("#whatarewedoing-img").style.right = "0px";
+      $("#whatarewedoing-text").fadeOut(0);
+      $("#whatarewedoing-title").fadeIn(0);
     }
-    setTimeout(textAnimate, 300);
-    document.getElementById("whoarewe-img").style.transform =
-      "translateX(60vw)";
-    document.getElementById("whoarewe-img").style.transition = "2s";
-    document.getElementById("whoarewe-img").style.transitionTimingFunction =
-      "ease";
-  });
-  $(".whatarewedoing").hover(function () {
-    function showText() {
-      $("#whatarewedoing-text").fadeIn("slow");
-    }
-    function textAnimate() {
-      $("#whatarewedoing-title").fadeOut("fast");
-      setTimeout(showText, 500);
-      document.getElementById("whatarewedoing-text").style.transform =
-        "translateX(23vw)";
-    }
-    setTimeout(textAnimate, 300);
-    document.getElementById("whatarewedoing-img").style.transform =
-      "translateX(-60vw)";
-    document.getElementById("whatarewedoing-img").style.transition = "2s";
-    document.getElementById(
-      "whatarewedoing-img"
-    ).style.transitionTimingFunction = "ease";
-  });
+  );
 }
 
 function whoAreWe() {
   if (window.screen.width < 968) {
-    document.querySelector("#whoarewe-title").style.display = "none";
-    document.querySelector("#whoarewe-text").style.display = "unset";
+    $("#whoarewe-title").fadeOut("slow");
+    $("#whoarewe-text").fadeIn("slow");
   }
 }
 function whatAreWeDoing() {
   if (window.screen.width < 968) {
-    document.querySelector("#whatarewedoing-title").style.display = "none";
-    document.querySelector("#whatarewedoing-text").style.display = "unset";
+    $("#whatarewedoing-title").fadeOut("slow");
+    $("#whatarewedoing-text").fadeIn("slow");
   }
 }
 function showBorder() {
@@ -104,40 +97,8 @@ function eventHeader() {
   }
 }
 
-function showFeedback() {
-  if (
-    document.getElementById("showfeedbackbtn").innerText == "БІЛЬШЕ ВІДГУКІВ"
-  ) {
-    document.getElementById("showfeedbackbtn").innerText = "МЕНШЕ ВІДГУКІВ";
-    document.getElementById("feedback__item").style.display = "flex";
-    document.getElementById("feedback__item2").style.display = "flex";
-    document.getElementById("feedback__item3").style.display = "flex";
-    document.getElementById("feedback__item4").style.display = "flex";
-    document.getElementById("feedback__item5").style.display = "flex";
-    document.getElementById("feedback__item6").style.display = "flex";
-    document.getElementById("feedback__item7").style.display = "flex";
-    document.getElementById("feedback__item8").style.display = "flex";
-    document.getElementById("feedback__item9").style.display = "flex";
-    $(".feedback__gradient").fadeOut();
-  } else {
-    document.getElementById("showfeedbackbtn").innerText = "БІЛЬШЕ ВІДГУКІВ";
-    document.getElementById("feedback__item4").style.display = "none";
-    document.getElementById("feedback__item5").style.display = "none";
-    document.getElementById("feedback__item6").style.display = "none";
-    document.getElementById("feedback__item7").style.display = "none";
-    document.getElementById("feedback__item8").style.display = "none";
-    document.getElementById("feedback__item9").style.display = "none";
-    $(".feedback__gradient").fadeIn();
-    if (window.screen.width <= 968) {
-      document.getElementById("feedback__item").style.display = "none";
-      document.getElementById("feedback__item2").style.display = "none";
-      document.getElementById("feedback__item3").style.display = "none";
-    }
-  }
-}
-
-/*document.addEventListener("DOMContentLoaded", function () {
-  const deadline = new Date(2023, 06, 01);
+document.addEventListener("DOMContentLoaded", function () {
+  const deadline = new Date(2024, 6, 18);
 
   let timerId = null;
 
@@ -169,7 +130,7 @@ function showFeedback() {
   countdownTimer();
 
   timerId = setInterval(countdownTimer, 1000);
-});*/
+});
 
 let eventListShown = false;
 function showEventList() {
