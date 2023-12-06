@@ -11,6 +11,14 @@
     <title>Поклик Яру | Головна</title>
     <link rel="icon" type="image/x-icon" href="./images/header&footer/logo.ico">
     <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+        @media screen and (max-width: 768px) {
+            .header {
+                justify-content: end;
+            }
+        }
+    </style>
 </head>
 
 <body>

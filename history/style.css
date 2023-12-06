@@ -70,6 +70,10 @@
 		height: 75%;
 	}
 
+	.container {
+		margin-top: 0;
+	}
+
 	.history__year-row {
 		padding: 30px;
 	}

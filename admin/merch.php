@@ -26,7 +26,32 @@ if (isset($_POST['create-new-merch__submit-btn'])) {
     } else {
         echo "<h3>  Failed to upload image!</h3>";
     }
-    header("Location: ./merch.php");
+}
+if (isset($_POST['edit-new-merch__submit-btn'])) {
+	$eName = $_POST['e-name'];
+	$eDescription = $_POST['e-desc'];
+	$ePrice = strip_tags($_POST['e-cost']);
+	$eSize = strip_tags($_POST['e-size']);
+	$id = strip_tags($_POST['e-id']);
+	$oldImage = strip_tags($_POST['old-e-image']);
+
+	if (file_exists("../temp/" . $oldImage)) {
+	    unlink("../temp/" . $oldImage);
+	}
+
+	$eFilename = $_FILES['e-image']["name"];
+	$eTempname = $_FILES['e-image']["tmp_name"];
+	$folder = "../temp/" . $eFilename;
+
+	if(empty($eFilename)){
+	    $eFilename = $oldImage;
+	} else {
+	    move_uploaded_file($eTempname, $folder);
+	}
+
+	$conn->query("UPDATE `product` 
+	    SET `name` = '$eName', `description` = '$eDescription', `cost` = '$ePrice', `size` = '$eSize', `image` = '$eFilename' 
+	        WHERE `id` = '$id'");
 }
 ?>
 
@@ -51,26 +76,7 @@ if (isset($_POST['create-new-merch__submit-btn'])) {
 	<main class="container" style="height: auto; justify-content: flex-start;">
 		<div class="merch-wrapper">
 			<div class="search-bar">
-				<input type="text" id="search-merch-input" placeholder="Пошук мерчу туть :)" />
-				<button id="filter-merch-btn"><img src="./images/filter.png" alt="filter"></button>
-			</div>
-			<div id="filter-pop-up">
-				<button id="filter-pop-up__close">+</button>
-				<ul class="filter-pop-up__list">
-					<li class="filter-pop-up__item">
-						Розділ
-						<select id="filter-pop-up__type">
-							<option value="no">Все</option>
-							<option value="new">Новинка</option>
-							<option value="cloth">Одяг</option>
-							<option value="chevron">Шеврони</option>
-							<option value="book">Книги</option>
-							<option value="flag">Прапори</option>
-						</select>
-					</li>
-					<li class="filter-pop-up__item">Ціна (грн) <input type="number" id="filter-pop-up__price" placeholder="Точне число"></li>
-					<li class="filter-pop-up__item"><button id="filter-pop-up__btn">Гоу</button></li>
-				</ul>
+				<input type="text" id="search-merch-input" placeholder="Шукати в мерчі..." />
 			</div>
 			<div class="merch-content">
 				<ul id="merch-content__list"></ul>

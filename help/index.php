@@ -12,6 +12,7 @@ require '../php/blocks.php';
     <title>Поклик Яру | Допомога</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../css/secondary.css">
     <link rel="icon" type="image/x-icon" href="../images/header&footer/logo.ico">
 </head>
 
@@ -41,14 +42,16 @@ require '../php/blocks.php';
                     <h2 class="help__title">Цільова допомога</h2>
 
                     <div class="help__zbir">
-                        <div class="help__zbir-col"><img src="./data/mriya.jpg" class="help__zbir-img" alt="На що збираємо"></div>
+                        <div class="help__zbir-col"><img src="./data/mriya.jpg" class="help__zbir-img"
+                                alt="На що збираємо"></div>
                         <div class="help__zbir-col">
                             <h3 class="help__zbir-title">Збираємо на мрію</h3>
                             <!--<div class="help__progress-wrapper">
                                 <div class="help__progress-col" style="width: 68%;">68%</div>
                                 <div class="help__progress-col" style="width: 32%;">32%</div>
                             </div>-->
-                            <a href="https://t.me/PoklykYaru/2292" align="center" style="margin: 20px 0px;">Детальніша інформація</a>
+                            <a href="https://t.me/PoklykYaru/2292" align="center" style="margin: 20px 0px;">Детальніша
+                                інформація</a>
                             <a href="https://send.monobank.ua/jar/EdxuZE5H8" class="help__zbir-btn">Допомогти</a>
                         </div>
                     </div>
@@ -58,15 +61,20 @@ require '../php/blocks.php';
                     <h2 class="help__title">Бажаєте допомогти інакше?</h2>
                     <form class="want-help__form" method="post" action="">
                         <input type="text" name="name" class="want-help__form-input" placeholder="Ім'я" required>
-                        <input type="email" name="email" class="want-help__form-input" placeholder="Електронна адреса" required>
-                        <textarea type="text" name="message" class="want-help__form-input" placeholder="Чим ви можете допомогти?"></textarea>
-                        <input class="want-help__from-btn" type="submit" value="надіслати"><span class="want-help__output_message"></span>
+                        <input type="email" name="email" class="want-help__form-input" placeholder="Електронна адреса"
+                            required>
+                        <textarea type="text" name="message" class="want-help__form-input"
+                            placeholder="Чим ви можете допомогти?"></textarea>
+                        <input class="want-help__from-btn" type="submit" value="надіслати"><span
+                            class="want-help__output_message"></span>
                     </form>
                 </div>
             </div>
             <div class="help__col">
                 <h2 class="help__title" style="margin-top: 20px;">Допомогти іншим</h2>
-                <p align="center" style="font-size: 18px">На жаль, тут немає зборів :( <br>Якщо ви маєте якийсь збір, відправте інформацію про нього сюди: <a href="mailto:pokluk.yary@gmail.com">pokluk.yary@gmail.com</a></p>
+                <p align="center" style="font-size: 18px">На жаль, тут немає зборів :( <br>Якщо ви маєте якийсь збір,
+                    відправте інформацію про нього сюди: <a
+                        href="mailto:pokluk.yary@gmail.com">pokluk.yary@gmail.com</a></p>
             </div>
         </div>
     </main>
@@ -76,8 +84,8 @@ require '../php/blocks.php';
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('.want-help__form').on('submit', function() {
+        $(document).ready(function () {
+            $('.want-help__form').on('submit', function () {
 
                 // Add text 'loading...' right after clicking on the submit button. 
                 $('.want-help__output_message').text('Loading...');
@@ -88,7 +96,7 @@ require '../php/blocks.php';
                     url: "./help-mail.php",
                     method: form.attr('method'),
                     data: form.serialize(),
-                    success: function(result) {
+                    success: function (result) {
 
                         // THIS IS WHAT I HAVE ADDED TO REMOVE EXCESS SPACES
                         let d = result.split(" ");

@@ -95,7 +95,11 @@
     }
 
     .aboutus__item-title {
-        font-size: 48px
+        font-size: 48px;
+    }
+
+    .header__info-title {
+        font-size: 8vh;
     }
 }
 
@@ -106,6 +110,10 @@
 
     .aboutus__item-title {
         font-size: 28px;
+    }
+
+    .header__info-title {
+        font-size: 6vh;
     }
 }
 

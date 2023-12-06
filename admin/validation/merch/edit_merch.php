@@ -26,6 +26,3 @@ if(empty($eFilename)){
 $conn->query("UPDATE `product` 
     SET `name` = '$eName', `description` = '$eDescription', `cost` = '$ePrice', `size` = '$eSize', `image` = '$eFilename' 
         WHERE `id` = '$id'");
-
-
-header("Location: ../../merch.php");

@@ -29,7 +29,7 @@ if ($result->num_rows > 0) {
                     <img src='../temp/".$row['image']."' alt='картинка мерчинки зроз'>
                 </div>
                 <div>
-                    <form method='post' action='./validation/merch/edit_merch.php' enctype='multipart/form-data'>
+                    <form method='post' action='' enctype='multipart/form-data'>
                         <input type='text' name='e-name' value='".$row['name']."' placeholder=\"Ім'я\">
                         <textarea name='e-desc' placeholder='Опис'>".$row['description']."</textarea>
                         <input type='text' name='e-cost' value='".$row['cost']."' placeholder='Ціна'>
@@ -37,7 +37,7 @@ if ($result->num_rows > 0) {
                         <input type='file' name='e-image' value='".$row['image']."'>
                         <input type='hidden' name='old-e-image' value='".$row['image']."'>
                         <input type='hidden' name='e-id' value='".$row['id']."'>
-                        <button type='submit' class='merch-content__edit-btn'>Редагувати</button>
+                        <button type='submit' name='edit-new-merch__submit-btn' class='merch-content__edit-btn'>Редагувати</button>
                     </form>
                 </div>
             </li>

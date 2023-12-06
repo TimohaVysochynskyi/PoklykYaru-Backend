@@ -846,10 +846,6 @@ body {
 }
 
 @media screen and (max-width: 968px) and (max-height: 505px) {
-    .header {
-        justify-content: end;
-    }
-
     .header__nav {
         justify-content: center;
         flex-wrap: wrap;

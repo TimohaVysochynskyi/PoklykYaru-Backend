@@ -39,11 +39,9 @@ require '../php/blocks.php';
             </div>
             <!-- 2017 -->
             <div class="history__year-wrapper wow fadeInRight">
-                <hr class="history__year-title-line" style="border-width: 15px;">
                 <div class="history__year-row">
                     <h2 class="history__year-title">2017 рік</h2>
                 </div>
-                <hr class="history__year-title-line">
                 <div class="history__year-row" style="background-image: url('../images/history/2017year-bg.png');">
                     <p class="history__year-text">
                         Виховна система була вдосконалена і таборування зробили з ночівлею. Місце було на лівому березі Дніпра в селі Благодатне. <br><br> На базі табору «Придніпровка» ми намагались реалізувати нашу виховну систему. Молодь проживала в будиночку, мала доступ до дискотек та спілкування з вихованцями «Придніпровки». Дві зміни. 50 дітей та додаткова мандрівна зміна в Карпатах. <br><br> Під час літнього таборування ми загартували ядро нашої команди та прийняли рішення працювати з вихованцями протягом року, не розриваючи зв’язок до наступного таборового сезону. Почалась регулярна гурткова робота в школах.
@@ -63,11 +61,9 @@ require '../php/blocks.php';
             </div>
             <!-- 2019 -->
             <div class="history__year-wrapper wow fadeInRight">
-                <hr class="history__year-title-line" style="border-width: 8px;">
                 <div class="history__year-row">
                     <h2 class="history__year-title">2019 рік</h2>
                 </div>
-                <hr class="history__year-title-line" style="border-width: 8px;">
                 <div class="history__year-row" style="background-image: url('../images/history/2019year-bg.png');">
                     <p class="history__year-text">
                         Наметовий табір у Чубівці із значними вдосконаленнями таборової програми був успішно реалізований. Понад 70 вихованців на двох змінах та нові члени команди. <br><br> Кількість дітей, охочих відвідати табір, збільшувалася. Збільшувалася і наша команда, що організовувала весь цей процес. Родзинкою року стала мандрівна зміна в Холодному Яру для найсильніших вихованців і членів команди. 16 учасників закопали в лісах свій страх і остаточно загартувались у міцну команду. На цій зміні народилась теперішня команда «Поклик Яру». <br><br> Було прийняте рішення відмовитись від орендування території в Чубівці і почати шукати власне місце для табору поближче до Холодного Яру.
@@ -76,7 +72,6 @@ require '../php/blocks.php';
             </div>
             <!-- 2020 -->
             <div class="history__year-wrapper wow fadeInLeft">
-                <hr class="history__year-title-line" style="border-width: 15px;">
                 <div class="history__year-row">
                     <h2 class="history__year-title">2020 рік</h2>
                 </div>
