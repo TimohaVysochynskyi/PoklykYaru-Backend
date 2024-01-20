@@ -150,7 +150,7 @@ require '../php/blocks.php';
                         <div class="event-paralelogram-wrapper">
                             <div class="event-paralelogram"></div>
                             <div class="event-paralelogram__text">
-                                <h1 class="event-title">зимовий похід імені горліса-горського</h1>
+                                <h1 class="event-title">зимовий похід<br>імені горліса-горського</h1>
                                 <h2 class="event-time">01.12.2023</h2>
                             </div>
                         </div>

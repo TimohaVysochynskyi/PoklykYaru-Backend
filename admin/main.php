@@ -29,7 +29,6 @@
     
     <main class="container">
         <div class="category-wrapper">
-            <a href="chat" class="category"><img src="./images/chat.png"><span>Чат</span></a>
             <a href="merch" class="category"><img src="./images/t-shirt.png"><span>Мерч</span></a>
             <a href="#" class="category"><img src="./images/copywriting.png"><span>Редагування</span></a>
             <a href="#" class="category"><img src="./images/line-chart.png"><span>Статистика</span></a>

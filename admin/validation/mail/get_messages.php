@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
                                 $('#help-msg-box').load('./validation/mail/get_messages.php');
                             }
                         });
-                    \"><img src='./validation/mail/eye.png' alt='read'></button>
+                    \"><img src='./images/seen.png' alt='read'></button>
                     
                     <button class=\"help-msg-btn-del\" id='" . $row['id'] . "' onclick=\"
                         let id = $(this).attr('id');
@@ -44,7 +44,7 @@ if ($result->num_rows > 0) {
                                 $('#help-msg-box').load('./validation/mail/get_messages.php');
                             }
                         });
-                    \"><img src='./validation/mail/trash-can.png' alt='delete'></button>
+                    \"><img src='./images/delete.png' alt='delete'></button>
                 </div>
             </li>";
         }

@@ -1,5 +1,5 @@
 <?php
-    require './php/blocks.php'; // Connection крінжатинa from another file
+require './php/blocks.php'; // Connection крінжатинa from another file
 ?>
 <!DOCTYPE html>
 <html lang="uk">
@@ -99,8 +99,8 @@
             <h2 class="statistic-title">ПОКЛИК ЯРУ В ЦИФРАХ - ЦЕ: </h2>
             <div class="statistic__row">
                 <div class="statistic__col"><span>28</span><span>Згадок в ЗМІ</span></div>
-                <div class="statistic__col"><span>864</span><span>учасника</span></div>
-                <div class="statistic__col"><span style="color: #293C43cc;">15</span><span>заходів</span></div>
+                <div class="statistic__col"><span>950+</span><span>учасників</span></div>
+                <div class="statistic__col"><span style="color: #293C43cc;">44</span><span>заходи</span></div>
             </div>
         </div>
 

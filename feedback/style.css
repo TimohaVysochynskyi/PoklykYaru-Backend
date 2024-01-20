@@ -88,10 +88,9 @@
     color: #000;
     font-size: 2.6vh;
     text-align: left;
-    line-height: 22px;
+    line-height: 26px;
     color: #1b292c;
     font-weight: 900;
-    line-height: 35px;
 }
 
 .feedback__slide-title span {
@@ -112,17 +111,17 @@
         flex-direction: column;
         align-items: center;
         justify-content: start;
-        padding: 60px 20px;
+        padding: 20px;
         height: 100% !important;
         margin-top: 0 !important;
     }
 
     .feedback__slide-col {
-        margin-top: 20%;
+        margin-top: 5%;
     }
 
     .feedback__slide-img {
-        width: 156px;
+        width: 128px;
     }
 
     .feedback__slide-title {
@@ -151,16 +150,13 @@
     }
 
     .feedback__slide-col {
-        margin-top: 5%;
+        margin-top: 2%;
     }
 
     .feedback__slide-img {
-        width: 128px;
+        width: 112px;
     }
 
-    .feedback__slide-title {
-        line-height: 30px;
-    }
 
 }
 

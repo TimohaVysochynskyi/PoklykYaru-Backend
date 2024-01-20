@@ -13,6 +13,44 @@ html {
     overflow-x: hidden !important;
 }
 
+.preloader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 5;
+}
+
+.preloader {
+    width: 100px;
+    height: 100px;
+
+    border: 2.5px solid #dedede;
+    border-top: 3.5px solid #74848c;
+    border-radius: 100%;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    animation: load 1s infinite linear;
+}
+
+@keyframes load {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .header {
     width: 100vw;
     padding: 25px;
@@ -22,7 +60,9 @@ html {
     font-weight: 300;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 6;
+    background-color: #fff;
+    box-shadow: 0px 2px 6px #cdcdcd;
 }
 
 .notification-btn {
@@ -36,7 +76,7 @@ html {
 }
 
 .container {
-    margin-top: 68px;
+    margin-top: 100px;
     min-height: 70vh;
     display: flex;
     flex-direction: column;
@@ -70,54 +110,6 @@ html {
     margin-right: 30px;
 }
 
-.chat-wrapper {
-    width: 100vw;
-    height: 85vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#chat-box {
-    height: 55vh;
-    width: 65%;
-    overflow: auto;
-    padding: 15px;
-    border: 2px solid #72838A;
-    border-radius: 2px;
-    line-height: 26px;
-    font-size: 18px;
-}
-
-#chat-form {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#chat-form input {
-    margin: 10px;
-    padding: 8px 10px;
-    font-size: 16px;
-    background: none;
-    border: 1px solid #72838A;
-    border-radius: 2px;
-    outline: none;
-    transition: .2s;
-}
-
-#chat-form input:focus {
-    transform: scale(1.02);
-}
-
-#chat-form input:last-child:hover {
-    background-color: #72838A;
-    color: #fefefe;
-    cursor: pointer;
-}
-
 #help-msg-window,
 #create-new-merch-wrapper,
 #create-new-zbir-wrapper {
@@ -137,7 +129,7 @@ html {
 .help-msg,
 .create-new-merch,
 .create-new-zbir {
-    width: 60%;
+    width: 70%;
     height: 75%;
     background-color: #dedede;
     border-radius: 2px;
@@ -271,21 +263,29 @@ html {
     flex-direction: column;
     align-items: center;
     padding: 15px;
+    padding-top: 40px;
     border: 2px solid #72838A;
     border-radius: 2px;
     text-align: center;
     position: relative;
     margin: 15px 0px;
+    width: 30%;
+}
+
+#merch-content__list li>div {
+    width: 100%;
 }
 
 .merch-content__del-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
 }
 
 #merch-content__list li div img {
-    width: 200px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 #merch-content__list li div:last-child form {
@@ -397,7 +397,7 @@ html {
 
 #create-new-merch__form,
 #create-new-zbir__form {
-    width: 40%;
+    width: 65%;
 }
 
 #create-new-merch__form input,
@@ -415,6 +415,10 @@ html {
     width: 100%;
     margin: 5px 0px;
     font-size: 16px;
+}
+
+#create-new-merch__form textarea {
+    height: 100px;
 }
 
 #create-new-merch__form button {
@@ -464,20 +468,25 @@ html {
 
 
 
-
 @media screen and (max-width: 768px) {
-    .container{
+    .container {
         margin-top: 8vh;
         width: 100vw;
         min-height: auto;
     }
-    .category-wrapper{
+
+    .category-wrapper {
         width: 100%;
         flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
     }
-    .category{
+
+    .category {
         width: 80%;
+    }
+
+    #merch-content__list li {
+        width: 95%;
     }
 }
