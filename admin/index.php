@@ -1,36 +1,37 @@
 <?php
 
-    require './validation/connect.php';
+require './validation/connect.php';
 
-    if (isset($_POST['auth-btn'])) {
-        $login = htmlentities(strip_tags($_POST['login']));
-        $password = htmlentities(strip_tags($_POST['password']));
+if (isset($_POST['auth-btn'])) {
+    $login = htmlentities(strip_tags($_POST['login']));
+    $password = htmlentities(strip_tags($_POST['password']));
 
-        //$password = md5($password);
+    //$password = md5($password);
 
-        $admin = $conn->query("SELECT * FROM `admin` WHERE `login` = '$login' AND `password` = '$password'");
-        $admin = $admin->fetch_assoc();
-    
-        setcookie('name', $admin['name'], time()+3600*24*30, "./");
-        setcookie('login', $admin['login'], time()+3600*24*30, "./");
-        setcookie('contact', $admin['contact'], time()+3600*24*30, "./");
+    $admin = $conn->query("SELECT * FROM `admin` WHERE `login` = '$login' AND `password` = '$password'");
+    $admin = $admin->fetch_assoc();
 
-        header("Location: ./main.php");
-    }
+    setcookie('name', $admin['name'], time() + 3600 * 24 * 30, "./");
+    setcookie('login', $admin['login'], time() + 3600 * 24 * 30, "./");
+    setcookie('contact', $admin['contact'], time() + 3600 * 24 * 30, "./");
+
+    header("Location: ./main");
+}
 
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Адмінка | Перевірка</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/index.css">
     <style>
-        body{
+        body {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -38,17 +39,19 @@
             flex-direction: column;
         }
 
-        h1{
+        h1 {
             text-align: center
         }
 
-        form{
+        form {
             display: flex;
             min-width: 20%;
             flex-direction: column;
 
         }
-        input,button{
+
+        input,
+        button {
             margin: 5px 0;
             padding: 8px;
             font-size: 16px;
@@ -56,11 +59,13 @@
             outline: none;
             border: 1px solid gray;
         }
-        button{
+
+        button {
             cursor: pointer;
         }
     </style>
 </head>
+
 <body>
     <h1>Для входу, введіть дані</h1>
     <br>
@@ -70,4 +75,5 @@
         <button name="auth-btn" type="submit">Увійти</button>
     </form>
 </body>
+
 </html>

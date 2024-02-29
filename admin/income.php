@@ -22,31 +22,9 @@ $archived = $archived->fetch_assoc();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Адмінка | Надходження</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/table.css">
     <style>
-        table {
-            border-collapse: collapse;
-            width: 90%;
-            margin: 20px auto;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        th,
-        td {
-            border: 1px solid #72838A;
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #fefefe;
-        }
-
-        tr:nth-child(even) {
-            background-color: #efefef;
-        }
-
         .navigation {
             margin-top: 100px;
             width: 100%;

@@ -1,7 +1,7 @@
 <?php
-    if(empty($_COOKIE['name']) || empty($_COOKIE['login']) || empty($_COOKIE['contact'])){
-        header("Location: ../admin");
-    }
+if (empty($_COOKIE['name']) || empty($_COOKIE['login']) || empty($_COOKIE['contact'])) {
+    header("Location: ../admin");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,13 +12,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Адмінка</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/index.css">
 </head>
 
 <body>
     <header class="header"><a href="/">Повернутися до сайту</a></header>
 
-    <button class="notification-btn" id="show-help-msg"><img src="./images/notification-bell.png" alt="Повідомлення"></button>
+    <button class="notification-btn" id="show-help-msg"><img src="./images/notification-bell.png"
+            alt="Повідомлення"></button>
     <div id="help-msg-window">
         <div class="help-msg">
             <button id="help-msg__close">+</button>
@@ -26,7 +27,7 @@
             <ul id="help-msg-box"></ul>
         </div>
     </div>
-    
+
     <main class="container">
         <div class="category-wrapper">
             <a href="merch" class="category"><img src="./images/t-shirt.png"><span>Мерч</span></a>
@@ -40,12 +41,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
-        $(document).ready(function() {
-            $("#show-help-msg").click(function() {
+        $(document).ready(function () {
+            $("#show-help-msg").click(function () {
                 document.querySelector("#help-msg-window").style.visibility = "unset";
                 $("#help-msg-box").load("./validation/mail/get_messages.php");
             });
-            $("#help-msg__close").click(function() {
+            $("#help-msg__close").click(function () {
                 var id = $(this).attr('id');
                 console.log(id);
                 document.querySelector("#help-msg-window").style.visibility = "hidden";

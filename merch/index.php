@@ -135,6 +135,10 @@ $data = $mysql->query("SELECT DISTINCT `type` FROM `product`");
         </div>
     </main>
 
+    <button class="open-cart-btn">
+        <img src="../images/merch/cart.png" alt="Корзина">
+    </button>
+
     <?php secondaryFooter() ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

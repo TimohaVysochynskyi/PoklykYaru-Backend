@@ -174,20 +174,21 @@
     cursor: pointer;
 }
 
-
-.cart-btn {
-    position: fixed;
-    right: 40px;
-    bottom: 40px;
-    padding: 15px;
-    border-radius: 200px;
-    background-color: #ffe221;
-    box-shadow: 1px 1px 6px #111;
-    z-index: 1;
+.product__desc-cart-btn {
+    height: 48px;
+    width: 48px;
+    margin-left: 10px;
+    transition: .3s;
 }
 
-.cart-btn>img {
-    width: 60px;
+.product__desc-cart-btn:hover {
+    transform: scale(1.05);
+}
+
+.product__desc-cart-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 

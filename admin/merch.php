@@ -45,7 +45,7 @@ if (isset($_POST['edit-new-merch__submit-btn'])) {
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="./style/index.css" />
 
 	<script src="./validation/merch/script.js"></script>
 	<style>

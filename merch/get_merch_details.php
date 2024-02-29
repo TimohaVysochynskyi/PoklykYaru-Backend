@@ -123,6 +123,8 @@ $image_arr = explode("|", $image);
             ?>
             <input type="hidden" name="price" readonly value="<?php echo $price ?>" required>
             <button type="submit" class="product__desc-btn" onclick="handlePost()">оплатити</button>
+            <a href="javascript:void(0)" class="product__desc-cart-btn"><img src="../images/merch/add-to-cart.png"
+                    alt="Додати в корзину"></a>
         </form>
     </div>
 
