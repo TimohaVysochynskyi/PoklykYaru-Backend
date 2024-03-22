@@ -93,7 +93,7 @@ $guests = array(
             </div>
         </div>
 
-        <div class="default-title__wrapper-y">
+        <div class="default-title__wrapper-y" style="bottom: 0 !important">
             <hr>
         </div>
         <div class="tabir__features">
@@ -149,24 +149,70 @@ $guests = array(
 
         <!-- СУДА -->
         <div class="registration-wrapper">
-            <h2 class="registration__course-title">ДО ЗУСТРІЧІ НАСТУПНОГО ЛІТА!</h2>
-
-            <!--<div class="registration-wrapper__row">
-                <div class="default-title__wrapper-y" style="top: 60px;">
-                    <a href="https://docs.google.com/forms/d/1IbLFIOxB1vnz4VdcdKWWGTlkIBd15mXIeui1fcPnb0k/edit" class="default-title" style="box-shadow: 0px 0px 10px #293C43;">зареєструватись</a>
-                    <hr>
+            <div class="registration__course">
+                <div class="registration__course-row">
+                    <h3 class="registration__course-subtitle">1 зміна</h3>
                 </div>
-            </div>-->
-        </div>
+                <div class="registration__course-row">
+                    <h4 class="registration__course-option">Дата: <span>23.06 - 02.07</span></h4>
+                    <h4 class="registration__course-option">Особливості: <span>10 - 13 років</span></h4>
+                </div>
+            </div>
+            <div class="registration__course">
+                <div class="registration__course-row">
+                    <h3 class="registration__course-subtitle">2 зміна</h3>
+                </div>
+                <div class="registration__course-row">
+                    <h4 class="registration__course-option">Дата: <span>07.07 - 16.07</span></h4>
+                    <h4 class="registration__course-option">Особливості: <span>14 - 17 років, для учасників, які ще НЕ
+                            БУЛИ на таборі «Поклик Яру»</span></h4>
+                </div>
+            </div>
+            <div class="registration__course">
+                <div class="registration__course-row">
+                    <h3 class="registration__course-subtitle">3 зміна</h3>
+                </div>
+                <div class="registration__course-row">
+                    <h4 class="registration__course-option">Дата: <span>21.07 - 30.07</span></h4>
+                    <h4 class="registration__course-option">Особливості: <span>14 - 17 років, для учасників, які ще НЕ
+                            БУЛИ на таборі «Поклик Яру»</span></h4>
+                </div>
+            </div>
+            <div class="registration__course">
+                <div class="registration__course-row">
+                    <h3 class="registration__course-subtitle">4 зміна</h3>
+                </div>
+                <div class="registration__course-row">
+                    <h4 class="registration__course-option">Дата: <span>07.07 - 16.07</span></h4>
+                    <h4 class="registration__course-option">Особливості: <span>14 - 17 років, для вихованців, які вже
+                            БУЛИ на таборі «Поклик Яру»</span></h4>
+                </div>
+            </div>
+            <div class="registration__course">
+                <div class="registration__course-row">
+                    <h3 class="registration__course-subtitle">5 зміна</h3>
+                </div>
+                <div class="registration__course-row">
+                    <h4 class="registration__course-option">Дата: <span>21.07 - 30.07</span></h4>
+                    <h4 class="registration__course-option">Особливості: <span>14 - 17 років, для вихованців, які вже
+                            БУЛИ на таборі «Поклик Яру»</span></h4>
+                </div>
+            </div>
 
+        </div>
+        <div class="default-title__wrapper-y" style="bottom: 63px !important">
+            <a target="blank" href="https://docs.google.com/forms/d/1h64fcvYZJ3j5cBkGTvfrb6mpUaZdak9_ilG9REaQx-o/edit"
+                class="default-title" style="box-shadow: 0px 0px 10px #293C43;">зареєструватись</a>
+            <hr>
+        </div>
         <div class="disciplines-wrapper">
             <h2 class="tabir__slider-wrapper__title">дисципліни</h2>
             <div id="app">
                 <div class="swiper swiper-carousel disciplines-swiper">
                     <div class="swiper-wrapper">
-                        <?php for ($i = 0; $i < count($disciplines) - 2; $i++) : ?>
-                        <?php for ($j = 0; $j < count($disciplines[$i]); $j++) : ?>
-                        <?php echo '
+                        <?php for ($i = 0; $i < count($disciplines) - 2; $i++): ?>
+                            <?php for ($j = 0; $j < count($disciplines[$i]); $j++): ?>
+                                <?php echo '
                                     <div class="swiper-slide">
                                         <div class="swiper-carousel-animate-opacity">
                                             <img src="../images/tabir/disciplines/' . $disciplines[$i + 2][$j] . '.jpg">
@@ -177,7 +223,7 @@ $guests = array(
                                         </div>
                                     </div>
                                 ' ?>
-                        <?php endfor ?>
+                            <?php endfor ?>
                         <?php endfor ?>
                     </div>
                 </div>
@@ -192,9 +238,9 @@ $guests = array(
             <div id="app">
                 <div class="swiper swiper-carousel tabir-swiper">
                     <div class="swiper-wrapper">
-                        <?php for ($i = 0; $i < count($guests) - 2; $i++) : ?>
-                        <?php for ($j = 0; $j < count($guests[$i]); $j++) : ?>
-                        <?php echo '
+                        <?php for ($i = 0; $i < count($guests) - 2; $i++): ?>
+                            <?php for ($j = 0; $j < count($guests[$i]); $j++): ?>
+                                <?php echo '
                                     <div class="swiper-slide">
                                         <div class="swiper-carousel-animate-opacity">
                                             <img src="../images/tabir/guests/' . $guests[$i + 2][$j] . '.jpg" style="object-position: top;">
@@ -205,7 +251,7 @@ $guests = array(
                                         </div>
                                     </div>
                                 ' ?>
-                        <?php endfor ?>
+                            <?php endfor ?>
                         <?php endfor ?>
                     </div>
                 </div>

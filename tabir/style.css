@@ -158,14 +158,15 @@
 
 .registration-wrapper {
     padding: 6vh 0px;
-    height: 70vh;
+    height: auto;
     width: 100%;
     background-image: url(../images/tabir/registration-bg.png);
     background-size: cover;
     background-position: center;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     margin-top: -55px;
 }
 
@@ -188,7 +189,7 @@
 }
 
 .registration__course-subtitle {
-    font-size: 28px;
+    font-size: 32px;
     margin: 0;
     font-weight: 700;
     letter-spacing: 1px;
@@ -221,20 +222,24 @@
 }
 
 .registration__course {
-    width: 40%;
-    height: 35%;
-    background-color: #293C43BF;
+    width: calc(100% / 2 - 60px);
+    min-height: 22vh;
+    background-color: #293c43ce;
+    box-shadow: 0px 0px 6px #181818;
     border: 3px solid #FFD537;
     border-radius: 150px;
-    padding: 50px;
+    padding: 30px 50px;
     margin: 20px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .registration__course-option {
     margin-left: 40px;
-    line-height: 25px;
     color: #DEB92D;
-    margin-top: 4px;
+    margin: 10px 0;
     font-size: 24px;
 }
 
@@ -243,11 +248,9 @@
 }
 
 a.default-title {
-    height: 70px;
+    padding: 15px 20px;
     width: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     bottom: -35px;
     transition: 0.6s;
 }
@@ -380,7 +383,6 @@ a.default-title:hover {
 
     .registration__course-option {
         align-items: center;
-        margin: 0px;
     }
 
     .registration__course-title {
@@ -429,7 +431,6 @@ a.default-title:hover {
 
     .registration__course-option {
         text-align: center;
-        margin: 0px;
     }
 }
 
@@ -481,7 +482,6 @@ a.default-title:hover {
 
     .registration__course-option {
         text-align: center;
-        margin: 0px;
     }
 }
 

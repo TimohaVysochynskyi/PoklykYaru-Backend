@@ -33,11 +33,15 @@ require './php/blocks.php'; // Connection крінжатинa from another file
     <header class="header" id="header">
         <section class="header__registration">
             <div class="header__register-timer-wrapper">
-                <a target="blank" href="#" class="header__register-timer">
-                    <img src="./images/header&footer/header-arrow.png" class="header__register-img">
-                    <span class="header__register-timer-text"> <span id="days"></span>дн. <span id="hours"></span>год.
-                        <span id="minutes"></span>хв.</span>
-                    <h1 class="header__register-title">РЕЄСТРАЦІЯ ПОЧНЕТЬСЯ ЧЕРЕЗ</h1>
+                <a target="blank"
+                    href="https://docs.google.com/forms/d/1h64fcvYZJ3j5cBkGTvfrb6mpUaZdak9_ilG9REaQx-o/edit"
+                    class="header__register-timer">
+                    <!-- <img src="./images/header&footer/header-arrow.png" class="header__register-img"> -->
+                    <span class="header__register-timer-text">
+                        <!-- <span id="days"></span>дн. <span id="hours"></span>год.<span id="minutes"></span>хв. -->
+                        РЕЄСТРАЦІЯ ПОЧАЛАСЯ
+                    </span>
+                    <!-- <h1 class="header__register-title">РЕЄСТРАЦІЯ ПОЧНЕТЬСЯ ЧЕРЕЗ</h1> -->
                 </a>
             </div>
         </section>
